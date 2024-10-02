@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f5ebe0; /*  background color */
+    color: white; 
+}
+
+header {
+    padding: 10px;
+}
+
+.navbar {
+    display: flex; 
+    align-items: center; 
+    background-color: #6c584c; /* background color */
+    color: white;
+    padding: 10px; 
+    position: fixed; /* Make the navbar fixed */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    z-index: 1000; 
+}
+
+.logo img {
+    width: 90px; 
+    height: auto;
+    margin-right: 10px;
+}
+
+.navbar h1 {
+    margin-right: 20px; 
+}
+
+.navbar ul {
+    display: flex; 
+    list-style-type: none;
+	    margin-left: auto; 
+}
+
+.navbar li {
+    margin: 0 15px; 
+}
+
+.navbar a {
+    color: white; 
+    text-decoration: none;
+}
+
+.vision {
+    color: black; /* Text color */
+    font-size: 24px; 
+    margin-top: 100px; 
+    text-align: center; /* Center */
+    width: 100%;
+}
+
+.vision2 {
+    color: black; /* Text color */
+    font-size: 20px; 
+    margin-top: 50px; 
+    text-align: center; /* Center */
+    width: 100%;
+}
+
+.Offer {
+    color: black; /* Text color */
+    margin-top: 50px;
+    padding: 20px;
+}
+
+/* Grid container for offers */
+.offers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* space between items */
+    margin-top: 50px;
+    padding: 0 20px; /* Some padding around the offers */
+}
+
+.offer-item {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.offer-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex; /* Use flexbox for easy alignment */
+    align-items: center; /* Vertically center the text and image */
+    justify-content: center; /* Horizontally center */
+}
+
+.offer-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center; /* Center the text */
+    background-size: cover; /* Make the background cover the entire label */
+    background-position: center; /* Center the background image */
+    color: white; /* Text color to contrast with the background image */
+    padding: 20px; /* Padding to make the label larger */
+    border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+/* Unique background for each label */
+.offer-label.offer1 {
+    background-image: url('Logo.jpg');
+}
+
+.offer-label.offer2 {
+    background-image: url('Logo.jpg');
+}
+
+.offer-label.offer3 {
+    background-image: url('Logo.jpg');
+}
+
+.offer-label.offer4 {
+    background-image: url('Logo.jpg');
+}
+
+.offer-label.offer5 {
+    background-image: url('Logo.jpg');
+}
+
+.offer-label.offer6 {
+    background-image: url('Logo.jpg');
+}
+
+
+footer {
+	color : black;
+    text-align: center;
+    padding: 20px;
+    background-color: #f5ebe0; 
+}
+
+
