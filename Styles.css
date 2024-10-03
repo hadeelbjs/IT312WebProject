@@ -10,6 +10,7 @@ body {
     background-color: #f5ebe0; /*  background color */
     color: #9B7E65; 
     margin-left: 50px;
+    margin-right: 50px;
 }
 
 header {
@@ -153,4 +154,17 @@ footer {
             margin-top: 130px;
             margin-top: 130px;
 }
-      
+ #CustomerNavBox h3{
+    text-align: center;
+}
+#CustomerNavBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    margin-bottom: 65px;
+ 
+}
+ #CustomerNavBox img{
+border-radius: 34px;
+ }
