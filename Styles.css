@@ -5,10 +5,11 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Georgia, Garamond,Helvetica,Arial;
     line-height: 1.6;
     background-color: #f5ebe0; /*  background color */
-    color: white; 
+    color: #9B7E65; 
+    margin-left: 50px;
 }
 
 header {
@@ -26,6 +27,7 @@ header {
     left: 0; 
     width: 100%; 
     z-index: 1000; 
+    
 }
 
 .logo img {
@@ -146,5 +148,9 @@ footer {
     padding: 20px;
     background-color: #f5ebe0; 
 }
-
-
+.Breadcrumb {
+            border-radius: 20px;
+            margin-top: 130px;
+            margin-top: 130px;
+}
+      
