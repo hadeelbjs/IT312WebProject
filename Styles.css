@@ -82,14 +82,14 @@ header {
 .offer-item {
     background-color: white;
     color: black;
-    padding: 80px; /* Increased padding for taller labels */
+    padding: 80px; 
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
 .offer-label {
-    height: 100px; /* Set fixed height for taller labels */
+    height: 100px; 
     font-size: 22px; 
     font-weight: bold;
     margin-bottom: 10px;
@@ -123,7 +123,6 @@ header {
     background-image: url('Logo.jpg');
 }
 
-/* New section for categories styled like offers */
 .categories-section {
     margin-top: 50px;
     text-align: center;
@@ -140,7 +139,7 @@ header {
     position: relative;
     background-color: white;
     color: white;
-    padding: 160px; /* Increased padding for taller labels */
+    padding: 160px;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -173,15 +172,14 @@ header {
     opacity: 0.8;
 }
 
-/* Unique background for each category */
 .category-item.category1::before {
-    background-image: url('clothes.jpg'); /* Replace with actual image path */
+    background-image: url('clothes.jpg'); 
 }
 
 .category-item.category2::before {
-    background-image: url('artworks.jpg'); /* Replace with actual image path */
+    background-image: url('artworks.jpg'); 
 }
 
 .category-item.category3::before {
-    background-image: url('furniture.jpg'); /* Replace with actual image path */
+    background-image: url('furniture.jpg'); 
 }
