@@ -173,14 +173,14 @@ header {
 }
 
 .category-item.category1::before {
-    background-image: url('clothes.jpg'); 
+    background-image: url('images/clothes.jpg'); 
 }
 
 .category-item.category2::before {
-    background-image: url('artworks.jpg'); 
+    background-image: url('images/artworks.jpg'); 
 }
 
 .category-item.category3::before {
-    background-image: url('furniture.jpg'); 
+    background-image: url('images/Furniture.jpg'); 
 }
 
