@@ -55,6 +55,7 @@ header {
     text-decoration: none;
 }
 
+
 .vision {
     color: black; 
     font-size: 24px; 
@@ -96,7 +97,7 @@ header {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
-    margin: 200px auto 0 auto; /* Margin-bottom set to 0 */
+    margin: 200px auto 0 auto; 
     max-width: 80%;
     width: fit-content;
 }
@@ -108,62 +109,99 @@ header {
     font-size: 28px;
 }
 
-.vision-container p {
-    font-size: 22px;
+
+.offer-section {
+    text-align: center;
+    margin-top: 50px;
+    font-family:'Courier New', Courier, monospace;
 }
 
-.offers-container {
+.offer-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 0 20px;
-    margin-top: 0; /* Remove top margin */
+    margin-top: 30px;
 }
 
-
 .offer-item {
+    position: relative;
     background-color: white;
-    color: black;
-    padding: 80px; 
+    color: white;
+    padding: 80px 0;
     text-align: center;
     border: 1px solid #ccc;
     border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    transition: transform 0.3s ease; 
+
+}
+
+.offer-item:hover {
+    transform: scale(1.05); 
+}
+
+.offer-item:hover::before {
+    transform: scale(1.05); 
 }
 
 .offer-label {
-    height: 100px; 
-    font-size: 22px; 
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
-    text-align: center;
     color: white;
-    padding: 20px;
+    margin-bottom: 15px;
+    text-shadow: 
+    -0.5px -0.5px 0 #000, /* Top left */
+     0.5px -0.5px 0 #000, /* Top right */
+    -0.5px  0.5px 0 #000, /* Bottom left */
+     0.5px  0.5px 0 #000; /* Bottom right */
+    
+}
+
+.offer-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; 
+    background-position: center;
     border-radius: 10px;
+    opacity: 0.709;
+    z-index: 0;
+    transition: transform 0.3s ease; 
+
 }
 
-.offer-label.offer1 {
-    background-image: url('Logo.jpg');
+.offer-item.offer1::before {
+    background-image: url('images/offer1.jpg');
 }
 
-.offer-label.offer2 {
-    background-image: url('Logo.jpg');
+.offer-item.offer2::before {
+    background-image: url('images/offer2.jpg');
 }
 
-.offer-label.offer3 {
-    background-image: url('Logo.jpg');
+.offer-item.offer3::before {
+    background-image: url('images/offer3.jpg');
 }
 
-.offer-label.offer4 {
-    background-image: url('Logo.jpg');
+.offer-item.offer4::before {
+    background-image: url('images/offer4.jpg');
 }
 
-.offer-label.offer5 {
-    background-image: url('Logo.jpg');
+.offer-item.offer5::before {
+    background-image: url('images/offer5.jpg');
 }
 
-.offer-label.offer6 {
-    background-image: url('Logo.jpg');
+.offer-item.offer6::before {
+    background-image: url('images/offer6.jpg');
 }
+
+
 
 .categories-section {
     margin-top: 50px;
@@ -183,11 +221,21 @@ header {
     color: white;
     padding: 160px;
     text-align: center;
-    border: 1px solid #ccc;
     border-radius: 10px;
     background-size: cover;
     background-position: center;
+    transition: transform 0.3s ease; 
+
 }
+
+.category-item:hover {
+    transform: scale(1.03); 
+}
+
+.category-item:hover::before {
+    transform: scale(1.03); 
+}
+
 
 .category-label {
     position: relative;
@@ -211,17 +259,19 @@ header {
     background-position: center;
     border-radius: 10px;
     z-index: 0;
-    opacity: 0.8;
+    opacity: 0.709;
+    transition: transform 0.3s ease; 
+
 }
 
 .category-item.category1::before {
-    background-image: url('clothes.jpg'); 
+    background-image: url('images/clothes.jpg'); 
 }
 
 .category-item.category2::before {
-    background-image: url('artworks.jpg'); 
+    background-image: url('images/artworks.jpg'); 
 }
 
 .category-item.category3::before {
-    background-image: url('furniture.jpg'); 
+    background-image: url('images/Furniture.jpg'); 
 } 
