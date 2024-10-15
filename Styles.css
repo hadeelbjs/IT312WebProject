@@ -184,3 +184,25 @@ header {
     background-image: url('images/Furniture.jpg'); 
 }
 
+ul.breadcrumb {
+    margin-top: 100px; 
+    padding: 10px 16px;
+    list-style: none;
+  }
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color:  #9B7E65;
+    content: ">";
+  }
+  ul.breadcrumb li a {
+    color:  #9B7E65;
+    text-decoration: none;
+  }
+  ul.breadcrumb li a:hover {
+    color:  #6c584c;
+    text-decoration: underline;
+  }
