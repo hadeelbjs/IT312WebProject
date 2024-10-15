@@ -206,3 +206,12 @@ ul.breadcrumb {
     color:  #6c584c;
     text-decoration: underline;
   }
+
+  .category-label a{
+    color:  white;
+    text-decoration: none;
+  }
+
+  .category-label a:hover{
+    color:  #ccc;
+    text-decoration: underline;}
