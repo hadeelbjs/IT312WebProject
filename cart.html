@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        #CustomerNavBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 50px;
+         
+        }
+
+        #CustomerNavBox h3{
+        text-align: center;
+        }
+        #CustomerNavBox {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 50px;
+            margin-bottom: 65px;
+        
+        }
+        #CustomerNavBox img{
+        border-radius: 34px;
+        }
+
+        main{
+            margin-top: 150px;
+        }
+
+        footer{
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .product-image {
+            width: 100px;
+            height: 100px;
+            background-color: lightgray;
+            display: block;
+        }
+        .order-summary {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .order-summary div {
+            padding: 20px;
+           border-radius: 9px;
+           margin-top: 30;
+        }
+        </style>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 120px; height: auto;"> 
+        </div>
+        <h1>Vintage Vault</h1>
+        <ul>
+            <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+            <li><a href="#seller-dashboard">Seller Dashboard</a></li>
+            <li><a href="#categories">Product Categories</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;">
+        <a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a>> Cart</p>
+    </div>
+    <h1>Cart Details</h1>
+    <a>Clear Cart</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Product Details</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="#" alt="Product Image" class="product-image">
+                    <p>Name: Lorem Ipsum Dolor</p>
+                    <a href="#" style="color: red;">Remove</a>
+                </td>
+                <td>
+                    <select>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+
+                    </select>
+                </td>
+                <td>$$$</td>
+                <td>$$$</td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="#" alt="Product Image" class="product-image">
+                    <p>Name: Lorem Ipsum Dolor</p>
+                    <a href="#" style="color: red;">Remove</a>
+                </td>
+                <td>
+                    <select>
+                        <option value="1">1</option>
+                    </select>
+                </td>
+                <td>$$$</td>
+                <td>$$$</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="order-summary">
+        <div>
+            <h2>Order Summary</h2>
+            <p>Items: 2</p>
+            <p>Total Cost: $$$</p>
+        </div>
+        <div>
+            <button style="padding: 15px 30px; background-color: black; color: white; border: none;">Checkout</button>
+        </div>
+</main>
+
+<footer>
+
+</footer>
+
+</body>
+
+</html>
