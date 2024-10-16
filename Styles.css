@@ -113,7 +113,6 @@ header {
 .offer-section {
     text-align: center;
     margin-top: 50px;
-    font-family:'Courier New', Courier, monospace;
 }
 
 .offer-container {
@@ -177,28 +176,28 @@ header {
 
 }
 
-.offer-label.offer1 {
-    background-image: url('Logo.jpg');
+.offer-item.offer1::before {
+    background-image: url('images/offer1.jpg');
 }
 
-.offer-label.offer2 {
-    background-image: url('Logo.jpg');
+.offer-item.offer2::before {
+    background-image: url('images/offer2.jpg');
 }
 
-.offer-label.offer3 {
-    background-image: url('Logo.jpg');
+.offer-item.offer3::before {
+    background-image: url('images/offer3.jpg');
 }
 
-.offer-label.offer4 {
-    background-image: url('Logo.jpg');
+.offer-item.offer4::before {
+    background-image: url('images/offer4.jpg');
 }
 
-.offer-label.offer5 {
-    background-image: url('Logo.jpg');
+.offer-item.offer5::before {
+    background-image: url('images/offer5.jpg');
 }
 
-.offer-label.offer6 {
-    background-image: url('Logo.jpg');
+.offer-item.offer6::before {
+    background-image: url('images/offer6.jpg');
 }
 
 
