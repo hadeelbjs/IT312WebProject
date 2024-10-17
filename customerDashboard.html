@@ -1,93 +1,188 @@
 <!DOCTYPE HTML>
-<html lang = 'en'>
-    
+<html lang='en'>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Customer Dashboard</title>
-        <link rel="stylesheet" href="Styles.css">
-        <style>
-            #CustomerNavBox {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 50px;
-             
-            }
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        body {
+            font-family: Georgia, Garamond, Helvetica, Arial;
+            line-height: 1.6;
+            background-color: #f5ebe0;
+            color: #9B7E65;
+            margin: 0;
+            padding: 0;
+        }
 
-            #CustomerNavBox h3{
+        .navbar {
+            display: flex;
+            align-items: center;
+            background-color: #6c584c;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .logo img {
+            width: 90px;
+            height: auto;
+            margin-right: 15px;
+        }
+
+        .navbar h1 {
+            font-size: 24px;
+            margin-right: auto;
+            color: white;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style-type: none;
+            margin-left: auto;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #ccc;
+        }
+
+        main {
+            padding-top: 100px;
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            }
-            #CustomerNavBox {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 50px;
-                margin-bottom: 65px;
-            
-            }
-            #CustomerNavBox img{
-            border-radius: 34px;
-            }
+        }
 
-            main{
-                margin-top: 150px;
-            }
+        .Breadcrumb {
+            margin-bottom: 40px;
+            text-align: left;
+        }
 
-            footer{
-                text-align: center;
-            }
-            
-            </style>
-    </head>
+        .Breadcrumb p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #9B7E65;
+        }
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 120px; height: auto;"> 
-                </div>
-                <h1>Vintage Vault</h1>
-                <ul>
-                    <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                    <li><a href="#seller-dashboard">Seller Dashboard</a></li>
-                    <li><a href="#categories">Product Categories</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
-            </nav>
-           
-        </header>
+        .Breadcrumb a {
+            color: #9B7E65;
+            text-decoration: none;
+        }
 
-        <main>
-            <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;">
-                <a href="index.html">Home</a> > Customer Dashboard</p>
+        .Breadcrumb a:hover {
+            color: #6c584c;
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #6c584c;
+            margin-bottom: 40px;
+        }
+
+        #CustomerNavBox {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 65px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        #CustomerNavBox a {
+            display: block;
+            text-decoration: none;
+            color: #9B7E65;
+            width: 300px;
+            text-align: center;
+        }
+
+        #CustomerNavBox img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #CustomerNavBox img:hover {
+            transform: scale(1.05);
+        }
+
+        #CustomerNavBox h3 {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #6c584c;
+        }
+
+        footer {
+            background-color: #6c584c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo">
             </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="#seller-dashboard">Seller Dashboard</a></li>
+                <li><a href="#categories">Product Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
-            <h2 style="font-size: xxx-large;">Welcome !</h1>
+    <main>
+        <div class='Breadcrumb'>
+            <p><a href="index.html">Home</a> > Customer Dashboard</p>
+        </div>
 
+        <h2>Welcome!</h2>
 
-            <div id = 'CustomerNavBox'>
-                <a href = '#PastOrderPage' >
-                    <img src="images/pastorderslink.jpg" width="300px" alt="link to past orders page">
-                    <h3>Past Orders</h3>
-                </a>
-                <a href = '#ProductEval' >
-                    <img src="images/orderreviewsicon.jpg"  width="300px" alt="link to order review page">
-                    <h3>Product Evaluation</h3>
-                </a>
-                <a href = 'cart.html' >
-                    <img src="images/cartlinkicon.jpg"  width="300px" alt="link to cart page">
-                    <h3>Cart</h3>
+        <div id='CustomerNavBox'>
+            <a href='#PastOrderPage'>
+                <img src="images/pastorderslink.jpg" alt="Link to past orders page">
+                <h3>Past Orders</h3>
+            </a>
+            <a href='#ProductEval'>
+                <img src="images/orderreviewsicon.jpg" alt="Link to product evaluation page">
+                <h3>Product Evaluation</h3>
+            </a>
+            <a href='cart.html'>
+                <img src="images/cartlinkicon.jpg" alt="Link to cart page">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </main>
 
-                </a>
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-            <p>Contact us: VintageVault@.com</p>
-        </footer>
-    </body>
-
-
+    <footer>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com</p>
+    </footer>
+</body>
 
 </html>
