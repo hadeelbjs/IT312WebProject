@@ -455,6 +455,58 @@ ul.breadcrumb {
     .product-card p {
         margin-bottom: 5px;
     }
+    
     .navbar a:hover {
         color: #ccc;
     }
+
+    .reviews-section {
+        padding: 40px 20px;
+        background-color: #f4f4f4; /* Adjust if needed */
+        text-align: center;
+        overflow: hidden; /* Hide overflow for smooth scrolling */
+    }
+    
+    .reviews-container {
+        display: flex;
+        flex-direction: row; /* Set to row for horizontal scrolling */
+        animation: scroll 15s linear infinite; /* Animation to scroll */
+        white-space: nowrap; /* Prevent line breaks */
+    }
+    
+    .main-review {
+        background-color: #fff; /* Match your design */
+        border: 1px solid #ddd; /* Match your design */
+        padding: 20px;
+        border-radius: 8px;
+        margin-right: 20px; /* Space between main review and other reviews */
+        flex: 0 0 auto; /* Prevent it from growing */
+    }
+    
+    .other-reviews {
+        display: flex; /* Arrange other reviews horizontally */
+    }
+    
+    .review-item {
+        border: 1px solid #ddd; /* Match your design */
+        padding: 20px;
+        border-radius: 8px; /* Match your design */
+        background-color: #fff; /* Match your design */
+        flex: 0 0 auto; /* Prevent items from growing */
+        min-width: 150px; /* Set a minimum width for each review */
+        margin-right: 20px; /* Space between review items */
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(100%); /* Start from the right */
+        }
+        100% {
+            transform: translateX(-100%); /* Move to the left */
+        }
+    }
+    
+    
+    
+
+    
