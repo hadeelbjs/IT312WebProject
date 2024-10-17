@@ -11,13 +11,13 @@ body {
     line-height: 1.6;
     background-color: #f5ebe0;
     color: #9B7E65; 
-    margin-left: 50px;
-    margin-right: 50px;
     padding-top: 130px; 
 
 }
-
-
+main {
+    margin-left: 50px;
+    margin-right: 50px;
+}
 
 .navbar {
     display: flex; 
@@ -99,10 +99,26 @@ body {
     transform: translateY(-5px) scale(1.02); 
 }
 
+.Breadcrumb {
+    margin-bottom: 40px;
+    text-align: left;
+}
 
+.Breadcrumb p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #9B7E65;
+}
 
+.Breadcrumb a {
+    color: #9B7E65;
+    text-decoration: none;
+}
 
-
+.Breadcrumb a:hover {
+    color: #6c584c;
+    text-decoration: underline;
+}
 
 
 .offer-section {
@@ -420,4 +436,7 @@ ul.breadcrumb {
     
     .product-card p {
         margin-bottom: 5px;
+    }
+    .navbar a:hover {
+        color: #ccc;
     }

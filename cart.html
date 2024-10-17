@@ -5,17 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vintage Vault - Cart</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Styles.css">
 
     <style>
      
-
-
         /* Breadcrumb */
         .Breadcrumb {
-            margin: 20px 40px;
             font-size: 1.2em;
-            margin-top: 20vh; /* 10% of the viewport height */
 
         }
 
@@ -64,10 +60,6 @@
             color: white;
         }
 
-        table tr:nth-child(even) {
-            background-color: #eee;
-        }
-
         table img {
             width: 80px;
             height: 80px;
@@ -82,6 +74,13 @@
         table a:hover {
             text-decoration: underline;
         }
+        input[type='number']{
+            width: 10%;
+            font-size: 1.5em;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        } 
 
         /* Order Summary */
         .order-summary {
@@ -97,6 +96,7 @@
             width: 45%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
         }
 
         .order-summary button {
@@ -120,7 +120,12 @@
             text-align: center;
             color: white;
             margin-top: 50px;
+            margin-left: 0;
+            margin-right: 0;
+          
         }
+        
+        
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -162,7 +167,7 @@
             <p><a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a> > Cart</p>
         </div>
 
-        <h1>Your Cart</h1>
+        <h1>Cart Details</h1>
         <div class="container">
             <table border="1">
                 <thead>
@@ -176,31 +181,25 @@
                 <tbody>
                     <tr>
                         <td>
-                            <img src="#" alt="Product Image">
-                            <p>Product Name: Vintage Lamp</p>
-                            <a href="#">Remove</a>
+                            <img src="images/offer4.jpg" alt="Product Image">
+                            <p>Name:<br> Vintage Mirror</p>
                         </td>
                         <td>
-                            <select>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
+                            <input type="number" name="Quan" min="1" ><br>
+                            <a href="#">Remove</a>
                         </td>
                         <td>$50</td>
                         <td>$50</td>
                     </tr>
                     <tr>
                         <td>
-                            <img src="#" alt="Product Image">
-                            <p>Product Name: Antique Clock</p>
-                            <a href="#">Remove</a>
+                            <img src="images/offer5.jpg" alt="Product Image">
+                            <p>Name: <br>Antique Clock</p>
                         </td>
                         <td>
-                            <select>
-                                <option value="1">1</option>
-                            </select>
+                           <input type="number" name="Quan" min="1" ><br>
+                            
+                            <a href="#">Remove</a>
                         </td>
                         <td>$150</td>
                         <td>$150</td>
@@ -214,15 +213,16 @@
                 <h2>Order Summary</h2>
                 <p>Items: 2</p>
                 <p>Total Cost: $200</p>
-            </div>
-            <div>
                 <button>Proceed to Checkout</button>
+
             </div>
+            
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2024 Vintage Vault. All Rights Reserved.</p>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com</p>
     </footer>
 </body>
 
