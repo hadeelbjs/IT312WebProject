@@ -4,6 +4,64 @@
     <meta charset = "UTF-8">
 <title> Past Order </title>
 <link rel="stylesheet" href="Styles.css">
+<style>
+    body{
+        font-family: Arial , sans-serif;
+        margin: 40px;
+        padding: 20px;
+    }
+    #orderH{
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .order-list {
+            max-width: 1200px;
+            margin: auto;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .order-item {
+            border-bottom: 1px solid #ddd;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        .order-info {
+            flex-grow: 1;
+        }
+        .order-info h3 {
+            margin: 0;
+            font-size: 1.1em;
+            color: #686262;//
+        }
+        .order-details {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .order-total {
+            font-weight: bold;
+            color: #333;
+        }
+        @media (max-width: 600px) {
+            .order-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .order-total {
+                margin-top: 5px;
+                font-size: medium;
+            }
+      
+    </style>
+
 </head>
 <body>
     <header>
@@ -21,6 +79,50 @@
         </nav>
     </header>
     <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;"><a href="index.html">Home </a>><a href="customerDashboard.html"> Customer Dashboard</a> > Past Order</p></div>
+    <h1 id="orderH">Past Orders</h1>
+    <div class="order-list">
+        <div class="order-item">
+            <div class="order-info">
+                <h3>Order #12345</h3>
+                <div class="order-details">Date: 2023-10-01</div>
+                <div class="order-details">Time: 10:00 AM</div>
+            </div>
+            <div class="order-total">$45.00</div>
+        </div>
+        <div class="order-item">
+            <div class="order-info">
+                <h3>Order #12346</h3>
+                <div class="order-details">Date: 2023-09-25</div>
+                <div class="order-details">Time: 8:49 PM</div>
+            </div>
+            <div class="order-total">$30.00</div>
+        </div>
+        <div class="order-item">
+            <div class="order-info">
+                <h3>Order #12347</h3>
+                <div class="order-details">Date: 2023-09-10</div>
+                <div class="order-details">Time: 1:43 AM</div>
+            </div>
+            <div class="order-total">$20.00</div>
+        </div>
+        <div class="order-item">
+            <div class="order-info">
+                <h3>Order #12397</h3>
+                <div class="order-details">Date: 2022-10-10</div>
+                <div class="order-details">Time: 2:15 PM</div>
+            </div>
+            <div class="order-total">$90.00</div>
+        </div>
+        <div class="order-item">
+            <div class="order-info">
+                <h3>Order #12367</h3>
+                <div class="order-details">Date: 2022-03-10</div>
+                <div class="order-details">Time: 12:09 AM</div>
+               
+            </div>
+            <div class="order-total">30.00</div>
+        </div>
+    </div>
 
 </body>
 
