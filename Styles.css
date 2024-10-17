@@ -113,6 +113,7 @@ header {
 .offer-section {
     text-align: center;
     margin-top: 50px;
+    font-family:'Courier New', Courier, monospace;
 }
 
 .offer-container {
