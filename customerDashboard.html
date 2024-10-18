@@ -1,93 +1,142 @@
 <!DOCTYPE HTML>
-<html lang = 'en'>
-    
+<html lang='en'>
 
-    <head>
-        <meta charset="UTF-8">
-        <title>Customer Dashboard</title>
-        <link rel="stylesheet" href="Styles.css">
-        <style>
-            #CustomerNavBox {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 50px;
-             
-            }
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="Styles.css">
+    <style>
+        
+        .Breadcrumb {
+            margin-bottom: 40px;
+            text-align: left;
+        }
 
-            #CustomerNavBox h3{
+        .Breadcrumb p {
+            font-size: 18px;
+            font-weight: bold;
+            color: #9B7E65;
+        }
+
+        .Breadcrumb a {
+            color: #9B7E65;
+            text-decoration: none;
+        }
+
+        .Breadcrumb a:hover {
+            color: #6c584c;
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 36px;
+            color: #6c584c;
+            margin-bottom: 40px;
             text-align: center;
-            }
-            #CustomerNavBox {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                margin-top: 50px;
-                margin-bottom: 65px;
-            
-            }
-            #CustomerNavBox img{
-            border-radius: 34px;
-            }
+        }
 
-            main{
-                margin-top: 150px;
-            }
+        #CustomerNavBox {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 65px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-            footer{
-                text-align: center;
-            }
-            
-            </style>
-    </head>
+        #CustomerNavBox a {
+            display: block;
+            text-decoration: none;
+            color: #9B7E65;
+            width: 300px;
+            text-align: center;
+        }
 
-    <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 120px; height: auto;"> 
-                </div>
-                <h1>Vintage Vault</h1>
-                <ul>
-                    <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                    <li><a href="#seller-dashboard">Seller Dashboard</a></li>
-                    <li><a href="#categories">Product Categories</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
-            </nav>
-           
-        </header>
+        #CustomerNavBox img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
 
-        <main>
-            <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;">
-                <a href="index.html">Home</a> > Customer Dashboard</p>
-            </div>
+        #CustomerNavBox img:hover {
+            transform: scale(1.05);
+        }
 
-            <h2 style="font-size: xxx-large;">Welcome !</h1>
+        #CustomerNavBox h3 {
+            font-size: 22px;
+            margin-top: 15px;
+            color: #6c584c;
+        }
 
+        footer {
+            background-color: #9B7E65;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            margin-left: 0;
+            margin-right: 0;
+          
+        }
 
-            <div id = 'CustomerNavBox'>
-                <a href = '#PastOrderPage' >
-                    <img src="images/pastorderslink.jpg" width="300px" alt="link to past orders page">
-                    <h3>Past Orders</h3>
-                </a>
-                <a href = '#ProductEval' >
-                    <img src="images/orderreviewsicon.jpg"  width="300px" alt="link to order review page">
-                    <h3>Product Evaluation</h3>
-                </a>
-                <a href = 'cart.html' >
-                    <img src="images/cartlinkicon.jpg"  width="300px" alt="link to cart page">
-                    <h3>Cart</h3>
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
 
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_blank"> 
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
                 </a>
             </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-            <p>Contact us: VintageVault@.com</p>
-        </footer>
-    </body>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="#seller-dashboard">Seller Dashboard</a></li>
+                <li><a href="#categories">Product Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <div class='Breadcrumb'>
+            <p><a href="index.html">Home</a> > Customer Dashboard</p>
+        </div>
 
+        <h2>Welcome!</h2>
+
+        <div id='CustomerNavBox'>
+            <a href='#PastOrderPage'>
+                <img src="images/pastorderslink.jpg" alt="Link to past orders page">
+                <h3>Past Orders</h3>
+            </a>
+            <a href='#ProductEval'>
+                <img src="images/orderreviewsicon.jpg" alt="Link to product evaluation page">
+                <h3>Product Evaluation</h3>
+            </a>
+            <a href='cart.html'>
+                <img src="images/cartlinkicon.jpg" alt="Link to cart page">
+                <h3>Cart</h3>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
+        <p>Follow us on: 
+            <a href="https://www.instagram.com/VintageVault" target="_blank">
+                <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+            </a> | 
+            <a href="https://www.x.com/VintageVault" target="_blank">
+                <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+            </a>
+        </p>
+    </footer>
+</body>
 
 </html>

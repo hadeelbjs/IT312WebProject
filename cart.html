@@ -1,154 +1,227 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Vintage Vault - Cart</title>
+    <link rel="stylesheet" href="Styles.css">
 
     <style>
-        #CustomerNavBox {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 50px;
-         
+     
+        /* Breadcrumb */
+        .Breadcrumb {
+            font-size: 1.2em;
+
         }
 
-        #CustomerNavBox h3{
-        text-align: center;
-        }
-        #CustomerNavBox {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            margin-top: 50px;
-            margin-bottom: 65px;
-        
-        }
-        #CustomerNavBox img{
-        border-radius: 34px;
+        .Breadcrumb a {
+            color: #9B7E65;
+            text-decoration: none;
         }
 
-        main{
-            margin-top: 150px;
+        .Breadcrumb a:hover {
+            text-decoration: underline;
+            
         }
 
-        footer{
+        /* Main Content Styling */
+        main {
+            padding: 20px;
+        }
+
+        h1 {
             text-align: center;
+            font-size: 2.5em;
+            color: #9B7E65;
+            margin-bottom: 40px;
         }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            background-color: white;
+            margin-bottom: 30px;
         }
-        th, td {
+
+        table th,
+        table td {
             padding: 15px;
             text-align: left;
         }
-        th {
-            background-color: #f2f2f2;
+
+        table th {
+            background-color: #9B7E65;
+            color: white;
         }
-        .product-image {
-            width: 100px;
-            height: 100px;
-            background-color: lightgray;
-            display: block;
+
+        table img {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
         }
+
+        table a {
+            color: #d9534f;
+            text-decoration: none;
+        }
+
+        table a:hover {
+            text-decoration: underline;
+        }
+        input[type='number']{
+            width: 10%;
+            font-size: 1.5em;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        } 
+
+        /* Order Summary */
         .order-summary {
             display: flex;
             justify-content: space-between;
-            margin-top: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
         }
+
         .order-summary div {
+            background-color: #fff;
             padding: 20px;
-           border-radius: 9px;
-           margin-top: 30;
+            width: 45%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-content: center;
         }
-        </style>
+
+        .order-summary button {
+            padding: 15px 30px;
+            background-color: #9B7E65;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        .order-summary button:hover {
+            background-color: #85684e;
+        }
+        
+        
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .order-summary {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .order-summary div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .Breadcrumb {
+                font-size: 1em;
+                margin: 10px 20px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 120px; height: auto;"> 
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_blank"> 
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
+                </a>
+             </div>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="#seller-dashboard">Seller Dashboard</a></li>
+                <li><a href="#categories">Product Categories</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="Breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a> > Cart</p>
         </div>
-        <h1>Vintage Vault</h1>
-        <ul>
-            <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-            <li><a href="#seller-dashboard">Seller Dashboard</a></li>
-            <li><a href="#categories">Product Categories</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
-</header>
 
-<main>
-    <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;">
-        <a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a>> Cart</p>
-    </div>
-    <h1>Cart Details</h1>
-    <a>Clear Cart</a>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Product Details</th>
-                <th>Quantity</th>
-                <th>Price</th>
-                <th>Total</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <img src="#" alt="Product Image" class="product-image">
-                    <p>Name: Lorem Ipsum Dolor</p>
-                    <a href="#" style="color: red;">Remove</a>
-                </td>
-                <td>
-                    <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-
-                    </select>
-                </td>
-                <td>$$$</td>
-                <td>$$$</td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="#" alt="Product Image" class="product-image">
-                    <p>Name: Lorem Ipsum Dolor</p>
-                    <a href="#" style="color: red;">Remove</a>
-                </td>
-                <td>
-                    <select>
-                        <option value="1">1</option>
-                    </select>
-                </td>
-                <td>$$$</td>
-                <td>$$$</td>
-            </tr>
-        </tbody>
-    </table>
-    
-    <div class="order-summary">
-        <div>
-            <h2>Order Summary</h2>
-            <p>Items: 2</p>
-            <p>Total Cost: $$$</p>
+        <h1>Cart Details</h1>
+        <div class="container">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Product Details</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="images/offer4.jpg" alt="Product Image">
+                            <p>Name:<br> Vintage Mirror</p>
+                        </td>
+                        <td>
+                            <input type="number" name="Quan" min="1" ><br>
+                            <a href="#">Remove</a>
+                        </td>
+                        <td>$50</td>
+                        <td>$50</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="images/offer5.jpg" alt="Product Image">
+                            <p>Name: <br>Antique Clock</p>
+                        </td>
+                        <td>
+                           <input type="number" name="Quan" min="1" ><br>
+                            
+                            <a href="#">Remove</a>
+                        </td>
+                        <td>$150</td>
+                        <td>$150</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <div>
-            <button style="padding: 15px 30px; background-color: black; color: white; border: none;">Checkout</button>
+
+        <div class="order-summary">
+            <div>
+                <h2>Order Summary</h2>
+                <p>Items: 2</p>
+                <p>Total Cost: $200</p>
+                <button>Proceed to Checkout</button>
+
+            </div>
+            
         </div>
-</main>
+    </main>
 
-<footer>
-
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
+        <p>Follow us on: 
+            <a href="https://www.instagram.com/VintageVault" target="_blank">
+                <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+            </a> | 
+            <a href="https://www.x.com/VintageVault" target="_blank">
+                <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+            </a>
+        </p>
+    </footer>
 </body>
 
 </html>

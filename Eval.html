@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+<title> Past Order </title>
+<link rel="stylesheet" href="Styles.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 70px 20px;
+        padding: 30px 10px;
+        
+    }
+    .container {
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #333;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    select {
+        width: 30%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        font-size: 16px;
+    }
+    input[type="text"],
+    textarea {
+        width: 50%; height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 20px;
+    }
+    .rating {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .rating label {
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .rating input[type="radio"] {
+        display: none;
+    }
+    .rating label i {
+        font-size: 24px;
+        color: #ccc;
+    }
+    .rating input[type="radio"]:checked ~ i {
+        color: #ffc107;
+    }
+    .upload-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .upload-container label {
+        background-color: #ccc;
+        color: #333;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #submitButton {
+        display: block;
+        margin: 0 auto;
+        background-color: #191a19;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    #submitButton:hover {
+        background-color: #565555;
+    }
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_blank"> 
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
+                </a>
+                </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="#seller-dashboard">Seller Dashboard</a></li>
+                <li><a href="#categories">Product Categories</a></li>
+                <li><a href="#cart">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;"><a href="index.html">Home </a>><a href="customerDashboard.html"> Customer Dashboard</a> > Product Evaluation</p></div>
+    
+
+
+       <!-- <div class="container">-->
+            <h1>Product Evaluation</h1>
+            <form id="evaluationForm">
+                <label for="previousOrders">Select Order to Review:</label>
+                <select id="previousOrders" name="previousOrders" required>
+                    <option value="">Select order</option>
+                    <option value="order1">Order 1</option>
+                    <option value="order2">Order 2</option>
+                    <option value="order3">Order 3</option>
+                </select>
+    
+                <label for="products">Select Product:</label>
+                <select id="products" name="products" required>
+                    <option value="">Select product</option>
+                    <option value="product1">Product 1</option>
+                    <option value="product2">Product 2</option>
+                    <option value="product3">Product 3</option>
+                </select>
+    
+                <label>How do you rate this product?</label>
+               <!-- <div class="rating">
+                    <label><input type="radio" name="rating" value="1" required><i class="fas fa-star"></i></label>
+                    <label><input type="radio" name="rating" value="2"><i class="fas fa-star"></i></label>
+                    <label><input type="radio" name="rating" value="3"><i class="fas fa-star"></i></label>
+                    <label><input type="radio" name="rating" value="4"><i class="fas fa-star"></i></label>
+                    <label><input type="radio" name="rating" value="5"><i class="fas fa-star"></i></label>
+                </div> -->
+                <div class="rating">
+                    <label>
+                        <input type="radio" name="rating" value="1" required>
+                        <img src="star-empty.png" alt="Star 1">
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="2">
+                        <img src="star-empty.png" alt="Star 2">
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="3">
+                        <img src="star-empty.png" alt="Star 3">
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="4">
+                        <img src="star-empty.png" alt="Star 4">
+                    </label>
+                    <label>
+                        <input type="radio" name="rating" value="5">
+                        <img src="star-empty.png" alt="Star 5">
+                    </label>
+                </div>
+            <div class="com">
+                <label for="comments">Write Your Review:</label>
+                <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..." required></textarea>
+            </div>
+                <div class="upload-container">
+                    <label for="uploadImage">Upload Image</label>
+                    <input type="file" id="uploadImage" name="uploadImage" accept="image/*" style="display: none;">
+                </div>
+    
+                <button type="submit" id="submitButton">Submit Feedback</button>
+            </form>
+      <!-- </div>-->
+    
+    <!-- Include Font Awesome for the star icons -->  
+       <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">*/ -->
+
+ 
+    
+        
+</body>
+
+</html>
+
