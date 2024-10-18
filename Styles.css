@@ -306,3 +306,101 @@ ul.breadcrumb {
   .category-label a:hover{
     color:  #ccc;
     text-decoration: underline;}
+
+    .category-container {
+        position: relative;
+        text-align: center;
+        color: #ffffff;
+      }
+
+    .category-bottom-left {
+        font-size: 60px;
+        position: absolute;
+        bottom: 8px;
+        left: 40px;
+      }
+
+
+      .card {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        margin: 10px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+  
+      .card img {
+        width: 100%;
+        height: 100%;
+
+      }
+  
+      .card .product-info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(197, 169, 131, 0.7);
+        color: white;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+      }
+  
+      .card:hover .product-info {
+        display: flex;
+      }
+  
+      .card .product-info p {
+        font-size: 1.1em;
+      }
+  
+      .card .top-left {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1.25em;
+      }
+  
+      .card .bottom-left {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: black;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 1.1em;
+      }
+  
+      .card .bottom-right {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background-color: #6c584c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+      }
+  
+      .card .bottom-right:hover {
+        background-color: #9B7E65;
+      }
+
+      .clothing-container{
+          margin: 50px 0px;
+          display:flex;
+          flex-wrap: wrap;     
+          justify-content: space-between;
+          align-content: space-between;
+      }
