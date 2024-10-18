@@ -378,10 +378,7 @@ ul.breadcrumb {
     text-decoration: none;
   }
 
-  .category-label a:hover{
-    color:  #ccc;
-    text-decoration: underline;}
-
+  
     .category-container {
         position: relative;
         text-align: center;
