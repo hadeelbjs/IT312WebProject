@@ -9,44 +9,21 @@
 
     <style>
      
-        /* Breadcrumb */
-        .Breadcrumb {
-            font-size: 1.2em;
-
-        }
-
-        .Breadcrumb a {
-            color: #9B7E65;
-            text-decoration: none;
-        }
-
-        .Breadcrumb a:hover {
-            text-decoration: underline;
-            
-        }
-
-        /* Main Content Styling */
-        main {
-            padding: 20px;
-        }
-
+     
         h2 {
-            text-align: center;
+            text-align: left;
             font-size: 2.5em;
             color: #9B7E65;
             margin-bottom: 40px;
         }
 
-        .container {
-            width: 90%;
-            margin: 0 auto;
-        }
+        
 
         table {
             width: 100%;
             border-collapse: collapse;
             background-color: white;
-            margin-bottom: 30px;
+            margin-bottom: 3%;
         }
 
         table th,
@@ -61,8 +38,8 @@
         }
 
         table img {
-            width: 80px;
-            height: 80px;
+            width: 20%;
+            height: auto;
             border-radius: 8px;
         }
 
@@ -111,6 +88,14 @@
 
         .order-summary button:hover {
             background-color: #85684e;
+        }
+
+        #clearCart{
+            display: inline;
+            font-size: 0.65em;
+            font-weight: normal;
+            text-decoration: underline;
+
         }
         
         
@@ -163,10 +148,11 @@
 
         <h2>Cart Details</h2>
         <div class="container">
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
-                        <th>Product Details</th>
+                        <th colspan="1">Product Details</th>
+                        <th></th>
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Total</th>
@@ -176,6 +162,9 @@
                     <tr>
                         <td>
                             <img src="images/offer4.jpg" alt="Product Image">
+                           
+                        </td>
+                        <td>
                             <p>Name:<br> Vintage Mirror</p>
                         </td>
                         <td>
@@ -188,6 +177,8 @@
                     <tr>
                         <td>
                             <img src="images/offer5.jpg" alt="Product Image">
+                        </td>
+                        <td>
                             <p>Name: <br>Antique Clock</p>
                         </td>
                         <td>
@@ -210,6 +201,8 @@
                 <button>Proceed to Checkout</button>
 
             </div>
+            <button id="Clear">Clear Cart</button>
+
             
         </div>
     </main>

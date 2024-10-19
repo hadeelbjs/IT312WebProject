@@ -6,62 +6,42 @@
     <title>Customer Dashboard</title>
     <link rel="stylesheet" href="Styles.css">
     <style>
-        
-        .Breadcrumb {
-            margin-bottom: 40px;
-            text-align: left;
-        }
-
-        .Breadcrumb p {
-            font-size: 18px;
-            font-weight: bold;
-            color: #9B7E65;
-        }
-
-        .Breadcrumb a {
-            color: #9B7E65;
-            text-decoration: none;
-        }
-
-        .Breadcrumb a:hover {
-            color: #6c584c;
-            text-decoration: underline;
-        }
-
         h2 {
-            font-size: 36px;
+            font-size: 250%;
             color: #6c584c;
-            margin-bottom: 40px;
+            margin-bottom: 4%;
             text-align: center;
         }
 
-        #CustomerNavBox {
+        #CustomerBox {
             display: flex;
             justify-content: space-around;
-            margin-bottom: 65px;
-            gap: 20px;
+            margin-bottom: 7%;
             flex-wrap: wrap;
         }
 
-        #CustomerNavBox a {
+        #CustomerBox a {
             display: block;
-            text-decoration: none;
-            color: #9B7E65;
             width: 300px;
             text-align: center;
+            text-decoration: none;
         }
 
-        #CustomerNavBox img {
-            width: 100%;
-            border-radius: 10px;
+        #CustomerBox h3:hover {
+            color: rgba(169, 122, 61, 0.811);
+        }
+
+        #CustomerBox img {
+            width: 80%;
+            border-radius: 5%;
             transition: transform 0.3s ease;
         }
 
-        #CustomerNavBox img:hover {
+        #CustomerBox img:hover {
             transform: scale(1.05);
         }
 
-        #CustomerNavBox h3 {
+        #CustomerBox h3 {
             font-size: 22px;
             margin-top: 15px;
             color: #6c584c;
@@ -109,14 +89,14 @@
             <p><a href="index.html">Home</a> > Customer Dashboard</p>
         </div>
 
-        <h2>Welcome!</h2>
+        <h2>Welcome, User</h2>
 
-        <div id='CustomerNavBox'>
-            <a href='#PastOrderPage'>
+        <div id='CustomerBox'>
+            <a href='pastOrder.html'>
                 <img src="images/pastorderslink.jpg" alt="Link to past orders page">
                 <h3>Past Orders</h3>
             </a>
-            <a href='#ProductEval'>
+            <a href='Eval.html'>
                 <img src="images/orderreviewsicon.jpg" alt="Link to product evaluation page">
                 <h3>Product Evaluation</h3>
             </a>
