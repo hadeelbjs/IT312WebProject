@@ -1,132 +1,266 @@
-<!DOCTYPE HTML>
-<html lang = 'en'>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>sallerDashboard</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
 
-    <body>
-        
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html" target="_blank"> 
-                        <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
-                    </a>
-                    </div>
-                <h1>Vintage Vault</h1>
-                <ul>
-                    <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                    <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-                    <li><a href="clothing.html">Clothing</a></li>
-                    <li><a href="#artworks">Artworks</a></li>
-                    <li><a href="#furniture">Furniture</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
-            </nav>
-            <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vintage Vault</title>
+    <link rel="stylesheet" href="styles.css">
 
-            <ul class="breadcrumb">
-                <li><a href="index.html">Home</a></li>
-                <li>sallerDashboard</li>
-            </ul>
-
-           
-
-        </header>
-    
-        <main>
             
-            <br>
-        
-            <div class="dashboard-container">
-                <div class="seller-info">
-                    <div class="sellericon">
-                        <img src="images\sallericon.jpg" alt="Seller icon">
-                    </div>
-                    <div class="seller-name">
-                        <input type="text" placeholder="Name" />
-                    </div>
-                </div>
+        <style>
+            
+  .dashboard-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 0px; 
+    max-width: 1200px;
+    width: 100%; 
+   }
 
-                <div class="actions">
-                    <button>Add Product</button>
-                    <button> Make/Delete Offer</button>
-                </div>
-            </div>
+.seller-background {
+    width: 150%;
+    height: 300px; 
+    background-image: url("images/Header1.png");
+    background-size:;
+    background-position: center;
+    border-radius: 10px 10px 0 0;
+}
+
+
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.actions button {
+    margin-bottom: 10px;
+    padding: 15px 0;
+    width: 100%; 
+    background-color: #9B7E65;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.actions button:hover {
+    background-color: rgb(177, 174, 174);
+}
+ 
         
-            <h2>My Products</h2>
+         h2 {
+             text-align: center;
+             margin-bottom: 20px;
+         }
+ 
+       
+.product-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    max-width: 100%;
+    padding: 20px;
+}
+
+.product-list::-webkit-scrollbar {
+    height: 10px;
+}
+
+.product-list::-webkit-scrollbar-thumb {
+    background-color: #9B7E65;
+    border-radius: 10px;
+}
+
+
+.product-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 200px;
+    max-width: 200px; 
+    flex-shrink: 0; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+
+.product-image {
+    width: 100%;
+    height: 150px; 
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+/* Product Description */
+.product-card p {
+    margin: 5px 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+#descreption{
+    font-size: 10px;
+}
+
+
+         .Breadcrumb {
+             margin-bottom: 40px;
+             text-align: left;
+            
+             
+         }
+ 
+         .Breadcrumb p {
+             font-size: 18px;
+             font-weight: bold;
+             color: #9B7E65;
+         }
+ 
+         .Breadcrumb a {
+             color: #9B7E65;
+             text-decoration: none;
+         }
+ 
+         .Breadcrumb a:hover {
+             color: #6c584c;
+             text-decoration: underline;
+         }
+ 
+    </style>
+     </head>
+<body>
         
-            <div class="product-list">
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <p>Product Name</p>
-                    <p>$</p>
-                </div>
-               
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
             </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="#artworks">Artworks</a></li>
+                <li><a href="#furniture">Furniture</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>sallerDashboard</li>
+        </ul>
+    </header>
+
+    <main>
            
-        </main>
+        <div class="dashboard-container">
+            <div class="seller-background"></div> 
+            <br>
+            <div class="actions">
+                <button>Add Product</button>
+                <button>Make/Delete Offer</button>
+            </div>
+        </div>
+
+        <h2>My Products</h2>
+
+        <div class="product-list">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\white-hydrangeas.webp" alt="artwork">
+                </div>
+                <p>Product Name</p>
+                <p id="descreption">Dis</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\winter-candles.webp" alt="">
+                </div>
+                <p>Product Name</p>
+                <p>description</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+               <img src="images\KO.webp">
+                </div>
+                <p>Product Name</p>
+                <p>$100</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\Sarah-Rustic-White-Wash-Resin-Table-Lamp_-Set-of-2_1900x.webp">
+                </div>
+                <p>Product Name</p>
+                <p>$80</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\_mg_0205_1.jpg" alt="">
+                </div>
+                <p>Product Name</p>
+                <p>$100</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\w220_q80 (2).avif" alt="">
+                </div>
+                <p>Product Name</p>
+                <p>$80</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\w1020_q80 (3).avif">
+                </div>
+                <p>Product Name</p>
+                <p>$100</p>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="images\w220_q80 (1) (1).avif">
+                </div>
+                <p>Product Name</p>
+                <p>$80</p>
+            </div>
+        </div>
+
+    </main>
 
 
 
-        <footer>
-            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-            <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
-            <p>Follow us on: 
-                <a href="https://www.instagram.com/VintageVault" target="_blank">
-                    <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
-                </a> | 
-                <a href="https://www.x.com/VintageVault" target="_blank">
-                    <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
-                </a>
-            </p>
-        </footer>
+
+    <footer>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com</p>
+    </footer>
 
 
 
 
 
-    </body>
+</body>
 
 
-
-    
 </html>
