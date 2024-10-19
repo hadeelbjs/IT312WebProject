@@ -378,10 +378,7 @@ ul.breadcrumb {
     text-decoration: none;
   }
 
-  .category-label a:hover{
-    color:  #ccc;
-    text-decoration: underline;}
-
+  
     .category-container {
         position: relative;
         text-align: center;
@@ -646,7 +643,109 @@ ul.breadcrumb {
         }
 }
     
-    
-    
+.AddProduct-container {
+    max-width: 100%;
+    margin: 2% auto;
+    padding: 20px;
+    background-color: #f5ebe0;
+}
 
+
+
+.AddProduct-form-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.image-upload, .AddProduct-category, .AddProduct-product-info {
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #6c584c;
+}
+
+.image-upload, .AddProduct-category {
+    background-color: rgb(234, 212, 183);  /* NEED TO BE CHANGED  */
+
+}
+
+.AddProduct-category option {
+    font-size: medium;
+}
+
+.AddProduct-product-info {
+    background-color: #f5ebe0;
+}
+
+.image-upload h2, .AddProduct-category h2, .AddProduct-product-info h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #6c584c;
+}
+
+.image-placeholder {
+    height: 150px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #fff;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.AddProduct-category select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.AddProduct-product-info .AddProduct-info-row {
+    margin-bottom: 15px;
+}
+
+.AddProduct-product-info label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.AddProduct-product-info input, .AddProduct-product-info textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.AddProduct-form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.AddProduct-cancel-btn, .AddProduct-save-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.AddProduct-cancel-btn {
+    background-color: #ccc;
+}
+
+.AddProduct-save-btn {
+    background-color: #6c584c;
+    color: #fff;
+}
+    
+.sort-by {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+}
     

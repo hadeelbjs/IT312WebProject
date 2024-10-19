@@ -1,0 +1,121 @@
+<!DOCTYPE HTML>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AddProduct</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" target="_blank"> 
+                        <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
+                    </a>
+                    </div>
+                <h1>Vintage Vault</h1>
+                <ul>
+                    <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                    <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+                    <li><a href="clothing.html">Clothing</a></li>
+                    <li><a href="#artworks">Artworks</a></li>
+                    <li><a href="#furniture">Furniture</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+            <br>
+
+            <ul class="breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sallerDashboard.html">sallerDashboard</a></li>
+                <li>AddProduct</li>
+            </ul>
+
+           
+
+        </header>
+    
+        <main>
+            <hr>
+            <div class="AddProduct-container">
+                <div class="AddProduct-form-container">
+                    <div class="image-upload">
+                        <h2>Image</h2>
+                        <div class="image-placeholder">
+                            <div class="image-box">
+                                <span>Upload new</span>
+                                <input type="file" name="image-upload" id="image-upload" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="AddProduct-category">
+                        <h2>Category</h2>
+                        <select name="category">
+                            <option value="artworks">Artworks</option>
+                            <option value="furniture">Furniture</option>
+                            <option value="clothing">Clothing</option>
+                        </select>
+                    </div>
+
+                    <div class="AddProduct-product-info">
+                        <h2>Product info</h2>
+                        <div class="AddProduct-info-row">
+                            <div class="AddProduct-info-inline">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" >
+                            </div>
+                            <div class="AddProduct-info-inline">
+                                <label for="price">Price</label>
+                                <input type="number" id="price" name="price" >
+                            </div>
+                            <div class="AddProduct-info-inline">
+                                <label for="quantity">Quantity</label>
+                                <input type="number" id="quantity" name="quantity" >
+                            </div>
+                            <div class="AddProduct-info-inline">
+                                <label for="description">Description</label>
+                                <textarea id="description" name="description" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="AddProduct-form-actions">
+                        <button class="AddProduct-cancel-btn">Cancel</button>
+                        <button class="AddProduct-save-btn">Save</button>
+                    </div>
+                </div>
+            </div> 
+            
+           
+        </main>
+
+
+
+        <footer>
+            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+            <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
+            <p>Follow us on: 
+                <a href="https://www.instagram.com/VintageVault" target="_blank">
+                    <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+                </a> | 
+                <a href="https://www.x.com/VintageVault" target="_blank">
+                    <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+                </a>
+            </p>
+        </footer>
+
+
+
+
+
+    </body>
+
+
+
+    
+</html>
