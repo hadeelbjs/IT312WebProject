@@ -128,7 +128,7 @@ main {
 .Breadcrumb p {
     font-size: 130%;
     color: #9B7E65;
-    font-weight:bold;
+    font-weight:normal;
 }
 
 .Breadcrumb a {
@@ -823,7 +823,7 @@ table a:hover {
 }
 
 .order-summary button {
-    padding: 15px 30px;
+    padding: 3% 7%;
     background-color: #9B7E65;
     color: white;
     border: none;
