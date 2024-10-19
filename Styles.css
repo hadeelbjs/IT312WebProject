@@ -758,6 +758,8 @@ h2 {
     margin-bottom: 3%;
 }
 
+/* Cart Page Styles*/
+
  table img {
     width: 40%;
     height: auto;
@@ -865,6 +867,10 @@ table a:hover {
 
     
 }
+/* End Of Cart Page Styles*/
+
+/* Customer Page Styles*/
+
 #CustomerBox {
     display: flex;
     justify-content: space-around;
@@ -898,6 +904,8 @@ table a:hover {
     margin-top: 15px;
     color: #6c584c;
 }
+/* End Of Customer Page Styles*/
+
 footer {
     background-color: #9B7E65;
     padding: 20px;
