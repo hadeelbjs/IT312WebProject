@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="Styles.css">
 
     <style>
-     
+     h2{
+        text-align: left;
+     }
+
+     .order-summary{
+        margin-bottom: 2%;
+     }
         
     </style>
 </head>
@@ -83,14 +89,18 @@
             </table>
 
         <div class="order-summary">
-            <div>
+            <div id="summary">
                 <h3>Order Summary</h3>
                 <p>Items: 2</p>
                 <p>Total Cost: 2,804 SAR</p>
-                <button>Proceed to Checkout</button>
-
+                
             </div>
-            <button id="Clear">Clear Cart</button>
+            <div class="buttons">
+                <button>Proceed to Checkout</button><br>
+                <button id="Clear">Clear Cart</button>
+            </div>
+            
+           
 
             
         </div>

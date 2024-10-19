@@ -811,29 +811,49 @@ table a:hover {
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
+    flex-direction: row;
 }
 
 .order-summary div {
     background-color: #fff;
     padding: 20px;
-    width: 45%;
+    width: 50%;
+    height: 70%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     justify-content: center;
+    align-content: center;
 }
 
+
 .order-summary button {
-    padding: 3% 7%;
+    padding: 2% 1%;
+    width: 70%;
+    height: 50%;
+    font-weight: bold;
     background-color: #9B7E65;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    margin-bottom: 3%;
+}
+.order-summary .buttons {
+    background-color: rgba(255, 255, 255, 0);
+    height: 60%;
+    box-shadow: none;
+    padding-left: 15%;
+    border-radius: 0%;
+    
+}
+    #Clear {
+    background-color: white;
+    color: #9B7E65;
 }
 
 .order-summary button:hover {
-    background-color: #85684e;
+    background-color: #d98b473e;
 }
 
 .price {
