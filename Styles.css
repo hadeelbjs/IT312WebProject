@@ -750,4 +750,166 @@ ul.breadcrumb {
     border-radius: 5px;
     margin: 20px;
 }
+
+h2 {
+    text-align: center;
+    font-size: 2.4em;
+    color: #9B7E65;
+    margin-bottom: 3%;
+}
+
+ table img {
+    width: 40%;
+    height: auto;
+    border-radius: 3%;
+    margin: 0;
+    padding: 0;
+}
+input[type='number']{
+    width: 25%;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
+} 
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    margin-bottom: 3%;
+}
+
+
+table th,
+table td {
+    padding: 1.6%;
+    text-align: left;
+}
+
+table th {
+    background-color: #9B7E65;
+    color: white;
+}
+
+
+
+table a {
+    color: #d9534f;
+    text-decoration: none;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+
+.order-summary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.order-summary div {
+    background-color: #fff;
+    padding: 20px;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+}
+
+.order-summary button {
+    padding: 15px 30px;
+    background-color: #9B7E65;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.order-summary button:hover {
+    background-color: #85684e;
+}
+
+.price {
+    width: 15%;
+}
+
+.productDetails{
+    display: flex;
+}
+
+.productDetails p{
+    margin-left: 6%;
+    margin-top: 5%;
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-summary {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-summary div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    
+}
+#CustomerBox {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 7%;
+    flex-wrap: wrap;
+}
+
+#CustomerBox a {
+    display: block;
+    width: 300px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#CustomerBox h3:hover {
+    color: rgba(169, 122, 61, 0.811);
+}
+
+#CustomerBox img {
+    width: 80%;
+    border-radius: 5%;
+    transition: transform 0.3s ease;
+}
+
+#CustomerBox img:hover {
+    transform: scale(1.05);
+}
+
+#CustomerBox h3 {
+    font-size: 22px;
+    margin-top: 15px;
+    color: #6c584c;
+}
+footer {
+    background-color: #9B7E65;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+  
+}
+
+footer p {
+    margin: 5px 0;
+}
+
