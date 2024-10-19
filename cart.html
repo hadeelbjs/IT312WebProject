@@ -9,15 +9,27 @@
 
     <style>
      
-     
         h2 {
             text-align: left;
             font-size: 2.5em;
             color: #9B7E65;
-            margin-bottom: 40px;
+            margin-bottom: 3%;
         }
 
-        
+         table img {
+            width: 40%;
+            height: auto;
+            border-radius: 3%;
+            margin: 0;
+            padding: 0;
+        }
+        input[type='number']{
+            width: 25%;
+            font-size: 1.5em;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            
+        } 
 
         table {
             width: 100%;
@@ -25,10 +37,11 @@
             background-color: white;
             margin-bottom: 3%;
         }
+       
 
         table th,
         table td {
-            padding: 15px;
+            padding: 1.6%;
             text-align: left;
         }
 
@@ -37,11 +50,7 @@
             color: white;
         }
 
-        table img {
-            width: 20%;
-            height: auto;
-            border-radius: 8px;
-        }
+    
 
         table a {
             color: #d9534f;
@@ -51,15 +60,8 @@
         table a:hover {
             text-decoration: underline;
         }
-        input[type='number']{
-            width: 10%;
-            font-size: 1.5em;
-            text-align: center;
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            
-        } 
+       
 
-        /* Order Summary */
         .order-summary {
             display: flex;
             justify-content: space-between;
@@ -90,15 +92,22 @@
             background-color: #85684e;
         }
 
-        #clearCart{
-            display: inline;
-            font-size: 0.65em;
-            font-weight: normal;
-            text-decoration: underline;
-
+        .price {
+            width: 15%;
         }
+
+        .productDetails{
+            display: flex;
+        }
+
+        .productDetails p{
+            margin-left: 6%;
+            margin-top: 5%;
+        }
+
+    
         
-        
+     
 
         /* Responsive Design */
         @media (max-width: 768px) {
@@ -112,10 +121,7 @@
                 margin-bottom: 20px;
             }
 
-            .Breadcrumb {
-                font-size: 1em;
-                margin: 10px 20px;
-            }
+            
         }
     </style>
 </head>
@@ -134,70 +140,65 @@
                 <li><a href="customerDashboard.html">Customer Dashboard</a></li>
                 <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
                 <li><a href="clothing.html">Clothing</a></li>
-                <li><a href="#artworks">Artworks</a></li>
-                <li><a href="#furniture">Furniture</a></li>
+                <li><a href="artworks.html">Artworks</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
-    </header>
-
-    <main>
         <div class="Breadcrumb">
             <p><a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a> > Cart</p>
         </div>
+    </header>
 
+    <main>
+        
         <h2>Cart Details</h2>
-        <div class="container">
+       
             <table>
                 <thead>
                     <tr>
-                        <th colspan="1">Product Details</th>
-                        <th></th>
+                        <th>Product Details</th>
                         <th>Quantity</th>
-                        <th>Price</th>
-                        <th>Total</th>
+                        <th class="price">Price</th>
+                        <th class="price">Total</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>
-                            <img src="images/offer4.jpg" alt="Product Image">
-                           
+                        <td class="productDetails">
+                            <img src="images/w520_q80 (1).avif" alt="Blazer">
+                            <p>Name:<br><strong>cady blazer</strong> </p>
                         </td>
+                        
                         <td>
-                            <p>Name:<br> Vintage Mirror</p>
-                        </td>
-                        <td>
-                            <input type="number" name="Quan" min="1" ><br>
+                            <input type="number" name="Quan" min="1" value="1"><br>
                             <a href="#">Remove</a>
                         </td>
-                        <td>$50</td>
-                        <td>$50</td>
+                        <td> 1,540 SAR</td>
+                        <td> 1,540 SAR</td>
                     </tr>
                     <tr>
-                        <td>
-                            <img src="images/offer5.jpg" alt="Product Image">
+                        <td class="productDetails">
+                            <img src="images/_mg_0205_1.jpg" alt="Entry Table">
+                            <p>Name: <br><strong>Entry Table</strong></p>
                         </td>
+                       
                         <td>
-                            <p>Name: <br>Antique Clock</p>
-                        </td>
-                        <td>
-                           <input type="number" name="Quan" min="1" ><br>
+                           <input type="number" name="Quan" min="1" value="1" ><br>
                             
                             <a href="#">Remove</a>
                         </td>
-                        <td>$150</td>
-                        <td>$150</td>
+                        <td> 1,264 SAR</td>
+                        <td> 1,264 SAR</td>
                     </tr>
                 </tbody>
             </table>
-        </div>
 
         <div class="order-summary">
             <div>
                 <h3>Order Summary</h3>
                 <p>Items: 2</p>
-                <p>Total Cost: $200</p>
+                <p>Total Cost: 2,804 SAR</p>
                 <button>Proceed to Checkout</button>
 
             </div>
