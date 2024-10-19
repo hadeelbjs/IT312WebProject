@@ -333,7 +333,7 @@ main {
     background-position: center;
     border-radius: 10px;
     z-index: 0;
-    opacity: 0.709;
+    opacity: 0.9;
     transition: transform 0.3s ease; 
 
 }
