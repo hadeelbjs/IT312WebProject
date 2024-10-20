@@ -479,6 +479,79 @@ ul.breadcrumb {
           align-content: space-between;
       }
     
+
+    .dashboard-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+    
+    .seller-info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .sellericon img {
+        width: 150px;
+        height: 150px;
+        
+    }
+    
+    .seller-name input {
+        margin-left: 50px;
+        padding: 10px;
+        width: 200px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .actions {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .actions button {
+        margin-bottom: 10px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 15px 30px; 
+        background-color:#9B7E65 ;
+        color: white;
+
+    }
+    
+    .actions button:hover {
+        background-color: rgb(177, 174, 174)
+    }
+    
+    h2 {
+        margin-bottom: 10px;
+    }
+    
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    .product-card {
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+    
+    .product-card .product-image {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    .product-card p {
+        margin-bottom: 5px;
+    }
     
     .navbar a:hover {
         color: #ccc;
@@ -695,11 +768,12 @@ h2 {
     padding: 0;
 }
 input[type='number']{
-    width: 25%;
+    width: 27%;
     font-size: 1.5em;
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    text-align: center; 
+    font-family: Georgia, Garamond, Helvetica, Arial;
+    color: #9B7E65;
+    margin-bottom: 5%;
 } 
 
 table {
@@ -720,6 +794,11 @@ table th {
     background-color: #9B7E65;
     color: white;
 }
+table td{
+    padding-top: 5%;
+    vertical-align: top;
+    
+}
 
 
 
@@ -735,29 +814,29 @@ table a:hover {
 
 .order-summary {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 40px;
     flex-direction: row;
+    margin-left: 10%;
 }
 
 .order-summary div {
     background-color: #fff;
-    padding: 20px;
+    padding: 2%;
     width: 50%;
     height: 70%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    justify-content: center;
-    align-content: center;
+   
 }
 
 
 .order-summary button {
+    font-family: Georgia, Garamond, Helvetica, Arial;
     padding: 2% 1%;
-    width: 70%;
+    width: 60%;
     height: 50%;
-    font-weight: bold;
+    font-size: 1em;
     background-color: #9B7E65;
     color: white;
     border: none;
@@ -765,21 +844,28 @@ table a:hover {
     border-radius: 8px;
     transition: background-color 0.3s ease;
     margin-bottom: 3%;
+    margin-left: 10%;
 }
 .order-summary .buttons {
-    background-color: rgba(255, 255, 255, 0);
-    height: 60%;
+    background-color: #9b7e6500;
     box-shadow: none;
-    padding-left: 15%;
     border-radius: 0%;
     
 }
-    #Clear {
+.order-summary .buttons strong {
+    font-size: 1.2em;
+    
+}
+#Clear {
     background-color: white;
     color: #9B7E65;
 }
+#Clear {
+       transition:  background-color 0.3s ease;
 
-.order-summary button:hover {
+}
+
+.order-summary button:hover, #Clear:hover {
     background-color: #d98b473e;
 }
 
