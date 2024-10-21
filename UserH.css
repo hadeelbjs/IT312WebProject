@@ -55,7 +55,7 @@ table a:hover {
 .order-summary {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 40px;
+    margin-bottom: 4%;
     flex-direction: row;
     margin-left: 10%;
 }
@@ -123,11 +123,7 @@ table a:hover {
 }
 
 
-
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 40%) {
     .order-summary {
         flex-direction: column;
         align-items: center;
@@ -153,7 +149,7 @@ table a:hover {
 
 #CustomerBox a {
     display: block;
-    width: 300px;
+    width: 30%;
     text-align: center;
     text-decoration: none;
 }
@@ -173,17 +169,18 @@ table a:hover {
 }
 
 #CustomerBox h3 {
-    font-size: 22px;
-    margin-top: 15px;
+    font-size: 1.4em;
+    margin-top: 3%;
     color: #6c584c;
 }
 /* End Of Customer Page Styles*/
 
 footer {
-    padding: 20px;
+    /*background-color: #cebca6;*/
+    padding: 1.8%;
     text-align: center;
-    color: white;
-    margin-top: 50px;
+    /*color: #6c584c;*/
+    margin-top: 7%;
     margin-left: 0;
     margin-right: 0;
   
