@@ -15,10 +15,10 @@ body {
 
 footer {
     background-color: #6c584c;
-    padding: 1.25em; /* 20px */
+    padding: 20px; /* 20px */
     text-align: center;
     color: white;
-    margin-top: 3.125em; /* 50px */
+    margin-top: 50px; /* 50px */
     margin-left: 0;
     margin-right: 0;
 }
@@ -601,19 +601,26 @@ ul.breadcrumb {
 
 
 .review-item.review1 {
-    background-image: url('images/artworks.jpg'); /* Replace with your image path */
+    background-image: url('images/w520_q80 (1).avif'); 
+    background-size:20em
+
 }
 
 .review-item.review2 {
-    background-image: url('images/cartlinkicon.jpg'); /* Replace with your image path */
+    background-image: url('images/w220_q80 (1).avif'); 
+    background-size:20em
 }
 
 .review-item.review3 {
-    background-image: url('path_to_image3.jpg'); /* Replace with your image path */
+    background-image: url('images/white-hydrangeas.webp'); 
+    background-size:20em
+
 }
 
 .review-item.review4 {
-    background-image: url('path_to_image3.jpg'); /* Replace with your image path */
+    background-image: url('images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp'); 
+    background-size:20em
+
 }
 
 
