@@ -6,7 +6,6 @@ body {
     background-color: #f5ebe0;
     color: #9B7E65; 
     padding-top: 5em; 
-    margin: 0%;
 }
 
 
@@ -677,6 +676,7 @@ ul.breadcrumb {
     margin-bottom: 15px;
     font-size: 18px;
     color: #6c584c;
+    text-align: left;
 }
 
 .image-placeholder {
