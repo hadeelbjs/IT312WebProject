@@ -67,16 +67,15 @@ main {
 }
 
 .vision-container {
-    text-align: center;
-    padding: 3.75em; /* 60px */
-    border-radius: 0.9375em; /* 15px */
+    margin-top: 50px;
 }
 
 .vision-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    display: flex;
+    flex-direction: row;
     gap: 30px;
     margin-top: 30px;
+    
 }
 
 .vision-item {
@@ -89,7 +88,7 @@ main {
 .vision-icon {
     width: 70px;
     height: auto;
-    margin-bottom: 15px; 
+    margin-bottom: 7px; 
 }
 
 .vision-item h3 {
@@ -104,10 +103,6 @@ main {
     line-height: 1.5; 
 
 } 
-
-.vision-item:hover {
-    transform: translateY(-5px) scale(1.02); 
-}
 
 
 .Breadcrumb {
@@ -271,28 +266,27 @@ main {
 .categories-section {
     margin-top: 50px;
     text-align: center;
-    
 }
 
 .categories-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25em; /* 20px */
-    margin-top: 1.875em; /* 30px */
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    gap: 1.25em; 
+    flex-wrap: wrap; 
 }
 
 .category-item {
     position: relative;
     background-color: white;
     color: white;
-    padding: 10em; /* 160px */
+    padding: 6em; /* Adjust as needed */
     text-align: center;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
     transition: transform 0.3s ease; 
-
+    flex: 0 1 200px; /* Set a minimum width for each item */
+    max-width: 100%; /* Prevent overflowing */
 }
+
 
 .category-item:hover {
     transform: scale(1.03); 
