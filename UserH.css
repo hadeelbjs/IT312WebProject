@@ -1,3 +1,8 @@
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
 /* Cart Page Styles*/
 
 table img {
@@ -55,7 +60,7 @@ table a:hover {
 .order-summary {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     flex-direction: row;
     margin-left: 10%;
 }
@@ -81,7 +86,7 @@ table a:hover {
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 7cap;
     transition: background-color 0.3s ease;
     margin-bottom: 3%;
     margin-left: 10%;
@@ -131,7 +136,6 @@ table a:hover {
 
     .order-summary div {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     
@@ -180,12 +184,12 @@ footer {
     padding: 1.8%;
     text-align: center;
     /*color: #6c584c;*/
-    margin-top: 7%;
+    margin-top: 2.4%;
     margin-left: 0;
     margin-right: 0;
   
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0.4% 0;
 }
