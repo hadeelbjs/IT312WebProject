@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make-deleteOffer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        ul.breadcrumb {
+            margin-top: 50px;
+            padding: 10px 16px;
+            list-style: none;
+        }
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color:  #9B7E65;
+            content: ">";
+        }
+        ul.breadcrumb li a {
+            color:  #9B7E65;
+            text-decoration: none;
+        }
+        ul.breadcrumb li a:hover {
+            color:  #6c584c;
+            text-decoration: underline;
+        }
+
+        
+        .offer-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .offer-container img {
+            width: 150px;
+            height:150px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 10%;
+        }
+
+        .offer-details {
+            text-align:left;
+            flex-grow: 1;
+            background-color: #f5ebe0;
+        }
+
+        .offer-details h3 {
+            text-align:left;
+            margin: 0;
+            color: #3d3838;
+        }
+        .offer-details p{
+            text-align:left;
+            margin: 0;
+            margin-top:12px; ;
+        }
+
+        .offer-actions {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+     
+        .new-offer-form {
+            margin-top: 30px;
+            padding: 20px;
+        }
+
+        .new-offer-form input[type="text"],
+        .new-offer-form input[type="number"] {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .new-offer-form input[type="file"] {
+            margin: 10px 0;
+        }
+
+        .new-offer-form button {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+    
+        #delete {
+            display: block;
+            margin: 20px auto; 
+            padding: 10px 20px;
+            background-color: #9B7E65;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #delete:hover {
+            background-color: #9B7E65;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;">
+            </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="artworks.html">Artworks</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li>Seller Dashboard</li>
+            <li>Make/Delete Offer</li>
+        </ul>
+    </header>
+
+
+    <section>
+        <div class="offer-container">
+            <input type="checkbox"> 
+            <img src="images/offer1.jpg" alt="Offer Image">
+            <div class="offer-details">
+                <h3>Offer Name</h3>
+                <p>Discount: 20%</p>
+            </div>
+        </div>
+        <div class="offer-container">
+            <input type="checkbox"> 
+            <img src="images/offer4.jpg" alt="Offer Image">
+            <div class="offer-details">
+                <h3>Offer Name</h3>
+                <p>Discount: 30%</p>
+            </div>
+        </div>
+
+        <button id="delete">Delete Selected Offers</button> 
+    </section>
+
+   
+    <section class="new-offer-form">
+        <h2>Add a New Offer</h2>
+        <input type="file" name="offerImage" accept="image/*">
+        <input type="text" name="offerName" placeholder="Offer Name">
+        <input type="number" name="discountPercentage" placeholder="Discount Percentage %">
+        <button>Add</button>
+    </section>
+</body>
+</html>
