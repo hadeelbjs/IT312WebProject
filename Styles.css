@@ -1,8 +1,4 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+
 
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
@@ -10,17 +6,23 @@ body {
     background-color: #f5ebe0;
     color: #9B7E65; 
     padding-top: 5em; 
+    margin: 0;
 }
 
 
 footer {
-    background-color: #6c584c;
-    padding: 20px; /* 20px */
+    background-color: #cebca6;
+    padding: 1.8%;
     text-align: center;
-    color: white;
-    margin-top: 50px; /* 50px */
+    /*color: #6c584c;*/
+    margin-top: 2.4%;
     margin-left: 0;
     margin-right: 0;
+  
+}
+
+footer p {
+    margin: 0.4% 0;
 }
 
 footer img {
@@ -40,8 +42,8 @@ main {
     color: white;
     padding: 0.3125em; /* 5px */
     position: fixed; 
-    top: 0; 
-    left: 0; 
+    top: 0%; 
+    left: 0%; 
     width: 100%; 
     z-index: 1000; 
 }
@@ -73,6 +75,7 @@ main {
 
 .vision-container {
     text-align: center;
+    box-sizing: border-box;
     padding: 3.75em; /* 60px */
     border-radius: 0.9375em; /* 15px */
 }
@@ -268,6 +271,7 @@ main {
 .categories-section {
     margin-top: 3.125em; /* 50px */
     text-align: center;
+    
 }
 
 .categories-container {
@@ -275,13 +279,14 @@ main {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25em; /* 20px */
     margin-top: 1.875em; /* 30px */
+ 
 }
 
 .category-item {
     position: relative;
     background-color: white;
     color: white;
-    padding: 10em; /* 160px */
+    padding: 5em; /* 160px */
     text-align: center;
     border-radius: 0.625em; /* 10px */
     background-size: cover;
@@ -315,7 +320,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-size: 100%; 
+    background-size: cover;
     background-position: center;
     border-radius: 0.625em; /* 10px */
     z-index: 0;
@@ -374,7 +379,7 @@ ul.breadcrumb {
         font-size: 60px;
         position: absolute;
         bottom: 8px;
-        left: 40px;
+        left: 5%;
       }
 
       .card {
