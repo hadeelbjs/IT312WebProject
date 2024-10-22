@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vintage Vault Category</title>
+    <title>Clothing</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body style="padding-top: 10px">
@@ -21,7 +21,7 @@
                 <li><a href="sellerdashboard.html">Seller Dashboard</a></li>
                 <li><a href="clothing.html">Clothing</a></li>
                 <li><a href="artworks.html">Artworks</a></li>
-                <li><a href="#furniture">Furniture</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
@@ -37,15 +37,20 @@
         <img src="images/clothing.JPEG" alt="clothing" style="width: 100%;">
         <div class="category-bottom-left">Clothing</div>
     </div>
-
-      <select id="sort-options" class="sort-by">
-          <optgroup label="Sort By">
-              <option value="recommended">Recommended</option>
-              <option value="newest">Newest</option>
-              <option value="low-high">Price Low - High</option>
-              <option value="high-low">Price High - Low</option>
-          </optgroup>
-      </select>
+   
+    <select id="sort-options" class="sort-by">
+        <optgroup label="Sort By">
+            <option value="recommended">Recommended</option>
+        </optgroup>
+        <optgroup label="Rating">
+          <option value="high-rating">Highest Rate</option>
+          <option value="low-rating">Lowest Rate</option>
+      </optgroup>
+        <optgroup label="Price">
+            <option value="low-high">Price Low - High</option>
+            <option value="high-low">Price High - Low</option>
+        </optgroup>
+    </select>
 
 <div class="clothing-container">
 
