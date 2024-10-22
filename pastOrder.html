@@ -5,127 +5,122 @@
 <title> Past Order </title>
 <link rel="stylesheet" href="Styles.css">
 <style>
-    body{
-        font-family: Arial , sans-serif;
-        margin: 40px 20px;
-        padding: 20px;
-    }
-    #orderH{
+.container {
+     overflow-y:auto;
+     padding:20px;
+     max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+        
+         
+  }
+  #orderH{
             text-align: center;
             margin-top: 40px;
             margin-bottom: 20px;
             color: #333;
         }
-        .order-list {
-            max-width: 1200px;
-            margin: auto;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .order-item {
-            border-bottom: 1px solid #ddd;
-            padding: 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .order-item:last-child {
-            border-bottom: none;
-        }
-        .order-info {
-            flex-grow: 1;
-        }
-        .order-info h3 {
-            margin: 0;
-            font-size: 1.1em;
-            color: #686262;//
-        }
-        .order-details {
-            color: #666;
-            font-size: 0.9em;
-        }
-        .order-total {
-            font-weight: bold;
-            color: #333;
-        }
-        @media (max-width: 600px) {
-            .order-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .order-total {
-                margin-top: 5px;
-                font-size: medium;
-            }
-      
-    </style>
+  .order-item {
+    border: 1px solid #ccc;
+    padding: 40px;
+    margin-bottom: 12px;
+    background-color: #f5f5f5;
+    width: 90%;
+    height: 30%;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-info h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  
+  .order-info p {
+    font-family: Arial , sans-serif;
+    margin: 5px 0;
+    font-size: 14px;
+  }
+  
+  .order-total {
+    font-size: 17px
+    margin-right: 5px;;
+    font-weight: bold;
+    
+  }
+  </style>
 
 </head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" target="_blank"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
-                </a>
-            </div>
-            <h1>Vintage Vault</h1>
-            <ul>
-                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                <li><a href="#seller-dashboard">Seller Dashboard</a></li>
-                <li><a href="#categories">Product Categories</a></li>
-                <li><a href="#cart">Cart</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class ='Breadcrumb' ><p style="font-size:large ; font-style: bold;"><a href="index.html">Home </a>><a href="customerDashboard.html"> Customer Dashboard</a> > Past Order</p></div>
-    <h1 id="orderH">Past Orders</h1>
-    <div class="order-list">
-        <div class="order-item">
-            <div class="order-info">
-                <h3>Order #12345</h3>
-                <div class="order-details">Date: 2023-10-01</div>
-                <div class="order-details">Time: 10:00 AM</div>
-            </div>
-            <div class="order-total">$45.00</div>
-        </div>
-        <div class="order-item">
-            <div class="order-info">
-                <h3>Order #12346</h3>
-                <div class="order-details">Date: 2023-09-25</div>
-                <div class="order-details">Time: 8:49 PM</div>
-            </div>
-            <div class="order-total">$30.00</div>
-        </div>
-        <div class="order-item">
-            <div class="order-info">
-                <h3>Order #12347</h3>
-                <div class="order-details">Date: 2023-09-10</div>
-                <div class="order-details">Time: 1:43 AM</div>
-            </div>
-            <div class="order-total">$20.00</div>
-        </div>
-        <div class="order-item">
-            <div class="order-info">
-                <h3>Order #12397</h3>
-                <div class="order-details">Date: 2022-10-10</div>
-                <div class="order-details">Time: 2:15 PM</div>
-            </div>
-            <div class="order-total">$90.00</div>
-        </div>
-        <div class="order-item">
-            <div class="order-info">
-                <h3>Order #12367</h3>
-                <div class="order-details">Date: 2022-03-10</div>
-                <div class="order-details">Time: 12:09 AM</div>
-               
-            </div>
-            <div class="order-total">30.00</div>
-        </div>
-    </div>
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" target="_blank"> 
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
+            </a>
+         </div>
+         <h1>Vintage Vault</h1>
 
+        <ul>
+            <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+            <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="artworks.html">Artworks</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    <div class="Breadcrumb">
+        <p><a href="index.html">Home</a> > <a href="customerDashboard.html">Customer Dashboard</a> > past Orders</p>
+    </div>
+   
+</header>
+    <h1 id="orderH">Past Orders</h1>
+    <body>
+        <div class="container">
+          <div class="order-item">
+            <div class="order-info">
+              <h3>Order #12345 <hr></h3>
+              <p>Date: 2023-10-01</p>
+              <p>Time: 10:00 AM</p>
+            </div>
+            <div class="order-total">SAR 45.00</div>
+          </div>
+        
+          <div class="order-item">
+            <div class="order-info">
+              <h3>Order #12346<hr></h3>
+              <p>Date: 2023-09-25</p>
+              <p>Time: 8:49 PM</p>
+            </div>
+            <div class="order-total">SAR 30.00</div>
+          </div>
+        
+          <div class="order-item">
+            <div class="order-info">
+              <h3>Order #12347<hr></h3>
+              <p>Date: 2023-09-10</p>
+              <p>Time: 1:43 AM</p>
+            </div>
+            <div class="order-total">SAR 20.00</div>
+          </div>
+        
+          <div class="order-item">
+            <div class="order-info">
+              <h3>Order #12397<hr></h3>
+              <p>Date: 2022-10-10</p>
+              <p>Time: 8:30 PM</p>
+            </div>
+            <div class="order-total">SAR 90.00</div>
+          </div>
+        </div>
+    
 </body>
 
 </html>
