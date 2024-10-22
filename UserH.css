@@ -1,3 +1,8 @@
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
 /* Cart Page Styles*/
 
 table img {
@@ -55,17 +60,20 @@ table a:hover {
 .order-summary {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 4%;
+    justify-content: space-around;
+    align-content: center;
+    margin-bottom: 2%;
     flex-direction: row;
-    margin-left: 10%;
+    line-height: 0.9em;
+   
 }
 
 .order-summary div {
     background-color: #fff;
     padding: 2%;
-    width: 50%;
+    width: 70%;
     height: 70%;
-    border-radius: 10px;
+    border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
 }
@@ -74,22 +82,25 @@ table a:hover {
 .order-summary button {
     font-family: Georgia, Garamond, Helvetica, Arial;
     padding: 2% 1%;
-    width: 60%;
+    width: 400px;
     height: 50%;
     font-size: 1em;
     background-color: #9B7E65;
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 7cap;
     transition: background-color 0.3s ease;
     margin-bottom: 3%;
-    margin-left: 10%;
 }
 .order-summary .buttons {
     background-color: #9b7e6500;
     box-shadow: none;
     border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     
 }
 .order-summary .buttons strong {
@@ -131,7 +142,6 @@ table a:hover {
 
     .order-summary div {
         width: 100%;
-        margin-bottom: 20px;
     }
 
     
@@ -180,12 +190,12 @@ footer {
     padding: 1.8%;
     text-align: center;
     /*color: #6c584c;*/
-    margin-top: 7%;
+    margin-top: 2.4%;
     margin-left: 0;
     margin-right: 0;
   
 }
 
 footer p {
-    margin: 5px 0;
+    margin: 0.4% 0;
 }
