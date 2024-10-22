@@ -60,17 +60,20 @@ table a:hover {
 .order-summary {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
     margin-bottom: 2%;
     flex-direction: row;
-    margin-left: 10%;
+    line-height: 0.9em;
+   
 }
 
 .order-summary div {
     background-color: #fff;
     padding: 2%;
-    width: 50%;
+    width: 70%;
     height: 70%;
-    border-radius: 10px;
+    border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
 }
@@ -79,7 +82,7 @@ table a:hover {
 .order-summary button {
     font-family: Georgia, Garamond, Helvetica, Arial;
     padding: 2% 1%;
-    width: 60%;
+    width: 400px;
     height: 50%;
     font-size: 1em;
     background-color: #9B7E65;
@@ -89,12 +92,15 @@ table a:hover {
     border-radius: 7cap;
     transition: background-color 0.3s ease;
     margin-bottom: 3%;
-    margin-left: 10%;
 }
 .order-summary .buttons {
     background-color: #9b7e6500;
     box-shadow: none;
     border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     
 }
 .order-summary .buttons strong {
