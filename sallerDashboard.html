@@ -90,13 +90,14 @@ h2 {
 }
 
 .product-image {
-    width: 100%;
-    height: 9.375em; /* 150px = 9.375em */
-    margin-bottom: 0.625em; /* 10px = 0.625em */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+width: 100%;
+height: 150px; /* 9.375em = 150px */
+margin-bottom: 10px; /* 0.625em = 10px */
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+
 }
 
 .product-card .product-image {
@@ -113,13 +114,14 @@ h2 {
 }
 
 .product-card p.name {
-    position: absolute;
-    top: 0.625em; /* 10px = 0.625em */
-    left: 0.625em; /* 10px = 0.625em */
-    font-size: 1em; /* 16px = 1em */
-    font-weight: normal;
-    color: black;
-    padding-bottom: 0.625em; /* 10px = 0.625em */
+position: relative;
+font-size: 1em; /* 16px = 1em */
+color: black;
+margin-bottom: 0.625em; /* 10px = 0.625em */
+padding-bottom: 0.0625em; /* 1px = 0.0625em */
+margin-top: 0.125em; /* 2px = 0.125em */
+text-align: left;
+
 }
 
 .product-card p.price {
@@ -137,14 +139,13 @@ h2 {
 
 .product-card p.description {
     margin-top: 1.25em; /* 20px = 1.25em */
-    margin-bottom: 1.5625em; /* 25px = 1.5625em */
-    font-size: 0.75em; /* 12px = 0.75em */
-    color: #555;
-    white-space: normal;
-    line-height: 1.4;
-    max-height: 4.2em;
-    overflow: hidden;
-    padding-bottom: 2.5em; /* 40px = 2.5em */
+margin-bottom: 1.5625em; /* 25px = 1.5625em */
+font-size: 0.875em; /* 14px = 0.875em */
+color: #555;
+white-space: normal;
+line-height: 1.4;
+text-align: center;
+
 }
 ul.breadcrumb {
     margin-top: 50px; 
@@ -177,9 +178,8 @@ ul.breadcrumb {
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html" target="_blank"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;"> 
-                </a>            </div>
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo" style="width: 90px; height: auto;">
+            </div>
             <h1>Vintage Vault</h1>
             <ul>
                 <li><a href="customerDashboard.html">Customer Dashboard</a></li>
@@ -273,16 +273,6 @@ ul.breadcrumb {
     </main>
     <footer>
         <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-        <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
-        <p>Follow us on: 
-            <a href="https://www.instagram.com/VintageVault" target="_blank">
-                <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
-            </a> | 
-            <a href="https://www.x.com/VintageVault" target="_blank">
-                <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
-            </a>
-        </p>
-    </footer>
-    
+        <p>Contact us: VintageVault@.com</p>
     </body>
     </html>
