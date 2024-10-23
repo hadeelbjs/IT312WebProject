@@ -34,7 +34,7 @@ main {
     display: flex; 
     flex-wrap: wrap;
     align-items: center; 
-    background-color: #6c584c;
+    background-color: #6c584cdb;
     color: white;
     padding: 5px; 
     position: fixed; 
@@ -44,25 +44,26 @@ main {
     z-index: 1000; 
 }
 
+
 .logo img {
-    width: 90px; 
-    height: auto;
-    margin-right: 10px;
+  width: 6.25%; 
+  height: auto;
+  margin-right: 0.7%; 
 }
 
 .navbar h1 {
-    margin-right: 20px; 
+  margin-right: 1.4%; 
 }
 
 .navbar ul {
-    display: flex; 
-    flex-wrap: wrap;
-    list-style-type: none;
-    margin-left: auto; 
+  display: flex; 
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-left: auto; 
 }
 
 .navbar li {
-    margin: 0 15px; 
+  margin: 0 15px; 
 }
 
 .navbar a {
@@ -98,8 +99,11 @@ main {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5f3edc70e4848c8ee0a5b7268692f5f5d3dc5358
   .category-label a{
     color:  white;
     text-decoration: none;
