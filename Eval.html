@@ -62,18 +62,32 @@ textarea:focus {
 }
 .rating {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
-  margin-bottom: 20px;
 }
 
-.rating label {
-  margin: 0 5px;
+.rating > input {
+  display: none;
+}
+
+.rating > label {
+  position: relative;
+  width: 1.1em;
+  font-size: 2rem;
+  color: #ddd;
   cursor: pointer;
 }
 
-.rating label img {
-  width: 30px;
-  height: 30px;
+.rating > label::before {
+  content: "★";
+  position: absolute;
+  opacity: 0;
+}
+
+.rating > label:hover:before,
+.rating > label:hover ~ label:before,
+.rating:not(:hover) > :checked ~ label:before {
+  opacity: 1 !important;
 }
 
 .upload-container {
@@ -153,30 +167,19 @@ textarea:focus {
         </select>
       </div>
       <div class="form-group">
-        <label>How do you rate this product?</label>
+        <label for="rating">How do you rate this product?</label>
         <div class="rating">
-          <label>
-            <input type="radio" name="rating" value="1" required>
-            <img src="images/emptystar.png" alt="Star 1">
-          </label>
-          <label>
-            <input type="radio" name="rating" value="2">
-            <img src="images/emptystar.png"alt="Star 2">
-          </label>
-          <label>
-            <input type="radio" name="rating" value="3">
-            <img src="images/emptystar.png" alt="Star 3">
-          </label>
-          <label>
-            <input type="radio" name="rating" value="4">
-            <img src="images/emptystar.png" alt="Star 4">
-          </label>
-          <label>
-            <input type="radio" name="rating" value="5">
-            <img src="images/emptystar.png" alt="Star 5">
-          </label>
+          <input type="radio" id="star5" name="rating" value="5" required>
+          <label for="star5">☆</label>
+          <input type="radio" id="star4" name="rating" value="4" required>
+          <label for="star4">☆</label>
+          <input type="radio" id="star3" name="rating" value="3" required>
+          <label for="star3">☆</label>
+          <input type="radio" id="star2" name="rating" value="2" required>
+          <label for="star2">☆</label>
+          <input type="radio" id="star1" name="rating" value="1" required>
+          <label for="star1">☆</label>
         </div>
-      </div>
       <div class="form-group">
         <label for="comments">Write Your Review:</label>
         <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..." required></textarea>
