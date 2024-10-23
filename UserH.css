@@ -60,7 +60,7 @@ table a:hover {
 .order-summary {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-content: center;
     margin-bottom: 2%;
     flex-direction: row;
