@@ -82,8 +82,8 @@ table a:hover {
 .order-summary button {
     font-family: Georgia, Garamond, Helvetica, Arial;
     padding: 2% 1%;
-    width: 400px;
-    height: 50%;
+    width: 25em;
+    height: 3em;
     font-size: 1em;
     background-color: #9B7E65;
     color: white;
@@ -114,6 +114,10 @@ table a:hover {
 #Clear {
        transition:  background-color 0.3s ease;
 
+}
+#Checkout{
+    margin-bottom: 4%;
+   
 }
 
 .order-summary button:hover, #Clear:hover {
