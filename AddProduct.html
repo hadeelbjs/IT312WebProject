@@ -12,7 +12,7 @@
 .AddProduct-container {
     max-width: 100%;
     margin: 2% auto;
-    padding: 20px;
+    padding: 25px;
     background-color: #f5ebe0;
 }
 
@@ -31,13 +31,14 @@
 
 .AddProduct-category {
     margin: bottom 5px; ;
-    border-radius: 8px;
-    border: 1px solid #6c584c;
+    
 }
 
 .image-upload, .AddProduct-category {
-    background-color: rgb(234, 212, 183);  /* NEED TO BE CHANGED  */
+    background-color: #f5ebe0;  /* NEED TO BE CHANGED  */
     padding: 0.3em 2em 0.7em 2em;
+    border-radius: 8px;
+    border: 0.15em solid #6c584c;
 }
 
 .AddProduct-category option {
@@ -46,9 +47,9 @@
 
 .AddProduct-product-info {
     background-color: #f5ebe0;
-    padding: 0.3em 2em;
+    padding: 0.3em 1.5em;
     border-radius: 8px;
-    border: 1px solid #6c584c;
+    border: 0.15em solid #6c584c;
     width: 194%;
     font-size: 1.3em;
 }
@@ -205,12 +206,12 @@
 
                             <li><div class="AddProduct-info-inline">
                                 <label for="price">Price</label>
-                                <input type="text" id="price" name="price" >
+                                <input type="number" id="price" name="price" >
                             </div></li>
 
                             <li><div class="AddProduct-info-inline">
                                 <label for="quantity">Quantity</label>
-                                <input type="text" id="quantity" name="quantity" >
+                                <input type="number" id="quantity" name="quantity" >
                             </div></li>
 
                         </ul>
