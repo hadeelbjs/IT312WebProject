@@ -21,31 +21,30 @@
     height: 20px;
     size:12px;
     margin-left: auto;
-    margin-right: 10px; /* Optional: add space between the checkbox and the container edge */
+    margin-right: 30px; /* Optional: add space between the checkbox and the container edge */
 }
         .offer-container img {
-            width: 150px;
-            height:150px;
+            width: 170px;
+            height:200px;
             object-fit: cover;
             margin-right: 20px;
-            border-radius: 10%;
+            border-radius: 5%;
+            margin-left: 20px;
         }
 
         .offer-details {
             text-align:left;
             flex-grow: 1;
             background-color: #f5ebe0;
+            margin-bottom: 50px;
         }
 
-        .offer-details h3 {
-            text-align:left;
-            margin: 0;
-            color: #3d3838;
-        }
         .offer-details p{
             text-align:left;
             margin: 0;
             margin-top:12px; ;
+            color: #3d3838;
+            
         }
 
         .offer-actions {
@@ -54,27 +53,38 @@
             margin-left: 20px;
         }
 
-     
         .new-offer-form {
     margin-top: 2px;
     padding: 20px;
     display: flex;
     align-items: flex-start; /* Align items to the top */
 }
-
-
-
-        .new-offer-form input[type="text"],
-        .new-offer-form input[type="number"] {
-            padding: 10px;
-            margin: 10px 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .new-offer-form .offer-inputs {
-    flex-grow: 1;
+.form-group {
+    margin-bottom: 15px;
 }
+
+.offer-inputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 10px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #3d3838;
+    margin-left: -5px;
+}
+
+
+.form-input {
+    padding: 10px;
+    margin: 0;
+    width: 250px; /* Adjust the width as needed */
+    box-sizing: border-box;
+}
+
         .image-plaseholder {
     height: 150px;
     background-color: #fff;
@@ -87,10 +97,7 @@
     margin-right: 20px;  /*Add space between the image and the text inputs */
 }
 
-.image-box {
-    text-align: center;
 
-}
     
         #button {
             display: block;
@@ -110,8 +117,12 @@
             background-color: #9B7E65;
         }
 
-        h1 {
-            text-align: left;}        
+        #labeladd{
+            text-align: left;
+            padding-left: 12px;
+            font-size: 20px;
+        
+        }       
 
     </style>
 </head>
@@ -132,9 +143,9 @@
             </ul>
         </nav>
         <div class="Breadcrumb">
-            <p><a href="index.html">Home</a> > <a href="sallerDashboard.html">saller Dashboard</a></p>
+            <p><a href="index.html">Home</a> > <a href="sallerDashboard.html">Saller Dashboard</a> > Make or Delete Offer</p>
         </div>
-    
+
     
     </header>
 
@@ -143,9 +154,9 @@
 
     <section>
       <div class="offer-container">
-    <img src="images/offer1.jpg" alt="Offer Image">
+    <img src="images\offer5.jpg" alt="Offer Image">
     <div class="offer-details">
-        <h3>Offer Name</h3>
+        <h3>Offer name: 20% OFF!!!</h3>
         <p>Discount: 20%</p>
     </div>
     <input type="checkbox"> <!-- Moved checkbox here -->
@@ -153,33 +164,38 @@
 <div class="offer-container">
     <img src="images/offer1.jpg" alt="Offer Image">
     <div class="offer-details">
-        <h3>Offer Name</h3>
-        <p>Discount: 20%</p>
+        <h3>Offer name: 50% OFF!!!</h3>
+        <p>Discount: 50%</p>
     </div>
     <input type="checkbox"> <!-- Moved checkbox here -->
 </div>
 
-        <button id="button" style="background-color: #9B7E65;">Delete Selected Offers</button> 
+        <button id="button">Delete Selected Offers</button> 
     </section>
 
     <hr>
-    <h1>Add a New Offer</h1>
+    <h1 id="labeladd">Add a New Offer</h1>
+
     <section class="new-offer-form">
-        
-        
         <div class="image-plaseholder">
             <div class="image-box">
-            <input type="file" name="offerImage" accept="image/*">
-        </div> </div>
-
+                <input type="file" name="offerImage" accept="image/*">
+            </div>
+        </div>
+    
         <div class="offer-inputs">
-            <label for="name">Name</label>
-            <input type="text" name="offerName">
-            <label for="name">discount Percentage %</label>
-            <input type="number" name="discountPercentage" >
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="offerName" class="form-input">
+            </div>
+            <div class="form-group">
+                <label for="discount">Discount Percentage %</label>
+                <input type="number" name="discountPercentage" class="form-input">
+            </div>
             <button id="button">Add</button>
         </div>
     </section>
+    
 
     <footer>
             <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
