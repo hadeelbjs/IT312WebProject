@@ -6,38 +6,23 @@
     <title>Make-deleteOffer</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        ul.breadcrumb {
-            margin-top: 50px;
-            padding: 10px 16px;
-            list-style: none;
-        }
-        ul.breadcrumb li {
-            display: inline;
-            font-size: 18px;
-        }
-        ul.breadcrumb li+li:before {
-            padding: 8px;
-            color:  #9B7E65;
-            content: ">";
-        }
-        ul.breadcrumb li a {
-            color:  #9B7E65;
-            text-decoration: none;
-        }
-        ul.breadcrumb li a:hover {
-            color:  #6c584c;
-            text-decoration: underline;
-        }
 
-        
-        .offer-container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 10px;
-            margin: 10px 0;
-        }
+.offer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px 0;
+}
 
+
+.offer-container input[type="checkbox"] {
+    width: 20px;  
+    height: 20px;
+    size:12px;
+    margin-left: auto;
+    margin-right: 10px; /* Optional: add space between the checkbox and the container edge */
+}
         .offer-container img {
             width: 150px;
             height:150px;
@@ -71,7 +56,7 @@
 
      
         .new-offer-form {
-            margin-top: 30px;
+            margin-top: 2px;
             padding: 20px;
         }
 
@@ -87,24 +72,17 @@
             margin: 10px 0;
         }
 
-        .new-offer-form button {
-            padding: 10px 20px;
-            background-color: black;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
     
         #button {
             display: block;
             margin: 20px auto; 
-            padding: 10px 50px;
-            font-size: 150%;
+            padding: 10px 30px;
+            font-size: 100%;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            background-color: #9B7E65;
         }
 
      
@@ -113,9 +91,8 @@
             background-color: #9B7E65;
         }
 
-        h2 {
-            text-align: left;
-        }
+        h1 {
+            text-align: left;}        
 
     </style>
 </head>
@@ -135,33 +112,33 @@
                 <li><a href="cart.html">Cart</a></li>
             </ul>
         </nav>
-        <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-            <li>Make/Delete Offer</li>
-        </ul>
+        <div class="Breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="sallerDashboard.html.html">saller Dashboard</a></p>
+        </div>
+    
+    
     </header>
 
     <hr>
 
 
     <section>
-        <div class="offer-container">
-            <input type="checkbox"> 
-            <img src="images/offer1.jpg" alt="Offer Image">
-            <div class="offer-details">
-                <h3>Offer Name</h3>
-                <p>Discount: 20%</p>
-            </div>
-        </div>
-        <div class="offer-container">
-            <input type="checkbox"> 
-            <img src="images/offer4.jpg" alt="Offer Image">
-            <div class="offer-details">
-                <h3>Offer Name</h3>
-                <p>Discount: 30%</p>
-            </div>
-        </div>
+      <div class="offer-container">
+    <img src="images/offer1.jpg" alt="Offer Image">
+    <div class="offer-details">
+        <h3>Offer Name</h3>
+        <p>Discount: 20%</p>
+    </div>
+    <input type="checkbox"> <!-- Moved checkbox here -->
+</div>
+<div class="offer-container">
+    <img src="images/offer1.jpg" alt="Offer Image">
+    <div class="offer-details">
+        <h3>Offer Name</h3>
+        <p>Discount: 20%</p>
+    </div>
+    <input type="checkbox"> <!-- Moved checkbox here -->
+</div>
 
         <button id="button" style="background-color: #9B7E65;">Delete Selected Offers</button> 
     </section>
@@ -169,11 +146,11 @@
     <hr>
    
     <section class="new-offer-form">
-        <h2>Add a New Offer</h2>
+        <h1>Add a New Offer</h1>
         <input type="file" name="offerImage" accept="image/*">
         <input type="text" name="offerName" placeholder="Offer Name">
         <input type="number" name="discountPercentage" placeholder="Discount Percentage %">
-        <button id="button"style="background-color: black;">Add</button>
+        <button id="button">Add</button>
     </section>
 </body>
 </html>
