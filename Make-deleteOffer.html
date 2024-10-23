@@ -75,15 +75,21 @@
         .new-offer-form .offer-inputs {
     flex-grow: 1;
 }
-        #upload-image {
+        .image-plaseholder {
     height: 150px;
     background-color: #fff;
     display: flex;
+    padding: 1em 0.2em 1em 1.5em;
     align-items: center;
     justify-content: center;
     border: 2px dashed #9B7E65;
-    width: 200px; /* Set the width of the image upload area */
-    margin-right: 20px; /* Add space between the image and the text inputs */
+    width: 230px;  /*Set the width of the image upload area */
+    margin-right: 20px;  /*Add space between the image and the text inputs */
+}
+
+.image-box {
+    text-align: center;
+
 }
     
         #button {
@@ -157,12 +163,15 @@
     </section>
 
     <hr>
-   
+    <h1>Add a New Offer</h1>
     <section class="new-offer-form">
-        <h1>Add a New Offer</h1>
-        <div id="upload-image">
+        
+        
+        <div class="image-plaseholder">
+            <div class="image-box">
             <input type="file" name="offerImage" accept="image/*">
-        </div>
+        </div> </div>
+
         <div class="offer-inputs">
             <input type="text" name="offerName" placeholder="Offer Name">
             <input type="number" name="discountPercentage" placeholder="Discount Percentage %">
