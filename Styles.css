@@ -132,17 +132,14 @@ main {
   margin-top: 20px;
 }
 
-/* Fallback: Default browser scrollbars */
 .offer-scroll-container {
   display: flex;
   overflow-x: auto;
   gap: 20px;
   padding: 20px;
   max-width: 100%;
-  
-  /* Firefox: Custom scrollbar */
-  scrollbar-width: thin; /* makes the scrollbar thin */
-  scrollbar-color: #6c584c #f5ebe0; /* Custom scrollbar color for Firefox */
+  scrollbar-width: thin; 
+  scrollbar-color: #6c584c #f5ebe0; 
 }
 
 
@@ -330,26 +327,26 @@ main {
 }
 
 .reviews-section {
-      padding: 40px 20px;
-      background-color: #f5ebe0; 
-      text-align: center;
-      overflow: hidden;
+  padding: 40px 20px;
+  background-color: #f5ebe0; 
+  text-align: center;
+  overflow: hidden;
 }
-  
+
 .reviews-container {
-      display: flex;
-      flex-direction: row;
-      animation: scroll 15s linear infinite;
-      white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  animation: scroll 15s linear infinite;
+  white-space: nowrap;
 }
 
 .review-item h3 {
-      position: absolute;
-      padding: 10px;
-      color: white;
-      z-index: 3; 
+  position: absolute;
+  padding: 10px;
+  color: white;
+  z-index: 3; 
 }
-  
+
 .review-item {
   background-size: cover; 
   background-position: center;
@@ -360,7 +357,8 @@ main {
   min-height: 200px;
   margin-right: 20px;
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
+  z-index: 2; 
 }
 
 .review-item::before {
@@ -386,29 +384,56 @@ main {
   z-index: 2; 
 }
 
+.star-rating {
+  font-size: 1.9rem; 
+  color: rgb(255, 229, 79); 
+  margin-top: 10px; 
+  margin-left: 390px; 
+  position: relative; 
+  z-index: 4; 
+}
 
 .review-item.review1 {
   background-image: url('images/w520_q80 (1).avif'); 
-  background-size:20em
-
+  background-size: 20em;
 }
 
 .review-item.review2 {
   background-image: url('images/w220_q80 (1).avif'); 
-  background-size:20em
+  background-size: 20em;
 }
 
 .review-item.review3 {
   background-image: url('images/white-hydrangeas.webp'); 
-  background-size:20em
-
+  background-size: 20em;
 }
 
 .review-item.review4 {
   background-image: url('images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp'); 
-  background-size:20em
-
+  background-size: 20em;
 }
+
+
+.review-item.review1 {
+  background-image: url('images/w520_q80 (1).avif'); 
+  background-size: 20em;
+}
+
+.review-item.review2 {
+  background-image: url('images/w220_q80 (1).avif'); 
+  background-size: 20em;
+}
+
+.review-item.review3 {
+  background-image: url('images/white-hydrangeas.webp'); 
+  background-size: 20em;
+}
+
+.review-item.review4 {
+  background-image: url('images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp'); 
+  background-size: 20em;
+}
+
  
 @keyframes scroll {
       0% {
