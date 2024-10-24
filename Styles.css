@@ -1,5 +1,12 @@
 
-
+   h2 {
+      margin-top: 0;
+        margin-bottom: 2%;
+        text-align: center;
+        font-size: 2em;
+        color: #9B7E65;
+    }
+    
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
     line-height: 1.6;
@@ -12,22 +19,23 @@ body {
 
 footer {
     background-color: #6c584c;
-    padding: 20px; /* 20px */
+    padding: 1%; /* 20px */
     text-align: center;
     color: white;
-    margin-top: 50px; /* 50px */
+    margin-top: 6%; /* 50px */
     margin-left: 0;
     margin-right: 0;
 }
 
 footer img {
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 0.8%;
 }
 
 main {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+  
 }
 
 .navbar {
@@ -36,7 +44,7 @@ main {
     align-items: center; 
     background-color: #6c584cdb;
     color: white;
-    padding: 5px; 
+    padding: 0.8%; 
     position: fixed; 
     top: 0; 
     left: 0; 
@@ -63,7 +71,7 @@ main {
 }
 
 .navbar li {
-  margin: 0 15px; 
+  margin: 0 1.3vw; 
 }
 
 .navbar a {
@@ -75,15 +83,40 @@ main {
     color: #3b2f28;
 }
 
+.Breadcrumb {
+  margin-bottom: 0%;
+  text-align: left;
+  margin-top: 4%;
+  margin-left: 5%;
+}
+
+.Breadcrumb p {
+  font-size: 130%;
+  color: #9B7E65;
+  font-weight:normal;
+}
+
+.Breadcrumb a {
+  color: #9B7E65;
+  text-decoration: none;
+}
+
+.Breadcrumb a:hover {
+  color: #6c584c;
+  text-decoration: underline;
+}
+
+
 .vision-container {
   position: relative;
-  height: 400px;
+  height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   margin-top: 1.9%;
 }
+
 
 .vision-content {
   position: relative;
@@ -92,6 +125,7 @@ main {
 }
 
 .vision-content img {
+  
   width: 100%;
   height: 100%;
   object-fit: cover; 
@@ -425,30 +459,6 @@ main {
 }
 
 
-.Breadcrumb {
-    margin-bottom: 2%;
-    text-align: left;
-    margin-top: 4%;
-    margin-left: 5%;
-}
-
-.Breadcrumb p {
-    font-size: 130%;
-    color: #9B7E65;
-    font-weight:normal;
-}
-
-.Breadcrumb a {
-    color: #9B7E65;
-    text-decoration: none;
-}
-
-.Breadcrumb a:hover {
-    color: #6c584c;
-    text-decoration: underline;
-}
-
-
 
   .category-label a{
     color:  white;
@@ -599,10 +609,7 @@ main {
         background-color: rgb(177, 174, 174)
     }
     
-    h2 {
-        margin-bottom: 10px;
-    }
-    
+ 
     .product-list {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -636,11 +643,6 @@ main {
     margin: 20px;
 }
 
-h2 {
-    text-align: center;
-    font-size: 2em;
-    color: #9B7E65;
-}
 
 
 

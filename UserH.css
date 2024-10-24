@@ -1,8 +1,4 @@
-main{
-    margin-left: 5%;
-    margin-right: 5%;
 
-}
 /* Cart Page Styles*/
 
 table img {
@@ -189,17 +185,3 @@ table a:hover {
 }
 /* End Of Customer Page Styles*/
 
-footer {
-    /*background-color: #cebca6;*/
-    padding: 1.8%;
-    text-align: center;
-    /*color: #6c584c;*/
-    margin-top: 2.4%;
-    margin-left: 0;
-    margin-right: 0;
-  
-}
-
-footer p {
-    margin: 0.4% 0;
-}
