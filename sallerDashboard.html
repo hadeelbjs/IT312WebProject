@@ -6,155 +6,145 @@
     <title>sallerDashboard</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-   .dashboard-container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1.25em auto; /* 20px = 1.25em */
-    padding: 0;
-    max-width: 75em; /* 1200px = 75em */
-    width: 100%;
-}
-.seller-background {
-    width: 100%; /* Full width */
-    height: 18.75em; /* 300px = 18.75em */
-    background-image: url("images/Black Minimalist Business Name Twitter Header.svg");
-    background-position: center;
-    border-radius: 0.625em 0.625em 0 0; /* 10px = 0.625em */
-}
-.actions {
-    display: flex; /* This puts the buttons side by side */
-    justify-content: center; /* Centers the buttons */
-    align-items: center; /* Vertically aligns the buttons */
-    gap: 1em; /* Adds a small space between the buttons */
-    margin-top: 2.5em; /* Keeps some margin at the top */
-}
 
-.actions button {
-    font-family: Georgia, Garamond, Helvetica, Arial;
-    padding: 0.9375em 2em; /* Adjust padding for a balanced button size */
-    font-size: 1em;
-    width: 20em;
-    background-color: #9B7E65;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 7cap; /* Rounded corners */
-    transition: background-color 0.3s ease;
-}
+    .box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1.25em auto; /* 20px = 1.25em */
+            padding: 0;
+            max-width: 75em; /* 1200px = 75em */
+            width: 100%;
+        }
 
-.actions button:hover {
-    background-color: #d98b473e;
-}
+        .seller-background {
+            width: 100%;
+            height: 18.75em; /* 300px = 18.75em */
+            background-image: url("images/Black Minimalist Business Name Twitter Header.svg");
+            background-position: center;
+            border-radius: 0.625em 0.625em 0 0; /* 10px = 0.625em */
+        }
 
-.actions button a {
-    color: white;
-    text-decoration: none;
-}
+        
+        .actions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3em;
+        margin-top: 2.5em;
+    }
 
-.actions button a:hover {
-    color: #f5f5f5;
-}
+    .actions .btn {
+        display: inline-block;
+        padding: 0.7375em 2em;
+        font-size: 1em;
+        width: 10em;
+        background-color: #9B7E65;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-radius: 2cap;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
+    .actions .btn:hover {
+        background-color: #d98b473e;
+    }
+        h2 {
+            text-align: center;
+            margin-bottom: 0.9375em; /* 15px = 0.9375em */
+            padding-top: 0.75em; /* 12px = 0.75em */
+        }
 
+        /* Product List Styling */
+        .products {
+            display: flex;
+            overflow-x: auto;
+            gap: 1.25em; /* 20px = 1.25em */
+            max-width: 100%;
+            padding: 1.25em; /* 20px = 1.25em */
+        }
 
-h2 {
-    text-align: center;
-    margin-bottom: 0.9375em; /* 15px = 0.9375em */
-    padding-top: 0.75em; /* 12px = 0.75em */
-}
-.product-list {
-    display: flex;
-    overflow-x: auto;
-    gap: 1.25em; /* 20px = 1.25em */
-    max-width: 100%;
-    padding: 1.25em; /* 20px = 1.25em */
-}
+        .products::-webkit-scrollbar {
+            height: 0.625em; /* 10px = 0.625em */
+        }
 
-.product-list::-webkit-scrollbar {
-    height: 0.625em; /* 10px = 0.625em */
-}
-.product-list::-webkit-scrollbar-thumb {
-    background-color: #9B7E65;
-    border-radius: 0.625em; /* 10px = 0.625em */
-}
+        .products::-webkit-scrollbar-thumb {
+            background-color: #9B7E65;
+            border-radius: 0.625em; /* 10px = 0.625em */
+        }
 
-.product-card {
-    position: relative;
-    padding: 0.625em; /* 10px = 0.625em */
-    border: 0.0625em solid #ccc; /* 1px = 0.0625em */
-    border-radius: 0.625em; /* 10px = 0.625em */
-    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1); /* 4px = 0.25em, 8px = 0.5em */
-    min-width: 12.5em; /* 200px = 12.5em */
-    max-width: 12.5em; /* 200px = 12.5em */
-    height: auto;
-    background-color: white;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        /* Product Card Styling */
+        .product-box{
+            position: relative;
+            padding: 0.625em; /* 10px = 0.625em */
+            border: 0.0625em solid #ccc; /* 1px = 0.0625em */
+            border-radius: 0.625em; /* 10px = 0.625em */
+            box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1); /* 4px = 0.25em, 8px = 0.5em */
+            min-width: 12.5em; /* 200px = 12.5em */
+            max-width: 12.5em; /* 200px = 12.5em */
+            height: auto;
+            background-color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-.product-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2); /* 8px = 0.5em, 16px = 1em */
-}
+        .product-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2); /* 8px = 0.5em, 16px = 1em */
+        }
 
-.product-image {
-width: 100%;
-height: 9.375em; /* 9.375em = 150px */
-margin-bottom: 0.625; /* 0.625em = 10px */
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
+        .product-image {
+            width: 100%;
+            height: 9.375em; /* 150px = 9.375em */
+            margin-bottom: 0.625em; /* Added the correct unit */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
 
-}
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0.5em; /* 8px = 0.5em */
+        }
 
-.product-card .product-image {
-    margin-top: 1.875em; /* 30px = 1.875em */
-    height: 9.375em; /* 150px = 9.375em */
-    overflow: hidden;
-}
+        .product-box p.name {
+            position: relative;
+            font-size: 1em; /* 16px = 1em */
+            color: black;
+            margin-bottom: 0.625em; /* 10px = 0.625em */
+            padding-bottom: 0.0625em; /* 1px = 0.0625em */
+            margin-top: 0.125em; /* 2px = 0.125em */
+            text-align: left;
+        }
 
-.product-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5em; /* 8px = 0.5em */
-}
+        .product-box p.price {
+            position: absolute;
+            bottom: 0;
+            left: 0.625em; /* 10px = 0.625em */
+            font-size: 0.875em; /* 14px = 0.875em */
+            color: black;
+            margin-top: 0.625em; /* 10px = 0.625em */
+        }
 
-.product-card p.name {
-position: relative;
-font-size: 1em; /* 16px = 1em */
-color: black;
-margin-bottom: 0.625em; /* 10px = 0.625em */
-padding-bottom: 0.0625em; /* 1px = 0.0625em */
-margin-top: 0.125em; /* 2px = 0.125em */
-text-align: left;
+        .product-box p.price span {
+            margin-right: 0.3125em; /* 5px = 0.3125em */
+        }
 
-}
-
-.product-card p.price {
-    position: absolute;
-    bottom: 0;
-    left: 0.625em; /* 10px = 0.625em */
-    font-size: 0.875em; /* 14px = 0.875em */
-    color: black;
-    margin-top: 0.625em; /* 10px = 0.625em */
-}
-
-.product-card p.price span {
-    margin-right: 0.3125em; /* 5px = 0.3125em */
-}
-
-.product-card p.description {
-    margin-top: 1.25em; /* 20px = 1.25em */
-margin-bottom: 1.5625em; /* 25px = 1.5625em */
-font-size: 0.875em; /* 14px = 0.875em */
-color: #555;
-white-space: normal;
-line-height: 1.4;
-text-align: center;
-}
+        .product-box p.descript {
+            margin-top: 1.25em; /* 20px = 1.25em */
+            margin-bottom: 1.5625em; /* 25px = 1.5625em */
+            font-size: 0.875em; /* 14px = 0.875em */
+            color: #555;
+            white-space: normal;
+            line-height: 1.4;
+            text-align: center;
+            }
 </style>
 </head>
 <body>
@@ -178,80 +168,80 @@ text-align: center;
         </div>
     </header>
     <main>
-        <div class="dashboard-container">
+        <div class="box">
             <div class="seller-background"></div>
         </div>
         <h2>My Products</h2>
-        <div class="product-list">
-            <div class="product-card">
+        <div class="products">
+            <div class="product-box">
                 <p class="name">White hydrangeas</p>
                 <div class="product-image">
                     <img src="images/white-hydrangeas.webp" alt="White hydrangeas">
                 </div>
-                <p class="description">Elegant white hydrangeas artwork in a minimalist vase, perfect for home decor.</p>
+                <p class="descript">Elegant white hydrangeas artwork in a minimalist vase, perfect for home decor.</p>
                 <p class="price"><span>SAR</span>364</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Winter Candles</p>
                 <div class="product-image">
                     <img src="images/winter-candles.webp" alt="Winter Candles">
                 </div>
-                <p class="description">Warm winter candle artwork set with a vintage aesthetic for cozy evenings.</p>
+                <p class="descript">Warm winter candle artwork set with a vintage aesthetic for cozy evenings.</p>
                 <p class="price"><span>SAR</span>1,238</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Vase</p>
                 <div class="product-image">
-                    <img src="images/KO.webp" aly="Vase">
+                    <img src="images/KO.webp" alt="Vase">
                 </div>
-                <p class="description">Stylish ceramic vase to elevate your floral displays.</p>
+                <p class="descript">Stylish ceramic vase to elevate your floral displays.</p>
                 <p class="price"><span>SAR</span>538</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Lamp</p>
                 <div class="product-image">
                     <img src="images/Sarah-Rustic-White-Wash-Resin-Table-Lamp_-Set-of-2_1900x.webp" alt="Lamp">
                 </div>
-                <p class="description">Rustic table lamp with a whitewash finish for a charming glow.</p>
+                <p class="descript">Rustic table lamp with a whitewash finish for a charming glow.</p>
                 <p class="price"><span>SAR</span>410</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Entry Table</p>
                 <div class="product-image">
                     <img src="images/_mg_0205_1.jpg" alt="Entry Table">
                 </div>
-                <p class="description">Beautifully crafted entry table with intricate detailing.</p>
+                <p class="descript">Beautifully crafted entry table with intricate detailing.</p>
                 <p class="price"><span>SAR</span>1,264</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Jacket</p>
                 <div class="product-image">
                     <img src="images/w220_q80(2).avif" alt="Jacket">
                 </div>
-                <p class="description">Trendy black leather jacket for a chic, modern look.</p>
+                <p class="descript">Trendy black leather jacket for a chic, modern look.</p>
                 <p class="price"><span>SAR</span>1,238</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Skirt</p>
                 <div class="product-image">
                     <img src="images/w1020_q80(3).avif" alt="Skirt">
                 </div>
-                <p class="description">Embellished laser-cut crepe mini skirt.</p>
+                <p class="descript">Embellished laser-cut crepe mini skirt.</p>
                 <p class="price"><span>SAR</span>838</p>
             </div>
-            <div class="product-card">
+            <div class="product-box">
                 <p class="name">Dress</p>
                 <div class="product-image">
-                    <img src="images/w220_q80 (1) (1).avif" alt="ress">
+                    <img src="images/w220_q80 (1) (1).avif" alt="Dress">
                 </div>
-                <p class="description">Colorful and bold dress with unique patterns for festive occasions.</p>
+                <p class="descript">Colorful and bold dress with unique patterns for festive occasions.</p>
                 <p class="price"><span>SAR</span>1,238</p>
             </div>
         </div>
         <div class="actions">
-            <button><a href="AddProduct.html">Add Product</a></button>
-            <button><a href="Make-deleteOffer.html">Make/Delete Offer</a></button>
-         </div>
+            <a href="AddProduct.html" class="btn">Add Product</a>
+            <a href="Make-deleteOffer.html" class="btn">Make/Delete Offer</a>
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
