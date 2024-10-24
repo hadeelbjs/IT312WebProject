@@ -395,22 +395,22 @@ main {
 
 
 .review-item.review1 {
-  background-image: url('images/w520_q80 (1).avif'); 
+  background-image: url("images/w520_q80(1).avif"); 
   background-size: 15em;
 }
 
 .review-item.review2 {
-  background-image: url('images/w220_q80 (1).avif'); 
+  background-image: url("images/w220_q80(1).avif"); 
   background-size: 10em;
 }
 
 .review-item.review3 {
-  background-image: url('images/white-hydrangeas.webp'); 
+  background-image: url("images/white-hydrangeas.webp"); 
   background-size: 15em;
 }
 
 .review-item.review4 {
-  background-image: url('images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp'); 
+  background-image: url("images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp"); 
   background-size: 15em;
 }
 
