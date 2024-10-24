@@ -1,6 +1,7 @@
 
 /* Cart Page Styles*/
 
+
 table img {
     width: 40%;
     height: auto;
@@ -41,8 +42,6 @@ table td{
     
 }
 
-
-
 table a {
     color: #d9534f;
     text-decoration: none;
@@ -58,17 +57,16 @@ table a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
-    margin-bottom: 2%;
     flex-direction: row;
-    line-height: 0.9em;
+    line-height: 0.9vw;
    
 }
 
 .order-summary div {
     background-color: #fff;
     padding: 2%;
-    width: 70%;
-    height: 70%;
+    width: 60vw;
+    height: 10vw;
     border-radius: 1em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
@@ -78,46 +76,47 @@ table a:hover {
 .order-summary button {
     font-family: Georgia, Garamond, Helvetica, Arial;
     padding: 2% 1%;
-    width: 25em;
-    height: 3em;
-    font-size: 1em;
+    width: 30vw;
+    height: 4vw;
+    font-size: 1.5vw;
     background-color: #9B7E65;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 7cap;
     transition: background-color 0.3s ease;
-    margin-bottom: 3%;
 }
+
 .order-summary .buttons {
     background-color: #9b7e6500;
     box-shadow: none;
     border-radius: 0%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     flex-wrap: wrap;
+    align-content: center;
     
 }
 .order-summary .buttons strong {
-    font-size: 1.2em;
-    
+    font-size: 1.8vw; 
 }
 #Clear {
     background-color: white;
     color: #9B7E65;
+    transition:  background-color 0.3s ease;
 }
-#Clear {
-       transition:  background-color 0.3s ease;
 
-}
 #Checkout{
-    margin-bottom: 4%;
+    margin-bottom: 0.5vw;
    
 }
 
-.order-summary button:hover, #Clear:hover {
+ #Clear:hover {
     background-color: #d98b473e;
+}
+#Checkout:hover {
+    background-color: #CCD5AE;
 }
 
 .price {
@@ -133,19 +132,6 @@ table a:hover {
     margin-top: 5%;
 }
 
-
-@media (max-width: 40%) {
-    .order-summary {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .order-summary div {
-        width: 100%;
-    }
-
-    
-}
 /* End Of Cart Page Styles*/
 
 /* Customer Page Styles*/
@@ -153,13 +139,13 @@ table a:hover {
 #CustomerBox {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 7%;
+    margin-bottom: 7vw;
     flex-wrap: wrap;
 }
 
 #CustomerBox a {
     display: block;
-    width: 30%;
+    width: 25vw;
     text-align: center;
     text-decoration: none;
 }
@@ -179,8 +165,8 @@ table a:hover {
 }
 
 #CustomerBox h3 {
-    font-size: 1.4em;
-    margin-top: 3%;
+    font-size: 1.4vw;
+    margin-top: 3vw;
     color: #6c584c;
 }
 /* End Of Customer Page Styles*/

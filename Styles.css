@@ -3,7 +3,7 @@ h2 {
     margin-top: 0;
     margin-bottom: 2%;
     text-align: center;
-    font-size: 2em;
+    font-size: 2.7vw;
     color: #9B7E65;
 }
     
@@ -31,12 +31,16 @@ footer img {
     vertical-align: middle;
     margin-right: 0.8%;
 }
+footer p{
+  font-size: 1.3vw;
+}
 
 main {
     margin-left: 5%;
     margin-right: 5%;
   
 }
+
 
 .navbar {
   display: flex; 
@@ -96,7 +100,7 @@ margin: 0 2vw;
 }
 
 .Breadcrumb p {
-  font-size: 130%;
+  font-size: 1.6vw;
   color: #9B7E65;
   font-weight:normal;
 }
@@ -110,6 +114,31 @@ margin: 0 2vw;
   color: #6c584c;
   text-decoration: underline;
 }
+p{
+  font-size: 1.5vw;
+}
+h3{
+  font-size: 1.8vw;
+}
+
+.category-label a{
+  color:  white;
+  text-decoration: none;
+}
+
+
+  .category-container {
+      position: relative;
+      text-align: center;
+      color: #ffffff;
+    }
+
+  .category-bottom-left {
+      font-size: 60px;
+      position: absolute;
+      bottom: 8px;
+      left: 5%;
+    }
 
 
 
