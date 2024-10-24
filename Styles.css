@@ -6,7 +6,17 @@ h2 {
     font-size: 2.7vw;
     color: #9B7E65;
 }
-    
+ button {
+  font-family: Georgia, Garamond, Helvetica, Arial;
+  padding: 2% 1%;
+  font-size: 1.5vw;
+  background-color: #9B7E65;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 7cap;
+  transition: background-color 0.3s ease;
+}   
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
     line-height: 1.6;
@@ -25,10 +35,14 @@ footer {
     margin-top: 6%; /* 50px */
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 0;
+    
 }
 
 footer img {
     vertical-align: middle;
+    width: 3vw;
+    height: auto;
     margin-right: 0.8%;
 }
 footer p{

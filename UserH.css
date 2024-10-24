@@ -3,15 +3,15 @@
 
 
 table img {
-    width: 40%;
+    width: 18vw;
     height: auto;
     border-radius: 3%;
     margin: 0;
     padding: 0;
 }
 input[type='number']{
-    width: 27%;
-    font-size: 1.5em;
+    width: 3.8vw;
+    font-size: 1.5vw;
     text-align: center; 
     font-family: Georgia, Garamond, Helvetica, Arial;
     color: #9B7E65;
@@ -28,8 +28,9 @@ table {
 
 table th,
 table td {
-    padding: 1.6%;
+    padding: 1.6vw;
     text-align: left;
+    font-size: 1.4vw;
 }
 
 table th {
@@ -165,8 +166,8 @@ table a:hover {
 }
 
 #CustomerBox h3 {
-    font-size: 1.4vw;
-    margin-top: 3vw;
+    font-size: 2.2vw;
+    margin-top: 1vw;
     color: #6c584c;
 }
 /* End Of Customer Page Styles*/
