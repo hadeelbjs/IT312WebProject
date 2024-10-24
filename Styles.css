@@ -1,11 +1,11 @@
 
-   h2 {
-      margin-top: 0;
-        margin-bottom: 2%;
-        text-align: center;
-        font-size: 2em;
-        color: #9B7E65;
-    }
+h2 {
+    margin-top: 0;
+    margin-bottom: 2%;
+    text-align: center;
+    font-size: 2em;
+    color: #9B7E65;
+}
     
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
@@ -54,29 +54,32 @@ main {
 
 
 .logo img {
-width: 6.25%; 
+width: 6vw; 
 height: auto;
-margin-right: 0.7%; 
+margin-right: 0.7vw; 
 }
 
 .navbar h1 {
-margin-right: 1.4%; 
+margin-right: 1.4vw; 
+font-size: 2vw;
+
 }
 
 .navbar ul {
 display: flex; 
 flex-wrap: wrap;
 list-style-type: none;
-margin-left: auto; 
+padding: 0;
 }
 
 .navbar li {
-margin: 0 1.3vw; 
+margin: 0 2vw; 
 }
 
 .navbar a {
   color: white; 
   text-decoration: none;
+  font-size: 1.3vw;
 }
 
 .navbar a:hover {
@@ -87,7 +90,7 @@ margin: 0 1.3vw;
 .Breadcrumb {
   margin-bottom: 2%;
   text-align: left;
-  margin-top: 4%;
+  margin-top: 5vw;
   margin-left: 5%;
 }
 
@@ -107,39 +110,19 @@ margin: 0 1.3vw;
   text-decoration: underline;
 }
 
-.Breadcrumb {
-margin-bottom: 0%;
-text-align: left;
-margin-top: 4%;
-margin-left: 5%;
-}
 
-.Breadcrumb p {
-font-size: 130%;
-color: #9B7E65;
-font-weight:normal;
-}
 
-.Breadcrumb a {
-color: #9B7E65;
-text-decoration: none;
-}
 
-.Breadcrumb a:hover {
-color: #6c584c;
-text-decoration: underline;
+.card {
+      position: relative;
+      width: 22%; 
+      height: 25em;
+      margin: 1%; 
+      background-color: white;
+      border-radius: 0.5em;
+      box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.1);
+      overflow: hidden;
 }
-
-      .card {
-        position: relative;
-        width: 22%; 
-        height: 25em;
-        margin: 1%; 
-        background-color: white;
-        border-radius: 0.5em;
-        box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-    }
     
       .card img {
         width: 100%;
