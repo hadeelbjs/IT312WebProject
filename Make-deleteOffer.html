@@ -19,7 +19,6 @@
 .offer-box input[type="checkbox"] {
     width: 20px;  
     height: 20px;
-    size:12px;
     margin-left: auto;
     margin-right: 30px; 
 }
@@ -160,7 +159,7 @@
 
     <section>
       <div class="offer-box">
-    <img src="images\offer5.jpg" alt="Offer Image">
+    <img src="images/offer5.jpg" alt="Offer Image">
     <div class="offer-info">
         <h3>Offer name: 20% OFF!!!</h3>
         <p>Discount: 20%</p>
@@ -180,9 +179,12 @@
     </section>
 
     <hr>
-    <h1 id="label-add">Add a New Offer</h1>
+    
 
     <section class="form-box">
+        <div class="form-header">
+        <h2 id="label-add">Add a New Offer</h2>
+    </div>
         <div class="img-upload">
             <div class="image-box">
                 <input type="file" name="offerImage" accept="image/*">
@@ -192,11 +194,12 @@
         <div class="inputs-box">
             <div class="form-field">
                 <label for="name">Name</label>
-                <input type="text" name="offerName" class="form-input">
+                <input type="text" id="name" name="offerName" class="form-input">
+
             </div>
             <div class="form-field">
                 <label for="discount">Discount Percentage %</label>
-                <input type="number" name="discountPercentage" class="form-input">
+<input type="number" id="discount" name="discountPercentage" class="form-input">
             </div>
             <button id="add">Add</button>
         </div>
