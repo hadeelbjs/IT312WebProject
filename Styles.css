@@ -16,7 +16,11 @@ h2 {
   cursor: pointer;
   border-radius: 7cap;
   transition: background-color 0.3s ease;
-}   
+}  
+*{
+  font-family:  "Caudex", Georgia, Garamond, Helvetica, Arial;
+  
+} 
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
     line-height: 1.6;
