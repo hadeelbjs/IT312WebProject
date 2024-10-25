@@ -57,6 +57,7 @@ select:focus {
     outline: none; 
 }
 
+
 textarea {
   width: 70%;
   height: 20vh; /* Height as a percentage of the viewport height */
@@ -72,7 +73,7 @@ textarea:focus {
 .rating {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .rating > input {
@@ -102,16 +103,23 @@ textarea:focus {
 .upload-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 2%;
+  padding: 3vw;
+  background-color: #f5ebe093;
+  border: #6c584cdb dashed 0.1vw ;
+  width: 49vw;
+  height: 6vw;
 }
 
-.upload-container label {
-  font-size: 1.2vw;
-  background-color: #ccc;
+
+/*.upload-container label {
+  font-size: 1.5vw;
+  font-weight: medium;
   color: #333;
-  padding: 0.9% 1.4%;
-  border-radius: 0.4rem;
-}
+
+
+}*/
 
 
 #submitButton {
@@ -157,7 +165,7 @@ textarea:focus {
 <main>
 <h1 id="header">Product Evaluation</h1>
 <div class="container">
-    <form id="evaluationForm">
+    <form id="evaluationForm" method="post" action="">
       <div class="form-group">
         <label for="previousOrders">Select Order to Review:</label>
         <select id="previousOrders" name="previousOrders" required>
@@ -196,9 +204,9 @@ textarea:focus {
         <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..." required></textarea>
       </div>
       <div class="form-group">
+        <label for="uploadImage">Upload Image</label>
         <div class="upload-container">
-          <label for="uploadImage">Upload Image</label>
-          <input type="file" id="uploadImage" name="uploadImage" accept="image/*" style="display: none;">
+          <input type="file" id="uploadImage" name="uploadImage" accept="image/*">
         </div>
       </div>
       <button type="submit" id="submitButton">Submit Feedback</button>

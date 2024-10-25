@@ -60,6 +60,7 @@ table a:hover {
     align-content: center;
     flex-direction: row;
     line-height: 0.9vw;
+    margin-bottom: 2%;
    
 }
 
@@ -146,7 +147,7 @@ table a:hover {
 
 #CustomerBox a {
     display: block;
-    width: 25vw;
+    width: 300px;
     text-align: center;
     text-decoration: none;
 }
