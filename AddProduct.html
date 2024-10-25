@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AddProduct</title>
         <link rel="stylesheet" href="styles.css">
+        <link rel="icon" href="images/favicon-32x32.png" type="image/png">
         <style>
             
 
@@ -12,7 +13,7 @@
 .AddProduct-container {
     max-width: 100%;
     margin: 2% auto;
-    padding: 25px;
+    padding:  1.5625em;
     background-color: #f5ebe0;
 }
 
@@ -21,23 +22,23 @@
 .AddProduct-form-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 0.9375em;
 }
 
 .image-upload {
-    border-radius: 8px;
-    border: 1px solid #6c584c;
+    border-radius: 0.5em;
+    border: 0.0625em  solid #6c584c;
 }
 
 .AddProduct-category {
-    margin: bottom 5px; ;
+    margin-bottom:  0.3125em; ;
     
 }
 
 .image-upload, .AddProduct-category {
     background-color: #f5ebe0;  /* NEED TO BE CHANGED  */
     padding: 0.3em 2em 0.7em 2em;
-    border-radius: 8px;
+    border-radius: 0.5em;
     border: 0.15em solid #6c584c;
 }
 
@@ -48,26 +49,26 @@
 .AddProduct-product-info {
     background-color: #f5ebe0;
     padding: 0.3em 1.5em;
-    border-radius: 8px;
+    border-radius: 0.5em;
     border: 0.15em solid #6c584c;
     width: 194%;
     font-size: 1.3em;
 }
 
 .image-upload h2, .AddProduct-category h2, .AddProduct-product-info h2 {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375em;
     font-size: 1.7em;
     color: #6c584c;
     text-align: left;
 }
 
 .image-placeholder {
-    height: 150px;
+    height: 9.375em;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #fff;
+    border: 0.125em dashed #fff;
 }
 
 .image-box {
@@ -76,25 +77,25 @@
 
 .AddProduct-category select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.625em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
 }
 
 .AddProduct-product-info .AddProduct-info-row {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375em;
 }
 
 .AddProduct-product-info label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125em;
 }
 
 .AddProduct-product-info input {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 0.625em;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
 }
 
 .AddProduct-product-info  ul {
@@ -109,8 +110,8 @@
 #description {
     padding: 1em ;
     width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border: 0.0625em solid #ccc;
+    border-radius: 0.25em;
     resize: none;
 }
 
@@ -118,13 +119,13 @@
     grid-column: span 2;
     display: flex;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 0.625em;
 }
 
 .AddProduct-cancel-btn, .AddProduct-save-btn {
-    padding: 10px 20px;
+    padding: 0.625em 1.25em;
     border: none;
-    border-radius: 4px;
+    border-radius: 0.25em;
     cursor: pointer;
 }
 
@@ -178,7 +179,7 @@
                         <div class="image-placeholder">
                             <div class="image-box">
                                 <span>Upload new</span>
-                                <input type="file" name="image-upload" id="image-upload" />
+                                <input type="file" name="image-upload" id="image-upload" >
                             </div>
                         </div>
                     </div>
