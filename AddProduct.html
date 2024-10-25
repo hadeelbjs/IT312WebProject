@@ -1,261 +1,236 @@
 <!DOCTYPE HTML>
-<html lang = 'en'>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AddProduct</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="images/favicon-32x32.png" type="image/png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-        <style>
-            
-.AddProduct-container {
-    max-width: 100%;
-    margin: 2% auto;
-    padding:  1.5625em;
-    background-color: #f5ebe0;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AddProduct</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Caudex', serif;
+        }
+
+        .AddProduct-container {
+            max-width: 90%;
+            margin: 2% auto;
+            padding: 1.5625em;
+            background-color: #f5ebe0;
+        }
+
+        .AddProduct-form-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.9375em;
+        }
+
+        .image-upload, .AddProduct-category, .AddProduct-product-info {
+            background-color: #f5ebe0;
+            padding: 0.3em 2em 0.7em 2em;
+            border-radius: 0.5em;
+            border: 0.15em solid #6c584c;
+        }
+
+        .AddProduct-category option {
+            font-size: 150%;
+        }
+
+        .AddProduct-product-info {
+            font-size: 1.3em;
+        }
+
+        .image-upload h2, .AddProduct-category h2, .AddProduct-product-info h2 {
+            margin-bottom: 0.9375em;
+            font-size: 1.7em;
+            color: #6c584c;
+            text-align: left;
+        }
+
+        .image-placeholder {
+            height: 9.375em;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 0.125em dashed #fff;
+        }
+
+        .image-box {
+            text-align: center;
+        }
+
+        .AddProduct-category select, .AddProduct-product-info input, #description {
+            width: 100%;
+            padding: 0.625em;
+            border: 0.0625em solid #ccc;
+            border-radius: 0.25em;
+        }
+
+        .AddProduct-product-info ul {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            padding-left: 0.3em;
+        }
+
+        .AddProduct-info-row {
+        }
+
+        #description {
+            padding: 1em;
+            resize: none;
+        }
+
+        .AddProduct-form-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.625em;
+        }
+
+        .AddProduct-cancel-btn, .AddProduct-save-btn {
+            padding: 0.625em 1.25em;
+            border: none;
+            border-radius: 0.25em;
+            cursor: pointer;
+            align-self: center;
+        }
+
+        .AddProduct-cancel-btn {
+            background-color: #ccc;
+        }
+
+        .AddProduct-save-btn {
+            background-color: #6c584c;
+            color: #fff;
+        }
+
+        @media (min-width: 768px) {
+    .AddProduct-form-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .AddProduct-product-info {
+        width: 100%; 
+    }
 }
 
+@media (min-width: 992px) {
+    .AddProduct-form-container {
+        grid-template-columns: 1fr 1fr;
+    }
 
-
-.AddProduct-form-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.9375em;
-}
-
-.image-upload {
-    border-radius: 0.5em;
-    border: 0.0625em  solid #6c584c;
-}
-
-.AddProduct-category {
-    margin-bottom:  0.3125em; ;
+    .AddProduct-product-info {
+        width: 188%; /* to Increase the width on larger screens */
+    }
     
-}
-
-.image-upload, .AddProduct-category {
-    background-color: #f5ebe0;  /* NEED TO BE CHANGED  */
-    padding: 0.3em 2em 0.7em 2em;
-    border-radius: 0.5em;
-    border: 0.15em solid #6c584c;
-}
-
-.AddProduct-category option {
-    font-size: 150%;
-}
-
-.AddProduct-product-info {
-    background-color: #f5ebe0;
-    padding: 0.3em 1.5em;
-    border-radius: 0.5em;
-    border: 0.15em solid #6c584c;
-    width: 194%;
-    font-size: 1.3em;
-}
-
-.image-upload h2, .AddProduct-category h2, .AddProduct-product-info h2 {
-    margin-bottom: 0.9375em;
-    font-size: 1.7em;
-    color: #6c584c;
-    text-align: left;
-}
-
-.image-placeholder {
-    height: 9.375em;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0.125em dashed #fff;
-}
-
-.image-box {
-    text-align: center;
-}
-
-.AddProduct-category select {
-    width: 100%;
-    padding: 0.625em;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-}
-
-.AddProduct-product-info .AddProduct-info-row {
-    margin-bottom: 0.9375em;
-}
-
-.AddProduct-product-info label {
-    display: block;
-    margin-bottom: 0.3125em;
-}
-
-.AddProduct-product-info input {
-    width: 100%;
-    padding: 0.625em;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-}
-
-.AddProduct-product-info  ul {
-    display: flex ;
-    flex-wrap: wrap;
-    align-items: center; 
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 0.3em;
-}
-
-#description {
-    padding: 1em ;
-    width: 100%;
-    border: 0.0625em solid #ccc;
-    border-radius: 0.25em;
-    resize: none;
-}
-
-.AddProduct-form-actions {
-    grid-column: span 2;
-    display: flex;
-    justify-content: flex-end;
-    gap: 0.625em;
-}
-
-.AddProduct-cancel-btn, .AddProduct-save-btn {
-    padding: 0.625em 1.25em;
-    border: none;
-    border-radius: 0.25em;
-    cursor: pointer;
-}
-
-.AddProduct-cancel-btn {
-    background-color: #ccc;
-}
-
-.AddProduct-save-btn {
-    background-color: #6c584c;
-    color: #fff;
-} 
-
-        </style>
-    </head>
-
-    <body>
+    .AddProduct-form-actions {
+        grid-column: span 2;
         
-        <header>
-            <nav class="navbar">
-                <div class="logo">
-                    <a href="index.html" target="_self"> 
-                        <img src="images/Logo-removebg-preview.png" alt="Website Logo" > 
-                    </a>
-                </div>
-                <h1>Vintage Vault</h1>
-                <ul>
-                    <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                    <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-                    <li><a href="clothing.html">Clothing</a></li>
-                    <li><a href="artworks.html">Artworks</a></li>
-                    <li><a href="furniture.html">Furniture</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </ul>
-            </nav>
-            <br>
-
-            <div class="Breadcrumb">
-                <p><a href="index.html">Home</a> > <a href="sallerDashboard.html">Seller Dashboard</a> > Add Product</p>
-            </div>
-
-           
-
-        </header>
-    
-        <main>
-            <hr>
-            <div class="AddProduct-container">
-                <div class="AddProduct-form-container">
-                    <div class="image-upload">
-                        <h2>Image</h2>
-                        <div class="image-placeholder">
-                            <div class="image-box">
-                                <span>Upload new</span>
-                                <input type="file" name="image-upload" id="image-upload" >
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="AddProduct-category">
-                        <h2>Category</h2>
-                        <select name="category">
-                            <option value="artworks">Artworks</option>
-                            <option value="furniture">Furniture</option>
-                            <option value="clothing">Clothing</option>
-                        </select>
-                    </div>
-
-                    <div class="AddProduct-product-info">
-                        <h2>Product info</h2>
-                        <div class="AddProduct-info-row">
-                            <ul>   
-
-                             <li><div class="AddProduct-info-inline">
-                                <label for="name">Name</label>
-                                <input type="text" id="name" name="name" >
-                            </div> </li>
-
-                            <li><div class="AddProduct-info-inline">
-                                <label for="price">Price</label>
-                                <input type="number" id="price" name="price" >
-                            </div></li>
-
-                            <li><div class="AddProduct-info-inline">
-                                <label for="quantity">Quantity</label>
-                                <input type="number" id="quantity" name="quantity" >
-                            </div></li>
-
-                        </ul>
-                            <div class="AddProduct-info-inline">
-                                <label for="description">Description</label>
-                                <textarea id="description" name="description" rows="8"></textarea>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    
-
-                    <div class="AddProduct-form-actions">
-                        <button class="AddProduct-cancel-btn">Cancel</button>
-                        <button class="AddProduct-save-btn">Save</button>
-                    </div>
-                </div>
-            </div> 
-            
-           
-        </main>
+    }
+}
 
 
 
-        <footer>
-            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-            <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
-            <p>Follow us on: 
-                <a href="https://www.instagram.com/VintageVault" target="_blank">
-                    <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
-                </a> | 
-                <a href="https://www.x.com/VintageVault" target="_blank">
-                    <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_self">
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo">
                 </a>
-            </p>
-        </footer>
+            </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="artworks.html">Artworks</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+        <br>
+        <div class="Breadcrumb">
+            <p><a href="index.html">Home</a> > <a href="sallerDashboard.html">Seller Dashboard</a> > Add Product</p>
+        </div>
+    </header>
 
+    <main>
+        <hr>
+        <div class="AddProduct-container">
+            <div class="AddProduct-form-container">
+                <div class="image-upload">
+                    <h2>Image</h2>
+                    <div class="image-placeholder">
+                        <div class="image-box">
+                            <span>Upload new</span>
+                            <input type="file" name="image-upload" id="image-upload">
+                        </div>
+                    </div>
+                </div>
+                <div class="AddProduct-category">
+                    <h2>Category</h2>
+                    <select name="category">
+                        <option value="artworks">Artworks</option>
+                        <option value="furniture">Furniture</option>
+                        <option value="clothing">Clothing</option>
+                    </select>
+                </div>
+                <div class="AddProduct-product-info">
+                    <h2>Product info</h2>
+                    <div class="AddProduct-info-row">
+                        <ul>
+                            <li>
+                                <div class="AddProduct-info-inline">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="AddProduct-info-inline">
+                                    <label for="price">Price</label>
+                                    <input type="number" id="price" name="price">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="AddProduct-info-inline">
+                                    <label for="quantity">Quantity</label>
+                                    <input type="number" id="quantity" name="quantity">
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="AddProduct-info-inline">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="8"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="AddProduct-form-actions">
+                    <button class="AddProduct-cancel-btn">Cancel</button>
+                    <button class="AddProduct-save-btn">Save</button>
+                </div>
+            </div>
+        </div>
+    </main>
 
-
-
-
-    </body>
-
-
-
-    
+    <footer>
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: VintageVault@.com | Phone: (123) 456-7890</p>
+        <p>Follow us on:
+            <a href="https://www.instagram.com/VintageVault" target="_blank">
+                <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+            </a> |
+            <a href="https://www.x.com/VintageVault" target="_blank">
+                <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+            </a>
+        </p>
+    </footer>
+</body>
 </html>
