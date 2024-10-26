@@ -11,58 +11,50 @@
 
 <style>
 .container {
-     overflow-y:auto;
-     padding:20px;
-     max-height: 500px;
+    overflow-y: auto;
+    padding: 2%; /* Changed to percentage */
+    max-height: 50vh; /* Changed to viewport height */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
-
-        
-         
-  }
-  #orderH{
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-  .order-item {
-    border: 1px solid #ccc;
-    padding: 40px;
-    margin-bottom: 12px;
+    margin-top: 2%; /* Changed to percentage */
+}
+#orderH {
+    text-align: center;
+    margin:4% 0 2% 0;
+    color: #6c584c;
+}
+.order-item {
+    border: 1% solid #ccc;
+    padding: 3%; /* Changed to percentage */
+    margin-bottom: 1.2%; /* Changed to percentage */
     background-color: #f5f5f5;
-    width: 90%;
-    height: 30%;
-   
+    width: 90%; /* Kept percentage for responsiveness */
+    height: auto; /* Changed to auto for flexibility */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
+    border-radius: 1.5em; /* Changed to em */
+    box-shadow: 0 0.4em 1.2em rgba(0, 0, 0, 0.1); /* Changed to em */
+}
   
-  .order-info h3 {
+.order-info h3 {
     margin: 0;
-    font-size: 16px;
-  }
+    font-size: 1.2em; /* Changed to em */
+}
   
-  .order-info p {
-    font-family: Arial , sans-serif;
-    margin: 5px 0;
-    font-size: 14px;
-  }
+.order-info p {
+    font-family: Arial, sans-serif;
+    margin: 0.5em 0; /* Changed to em */
+    font-size: 1.1em; /* Changed to em */
+}
   
-  .order-total {
-    font-size: 17px;
-    margin-right: 5px;
+.order-total {
+    font-size: 1.3em; /* Changed to em */
+    margin-right: 0.5%; /* Changed to percentage */
     font-weight: bold;
-
-  }
-  
+}
   </style>
-
 </head>
 <header>
     <nav class="navbar">
@@ -93,7 +85,7 @@
         <div class="container">
           <div class="order-item">
             <div class="order-info">
-              <h3>Order #12345 <hr></h3>
+              <h3>Order #12345</h3><hr>
               <p>Date: 2023-10-01</p>
               <p>Time: 10:00 AM</p>
             </div>
@@ -102,7 +94,7 @@
         
           <div class="order-item">
             <div class="order-info">
-              <h3>Order #12346<hr></h3>
+              <h3>Order #12346</h3>
               <p>Date: 2023-09-25</p>
               <p>Time: 8:49 PM</p>
             </div>
@@ -111,7 +103,7 @@
         
           <div class="order-item">
             <div class="order-info">
-              <h3>Order #12347<hr></h3>
+              <h3>Order #12347</h3>
               <p>Date: 2023-09-10</p>
               <p>Time: 1:43 AM</p>
             </div>
@@ -120,7 +112,7 @@
         
           <div class="order-item">
             <div class="order-info">
-              <h3>Order #12397<hr></h3>
+              <h3>Order #12397</h3>
               <p>Date: 2022-10-10</p>
               <p>Time: 8:30 PM</p>
             </div>
@@ -141,5 +133,4 @@
         </p>
     </footer>
 </body>
-
 </html>
