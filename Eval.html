@@ -42,7 +42,7 @@ label {
 select {
   width: 45%;
   padding: 1.7% ;
-  border: 1% solid #dfdddd;
+  border: 0.1vw solid #dfdddd;
   border-radius: 0.9rem;
   font-size: 1.2vw;
   color: #565555;
@@ -62,7 +62,7 @@ textarea {
   width: 70%;
   height: 20vh; /* Height as a percentage of the viewport height */
   padding: 2%;
-  border: 1% solid #f9f4f4;
+  border: 0.1vw solid #f9f4f4;
   border-radius: 0.6rem;
   font-size: 1.6vw;
 }
@@ -155,7 +155,7 @@ textarea:focus {
 <main>
 <h1 id="header">Product Evaluation</h1>
 <div class="container">
-    <form id="evaluationForm" method="post" action="">
+    <form id="evaluationForm" method="post" action="URL">
       <div class="form-group">
         <label for="previousOrders">Select Order to Review:</label>
         <select id="previousOrders" name="previousOrders" required>
@@ -176,7 +176,7 @@ textarea:focus {
         </select>
       </div>
       <div class="form-group">
-        <label for="rating">How do you rate this product?</label>
+        <label>How do you rate this product?</label>
         <div class="rating">
           <input type="radio" id="star5" name="rating" value="5" required>
           <label for="star5">☆</label>
@@ -189,6 +189,7 @@ textarea:focus {
           <input type="radio" id="star1" name="rating" value="1" required>
           <label for="star1">☆</label>
         </div>
+      </div>
       <div class="form-group">
         <label for="comments">Write Your Review:</label>
         <textarea id="comments" name="comments" rows="4" placeholder="Your feedback..." required></textarea>
