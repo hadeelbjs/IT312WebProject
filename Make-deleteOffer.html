@@ -3,177 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Make-deleteOffer</title>
+    <title>Vintage Vault</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="images/favicon-32x32.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
     <style>
+        .offer-box, .form-box {
+            background-color: #ffffff;
+            padding: 2vw;
+            margin: 2vw 3vw;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.1);
+        }
 
-/* General container for sections */
-.offer-box, .form-box {
-    background-color: #ffffff; /* White background */
-    padding: 20px;
-    margin: 20px 30px;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for card effect */
-}
+        .offer-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90vw;
+            height: auto;
+        }
 
-/* Offer item box styles */
-.offer-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 90%;
-    height: auto;
-}
+        .offer-box input[type="checkbox"] {
+            width: 1.6vw;
+            height: 1.6vw;
+            margin-left: auto;
+            margin-right: 1.875vw;
+        }
 
-.offer-box input[type="checkbox"] {
-    width: 1.6em;
-    height: 1.6em;
-    margin-left: auto;
-    margin-right: 1.875em;
-}
+        .offer-box img {
+            width: 8vw;
+            height: 8vw;
+            object-fit: cover;
+            margin-right: 1.25vw;
+            border-radius: 0.5vw;
+            margin-left: 0.5vw;
+        }
 
-.offer-box img {
-    width: 8em;
-    height: 8em;
-    object-fit: cover;
-    margin-right: 1.25em;
-    border-radius: 5%;
-    margin-left: 0.5em;
-}
+        .offer-info {
+            text-align: left;
+            flex-grow: 1;
+            background-color: transparent;
+            margin-bottom: 0;
+        }
 
-.offer-info {
-    text-align: left;
-    flex-grow: 1;
-    background-color: transparent;
-    margin-bottom: 0;
-    color: #3d3838;
-}
+        .offer-info p {
+            text-align: left;
+            margin: 0;
+            margin-top: 0.75vw;
+        }
+        .offer-info h2 {
+            text-align: left;
+            margin: 0;
+            margin-top: 0.75vw;
+            font-size:2vw;
+        }
 
+        .form-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 2vw;
+            padding: 2vw;
+            background-color: #ffffff;
+            border-radius: 1.5vw;
+            box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.1);
+            max-width: 90vw;
+            margin: 0 auto;
+        }
 
-.offer-info p {
-    text-align: left;
-    margin: 0;
-    margin-top: 0.75em;
-    color: #9B7E65;
-}
+        .inputs-box {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 30vw;
+        }
 
-.offer-actions {
-    display: flex;
-    align-items: center;
-    margin-left: 1.25em;
-}
-.form-box {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px; /* Adds space between the image and the input fields */
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 90%;
-    margin: 0 auto;
-}
+        .form-field {
+            margin-bottom: 0.9375vw;
+        }
 
+        .form-field label {
+            display: block;
+            margin-bottom: 0.3125vw;
+            color: #5A4A3A;
+        }
 
-.inputs-box {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 300px; /* Limits the width of the input fields section */
-}
+        .form-input {
+            padding: 1vw;
+            width: 100%;
+            box-sizing: border-box;
+            border: 0.1vw solid #ccc;
+            border-radius: 0.8vw;
+        }
 
-.form-field {
-    margin-bottom: 0.9375em;
-}
+        .img-upload {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 30vw;
+            height: 19vw;
+            margin-bottom: 1vw;
+            border: 0.2vw dashed #9B7E65;
+            border-radius: 0.8vw;
+            background-color: #f9f9f9;
+        }
 
-.form-field label {
-    display: block;
-    margin-bottom: 0.3125em;
-    color: #9B7E65;
-}
+        .img-upload label {
+            padding-left: 5vw;
+            font-size: 1vw;
+        }
 
-.form-input {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-}
+        .delete-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
 
-/* Image upload area */
-.img-upload {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    height: 190px;
-    margin-bottom: 1em;
-    border: 2px dashed #9B7E65;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-}
+        button, #delete {
+            background-color: #9B7E65;
+            color: #fff;
+            padding: 1.2vw 2vw;
+            font-size: 1vw;
+            border: none;
+            border-radius: 0.8vw;
+            cursor: pointer;
+            margin-top: 1vw;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
 
-.img-upload input[type="file"] {
-    font-size: 0.9em;
-}
+        #delete {
+            margin-top: 3vw;
+            margin-bottom: 3vw;
+        }
 
+        button:hover {
+            background-color: #d98b473e;
+        }
 
-button {
-    background-color: #9B7E65;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease;
-    align-self:center;
-}
+        h2 {
+            color: #3d3838;
+        }
 
-#delete {
-    background-color: #9B7E65;
-    color: #fff;
-    padding: 12px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: background-color 0.3s ease;
-    display: block; /* Ensure it's treated as a block element */
-    margin-left: auto;  /* Automatically adjust the left margin */
-    margin-right: auto; /* Automatically adjust the right margin */
-    text-align: center;
-}
-
-h3{
-    color: #3d3838;
-}
-#label-add{
-text-align: left;
-padding-left: 15px;
-}
-
-button:hover {
-    background-color: #d98b473e;
-}
-
+        #label-add {
+            text-align: left;
+            padding-left: 1.5vw;
+        }
+        .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
     </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html" target="_self"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" > 
-                </a>            </div>
+                <a href="index.html">
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo"> 
+                </a>            
+            </div>
             <h1>Vintage Vault</h1>
             <ul>
                 <li><a href="customerDashboard.html">Customer Dashboard</a></li>
@@ -187,40 +185,61 @@ button:hover {
         <div class="Breadcrumb">
             <p><a href="index.html">Home</a> > <a href="sallerDashboard.html">Seller Dashboard</a> > Make or Delete Offer</p>
         </div>
-
     </header>
 
     <hr>
 
     <section>
-      <div class="offer-box">
-    <img src="images/offer5.jpg" alt="Offer Image">
-    <div class="offer-info">
-        <h3>Offer name: 20% OFF!!!</h3>
-        <p>Discount: 20%</p>
-    </div>
-    <input type="checkbox"> <!-- Moved checkbox here -->
-</div>
-<div class="offer-box">
-    <img src="images/offer1.jpg" alt="Offer Image">
-    <div class="offer-info">
-        <h3>Offer name: 50% OFF!!!</h3>
-        <p>Discount: 50%</p>
-    </div>
-    <input type="checkbox"> <!-- Moved checkbox here -->
-</div>
-
-
-        <button id="delete">Delete Selected Offers</button> 
+        <style>
+            .visually-hidden {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                margin: -1px;
+                padding: 0;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                border: 0;
+            }
+        </style>
+        
+        <div class="offer-box">
+            <img src="images/offer5.jpg" alt="Offer Image">
+            <div class="offer-info">
+                <h2>Offer name: 20% OFF!!!</h2>
+                <p>Discount: 20%</p>
+            </div>
+            <label for="offer1" class="visually-hidden">Select offer to delete</label>
+            <input type="checkbox" id="offer1">
+        </div>
+        <div class="offer-box">
+            <img src="images/offer1.jpg" alt="Offer Image">
+            <div class="offer-info">
+                <h2>Offer name: 50% OFF!!!</h2>
+                <p>Discount: 50%</p>
+            </div>
+            <label for="offer2" class="visually-hidden">Select offer to delete</label>
+            <input type="checkbox" id="offer2">
+        </div>
+        
+        <div class="delete-container">
+            <button id="delete">Delete Selected Offers</button> 
+        </div>
+        
     </section>
 
     <hr>
-    <section><h3 id="label-add">Add a New Offer</h3></section>
+
+    <section>
+        <h2 id="label-add">Add a New Offer</h2>
+    </section>
+
     <section class="form-box">
         <div class="img-upload">    
-                <input type="file" name="offerImage" accept="image/*">
+            <label for="offerImage">Upload Offer Image</label>
+            <input type="file" name="offerImage" id="offerImage" accept="image/*">
         </div>
-    
+
         <div class="inputs-box">
             <div class="form-field">
                 <label for="name">Name</label>
@@ -229,7 +248,7 @@ button:hover {
 
             <div class="form-field">
                 <label for="discount">Discount Percentage %</label>
-<input type="number" id="discount" name="discountPercentage" class="form-input">
+                <input type="number" id="discount" name="discountPercentage" class="form-input">
             </div>
 
             <button id="add">Add</button>
@@ -237,17 +256,16 @@ button:hover {
     </section>
 
     <footer>
-            <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-            <p>Contact us: <a href="mailto:VintageVaultsa@gmail.com" style="color:darkblue;">VintageVaultsa@gmail.com</a> | Phone: (123) 456-7890</p>
-            <p>Follow us on: 
-                <a href="https://www.instagram.com/VintageVaultStore" target="_blank">
-                    <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
-                </a> | 
-                <a href="https://www.x.com/VintageVaultSa" target="_blank">
-                    <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
-                </a>
-            </p>
-        </footer>
-
+        <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+        <p>Contact us: <a href="mailto:VintageVaultsa@gmail.com" style="color:darkblue;">VintageVaultsa@gmail.com</a> | Phone: (123) 456-7890</p>
+        <p>Follow us on: 
+            <a href="https://www.instagram.com/VintageVaultStore" target="_blank">
+                <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+            </a> | 
+            <a href="https://www.x.com/VintageVaultSa" target="_blank">
+                <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
