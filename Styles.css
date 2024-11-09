@@ -237,7 +237,7 @@ h3{
         background-color: #9B7E65;
       }
 
-    .clothing-container{
+    .product-container{
           display:flex;
           flex-wrap: wrap;     
           justify-content: space-between;
