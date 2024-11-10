@@ -25,11 +25,11 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html" target="_self"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo">
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo"> 
                 </a>
-            </div>
-            <h1>Vintage Vault</h1> 
-            <div id="current-week-date" class="week-date"></div>
+             </div>
+             <h1>Vintage Vault</h1>
+
             <ul>
                 <li><a href="customerDashboard.html">Customer Dashboard</a></li>
                 <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
@@ -37,8 +37,6 @@
                 <li><a href="artworks.html">Artworks</a></li>
                 <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="cart.html">Cart</a></li>
-                <li class="vertical-line">|</li>
-                <li><button id="theme-toggle" class="theme-toggle">Customize</button></li>
             </ul>
         </nav>
         <div class="Breadcrumb">
@@ -128,6 +126,100 @@
             </a>
         </p>
     </footer>
+    <script>
+     function ClearCart() {
+        let items = document.getElementsByTagName("table");
+      
+        for (let i = items.length - 1; i >= 0; i--) {
+            items[i].remove();
+        }
+        document.getElementById("Checkout").remove();
+        document.getElementById("Clear").remove();
+
+
+        let orderSum = document.getElementById("summary");
+        let h3 = orderSum.getElementsByTagName("h3");
+        h3[0].remove();
+        //h3[0].innerHTML = "Your Cart is Empty"
+        let p = orderSum.getElementsByTagName("p");
+        p[0].remove();
+        document.getElementById("Total").remove();
+        orderSum.remove();
+        //orderSum.style.backgroundColor = rgba(0,0,0,0);
+        cartEmp = document.getElementById("CartIsEmpty");
+        cartEmp.innerHTML = "Your cart is empty";
+        cartEmp.style.fontSize = "25px" ;
+        cartEmp.style.color = "#634b2d";
+
+    }
+    // Function to update the totals
+        function updateCartTotals() {
+            let grandTotal = 0;
+
+            // Get all rows in the cart table body
+            const rows = document.getElementsByClassName('cart-row'); 
+
+            for (let i = 0; i < rows.length; i++) {
+                // Get the quantity input and unit price
+                const quantityInput = rows[i].getElementsByClassName('quantity')[0];
+                const unitPrice = parseFloat(quantityInput.getAttribute('data-price'));
+                const quantity = parseInt(quantityInput.value, 10);
+
+                // Calculate the total price for this row
+                const totalPrice = unitPrice * quantity;
+                rows[i].getElementsByClassName('total-price')[0].textContent = `${totalPrice.toLocaleString()} SAR`;
+
+                // Add this row's total to the grand total
+                grandTotal += totalPrice;
+            }
+
+            // Update the grand total on the page
+            document.getElementById('Total').textContent = `Total Cost: ${grandTotal.toLocaleString()} SAR`;
+        }
+
+
+        // Get all quantity inputs
+        const quantityInputs = document.getElementsByClassName('quantity');
+        for (let i = 0; i < quantityInputs.length; i++) {
+            quantityInputs[i].addEventListener('input', updateCartTotals);
+        }
+
+        // Initial calculation on page load
+        updateCartTotals();
+
+        function updateNoItems() {
+            let noItems = 0;
+
+            // Get all rows in the cart table body
+            const rows = document.getElementsByClassName('cart-row'); 
+            noItems = rows.length ;
+
+            // Update the grand total on the page
+            document.getElementById('orderSumNoITems').textContent = `Items: ${noItems.toLocaleString()}`;
+        }
+        updateNoItems();
+
+        function removeItem(row){
+            tableRow = row.closest('tr');
+            if (tableRow) {
+                tableRow.remove();
+                updateCartTotals();
+                updateNoItems() 
+            }
+        }
+
+        function checkout(){
+            feedback = "Thank You For Your Purchase";
+            total = document.getElementById("Total").textContent;
+            feedback += "\n" + total;
+            alert(feedback);
+            
+            window.location.href = "Eval.html"; 
+       
+        }
+
+    </script>
+   
 </body>
 
 </html>
