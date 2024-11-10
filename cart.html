@@ -50,8 +50,12 @@
     <main>
         
         <h2 style="text-align: left;">Cart Details</h2>
+
+        <div id="CartIsEmpty">
+
+        </div>
        
-            <table>
+            <table id="cartTable">
                 <thead>
                     <tr>
                         <th>Product Details</th>
@@ -61,51 +65,51 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr class="cart-row">
                         <td class="productDetails">
                             <img src="images/w520_q80(1).avif" alt="Blazer">
                             <p>Name:<br><strong>cady blazer</strong> </p>
                         </td>
                         
                         <td>
-                            <input type="number" name="Quan" min="1" value="1"><br>
-                            <a href="#">Remove</a>
+                            <input class="quantity" type="number" name="Quan" min="1" value="1" data-price="1540"><br>
+                            <a onclick="removeItem(this)">Remove</a>
                         </td>
                         <td> 1,540 SAR</td>
-                        <td> 1,540 SAR</td>
+                        <td class="total-price"> 1,540 SAR</td>
                     </tr>
-                    <tr>
+                    <tr class="cart-row">
                         <td class="productDetails">
                             <img src="images/_mg_0205_1.jpg" alt="Entry Table">
                             <p>Name: <br><strong>Entry Table</strong></p>
                         </td>
                        
                         <td>
-                           <input type="number" name="Quan" min="1" value="1" ><br>
+                           <input type="number" class="quantity" name="Quan" min="1" value="1" data-price="1264"><br>
                             
-                            <a href="#">Remove</a>
+                            <a onclick="removeItem(this)">Remove</a>
                         </td>
                         <td> 1,264 SAR</td>
-                        <td> 1,264 SAR</td>
+                        <td class="total-price"> 1,264 SAR</td>
                     </tr>
                 </tbody>
             </table>
 
         <div class="order-summary">
             <div id="summary">
-                <h3>Order Summary</h3>
-                <p>Items: 2</p>
-                <p>Total Cost: 2,804 SAR</p>
+                <h3 id = "orderSumH">Order Summary</h3>
+                <p id = "orderSumNoITems">Items: 2</p>
+                <p id = "Total">Total Cost: 2,804 SAR</p>
                 
             </div>
             <div class="buttons">
-                <a href="cart.html">
-                    <button id="Checkout" >
+                <a>
+                    <button id="Checkout" onclick="checkout()" >
                         <strong>Checkout</strong>
                     </button>
                 </a>
                 <br>
-                <button id="Clear">Clear Cart</button>
+                <button id="Clear" onclick="ClearCart()">Clear Cart</button>
             </div>
             
            
@@ -124,48 +128,6 @@
             </a>
         </p>
     </footer>
-
-    <script>
-
-
-        function getCurrentWeekStartDate() {
-            const today = new Date();
-            const dayOfWeek = today.getDay(); 
-            const sundayOffset = dayOfWeek; 
-            const sundayDate = new Date(today);
-            sundayDate.setDate(today.getDate() - sundayOffset);
-    
-            const options = { day: 'numeric', month: 'long' };
-            return sundayDate.toLocaleDateString('en-US', options);
-        }
-    
-        document.getElementById('current-week-date').textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
-    
-          document.getElementById('theme-toggle').addEventListener('click', function() {
-              document.body.classList.toggle('theme-dark');
-          });
-    
-          const toggleButton = document.getElementById('toggle-offers');
-        const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
-    
-        toggleButton.addEventListener('click', function() {
-            hiddenOffers.forEach(function(offer) {
-                offer.classList.toggle('hidden');
-            });
-    
-    
-            if (hiddenOffers[0].classList.contains('hidden')) {
-                toggleButton.textContent = 'More Offers'; // Show more
-            } else {
-                toggleButton.textContent = 'Less Offers'; // Show less
-            }
-        });
-    
-    
-      </script>
-    
-    
-    
 </body>
 
 </html>
