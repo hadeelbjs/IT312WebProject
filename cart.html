@@ -101,8 +101,8 @@
                 
             </div>
             <div class="buttons">
-                <a href="cart.html">
-                    <button id="Checkout" >
+                <a>
+                    <button id="Checkout" onclick="checkout()" >
                         <strong>Checkout</strong>
                     </button>
                 </a>
@@ -206,6 +206,16 @@
                 updateCartTotals();
                 updateNoItems() 
             }
+        }
+
+        function checkout(){
+            feedback = "Thank You For Your Purchase";
+            total = document.getElementById("Total").textContent;
+            feedback += "\n" + total;
+            alert(feedback);
+            
+            window.location.href = "Eval.html"; 
+       
         }
 
     </script>
