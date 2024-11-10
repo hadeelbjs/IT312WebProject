@@ -137,11 +137,12 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html" target="_self">
+                <a href="index.html" target="_self"> 
                     <img src="images/Logo-removebg-preview.png" alt="Website Logo">
                 </a>
             </div>
-            <h1>Vintage Vault</h1>
+            <h1>Vintage Vault</h1> 
+            <div id="current-week-date" class="week-date"></div>
             <ul>
                 <li><a href="customerDashboard.html">Customer Dashboard</a></li>
                 <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
@@ -149,6 +150,8 @@
                 <li><a href="artworks.html">Artworks</a></li>
                 <li><a href="furniture.html">Furniture</a></li>
                 <li><a href="cart.html">Cart</a></li>
+                <li class="vertical-line">|</li>
+                <li><button id="theme-toggle" class="theme-toggle">Customize</button></li>
             </ul>
         </nav>
         <br>
@@ -227,5 +230,50 @@
             </a>
         </p>
     </footer>
+
+
+
+    <script>
+
+
+        function getCurrentWeekStartDate() {
+            const today = new Date();
+            const dayOfWeek = today.getDay(); 
+            const sundayOffset = dayOfWeek; 
+            const sundayDate = new Date(today);
+            sundayDate.setDate(today.getDate() - sundayOffset);
+    
+            const options = { day: 'numeric', month: 'long' };
+            return sundayDate.toLocaleDateString('en-US', options);
+        }
+    
+        document.getElementById('current-week-date').textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
+    
+          document.getElementById('theme-toggle').addEventListener('click', function() {
+              document.body.classList.toggle('theme-dark');
+          });
+    
+          const toggleButton = document.getElementById('toggle-offers');
+        const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
+    
+        toggleButton.addEventListener('click', function() {
+            hiddenOffers.forEach(function(offer) {
+                offer.classList.toggle('hidden');
+            });
+    
+    
+            if (hiddenOffers[0].classList.contains('hidden')) {
+                toggleButton.textContent = 'More Offers'; // Show more
+            } else {
+                toggleButton.textContent = 'Less Offers'; // Show less
+            }
+        });
+    
+    
+      </script>
+    
+    
+    
+
 </body>
 </html>

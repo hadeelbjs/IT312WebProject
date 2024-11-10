@@ -11,7 +11,7 @@ h2 {
   font-family: Georgia, Garamond, Helvetica, Arial;
   padding: 2% 1%;
   font-size: 1.5vw;
-  background-color: #9B7E65;
+  background-color: #6c584cdb;
   color: white;
   border: none;
   cursor: pointer;
@@ -29,8 +29,50 @@ body {
     line-height: 1.6;
     background-color: #f5ebe0;
     color: #9B7E65; 
-    padding-top: 3.8em; 
+    padding-top: 9.4em; 
     margin: 0em;
+}
+
+.theme-dark {
+  background-color: #281f16;
+}
+
+.theme-dark .reviews-section{
+  background-color: #281f16;
+
+}
+
+
+.theme-dark h2{
+  color:white;
+}
+
+.theme-dark footer{
+  background-color: #1a150e;
+}
+
+.theme-dark nav {
+  background-color: #1a150edc;
+}
+
+.theme-dark button {
+  background-color: #281f16;
+  color: #ecf0f1;
+}
+
+.theme-dark .more-button{
+  background-color:#9B7E65 ;
+
+}
+
+.theme-light button {
+  background-color: #9B7E65;
+  color: white;
+}
+
+
+.theme-toggle:hover {
+  color: #3b2f28;
 }
 
 
@@ -60,6 +102,15 @@ main {
     margin-left: 5%;
     margin-right: 5%;
   
+}
+
+
+.week-date {
+  flex-grow: 1;
+  font-size: 1.5vw;
+  margin: 2vw 0;
+  text-align: center;
+  color: #6c584c;
 }
 
 
@@ -110,6 +161,18 @@ margin: 0 2vw;
 
 .navbar a:hover {
   color: #3b2f28;
+}
+
+
+.vertical-divider {
+  margin: 0 10px;
+  font-size: 1.2vw;
+}
+
+.vertical-line {
+    padding: 0 0.2vw;
+    color: white; /* Adjust color as needed */
+    font-weight: bold;
 }
 
 

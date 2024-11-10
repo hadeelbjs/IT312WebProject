@@ -14,27 +14,27 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">
-        <a href="index.html" target="_self">
-          <img src="images/Logo-removebg-preview.png" alt="Website Logo">
-        </a>
-      </div>
-      <h1>Vintage Vault</h1>
-      <ul>
-        <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-        <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-        <li><a href="clothing.html">Clothing</a></li>
-        <li><a href="artworks.html">Artworks</a></li>
-        <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="cart.html" onclick="saveCartAndRedirect()">Cart</a></li>
-      </ul>
-    </nav>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html" target="_self"> 
+                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" > 
+                </a>
+                </div>
+            <h1>Vintage Vault</h1>
+            <ul>
+                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="artworks.html">Artworks</a></li>
+                <li><a href="furniture.html">Furniture</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
 
-    <div class="Breadcrumb">
-      <p><a href="index.html">Home</a> > Artworks</p>
-    </div>
+        <div class="Breadcrumb">
+          <p><a href="index.html">Home</a> >  Artworks</p>
+      </div>
 
     <div class="category-container">
       <img src="images/artworksbackground.png" alt="artworks" style="width: 100%;">
@@ -175,85 +175,6 @@
       </a>
     </p>
   </footer>
-
-  <script>
-    var cart = {}; // Object to store selected items in the cart
-  
-    // Function to handle sorting
-    function sortProducts() {
-      var sortOption = document.getElementById("sort-options").value;
-      var productContainer = document.querySelector(".product-container");
-      var items = Array.from(productContainer.children);
-  
-      items.sort(function(a, b) {
-        var nameA = a.querySelector(".top-left").innerText.toUpperCase();
-        var nameB = b.querySelector(".top-left").innerText.toUpperCase();
-        var priceA = parseFloat(a.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
-        var priceB = parseFloat(b.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
-  
-        // Manual sorting based on selected criteria
-        if (sortOption === "A-Z") {
-          return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
-        } else if (sortOption === "Z-A") {
-          return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
-        } else if (sortOption === "low-high") {
-          return priceA - priceB;
-        } else if (sortOption === "high-low") {
-          return priceB - priceA;
-        }
-      });
-  
-      // Reorder items in the DOM
-      for (var i = 0; i < items.length; i++) {
-        productContainer.appendChild(items[i]);
-      }
-    }
-  
-    // Function to add or remove items from cart
-
-    function toggleCartItem(productId) {
-    const checkbox = document.getElementById("cart-checkbox-" + productId);
-    const quantityControl = document.getElementById("quantity-control-" + productId);
-    const quantityElement = document.getElementById("quantity-" + productId);
-    const productName = document.getElementById("name-" + productId).innerText;
-    const productPrice = parseFloat(document.getElementById("price-" + productId).innerText.replace("SAR ", "").replace(",", ""));
-
-    if (checkbox.checked) {
-      quantityControl.classList.remove("hidden");
-      cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText) };
-    } else {
-      quantityElement.innerText = 1;
-      quantityControl.classList.add("hidden");
-      delete cart[productId];
-    }
-  }
-
-  function increaseQuantity(productId) {
-    const quantityElement = document.getElementById("quantity-" + productId);
-    quantityElement.innerText = parseInt(quantityElement.innerText) + 1;
-    if (cart[productId]) {
-      cart[productId].quantity = parseInt(quantityElement.innerText);
-    }
-  }
-
-  function decreaseQuantity(productId) {
-    const quantityElement = document.getElementById("quantity-" + productId);
-    const currentQuantity = parseInt(quantityElement.innerText);
-    if (currentQuantity > 1) {
-      quantityElement.innerText = currentQuantity - 1;
-      if (cart[productId]) {
-        cart[productId].quantity = currentQuantity - 1;
-      }
-    }
-  }
-  
-    // Function to save cart data to localStorage and redirect to cart page
-    function saveCartAndRedirect() {
-      localStorage.setItem("cart", JSON.stringify(cart));
-      window.location.href = "cart.html";
-    }
-  </script>  
-  
 </body>
 
 </html>
