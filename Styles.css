@@ -255,3 +255,36 @@ h3{
 
 
 
+/* Styling the quantity buttons and display */
+.card .quantity-control {
+  position: absolute;
+  top: 0.5vw;
+  right: 1vw;
+  display: flex;
+  align-items: center;
+  font-size: 1.2vw;
+}
+
+.card .quantity-control button {
+  background-color: #6c584c;
+  color: white;
+  border: none;
+  border-radius: 0.3vw;
+  padding: 0.5vw;
+  font-size: 1.5vw;
+}
+
+.card .quantity-control button:hover {
+  background-color: #9B7E65;
+}
+
+.card .quantity-control span {
+  margin: 0 0.5vw;
+  font-size: 1.4vw;
+  color: black;
+}
+
+
+.hidden {
+  display: none !important;
+}

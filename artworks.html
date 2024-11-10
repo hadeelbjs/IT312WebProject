@@ -1,87 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artworks</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon-32x32.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artworks</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" target="_self"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" > 
-                </a>
-                </div>
-            <h1>Vintage Vault</h1>
-            <ul>
-                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-                <li><a href="clothing.html">Clothing</a></li>
-                <li><a href="artworks.html">Artworks</a></li>
-                <li><a href="furniture.html">Furniture</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav>
-
-        <div class="Breadcrumb">
-          <p><a href="index.html">Home</a> >  Artworks</p>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" target="_self">
+          <img src="images/Logo-removebg-preview.png" alt="Website Logo">
+        </a>
       </div>
+      <h1>Vintage Vault</h1>
+      <ul>
+        <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+        <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+        <li><a href="clothing.html">Clothing</a></li>
+        <li><a href="artworks.html">Artworks</a></li>
+        <li><a href="furniture.html">Furniture</a></li>
+        <li><a href="cart.html" onclick="saveCartAndRedirect()">Cart</a></li>
+      </ul>
+    </nav>
 
-    
+    <div class="Breadcrumb">
+      <p><a href="index.html">Home</a> > Artworks</p>
+    </div>
 
     <div class="category-container">
-        <img src="images/artworksbackground.png" alt="artworks" style="width: 100%;">
-        <div class="category-bottom-left">Artworks</div>
+      <img src="images/artworksbackground.png" alt="artworks" style="width: 100%;">
+      <div class="category-bottom-left">Artworks</div>
     </div>
   </header>
 
-<main>
-    <select id="sort-options" class="sort-by">
+  <main>
+    <select id="sort-options" class="sort-by" onchange="sortProducts()">
       <optgroup label="Sort By">
-          <option value="recommended">Recommended</option>
+        <option value="recommended">Recommended</option>
       </optgroup>
       <optgroup label="Alphabetically">
         <option value="A-Z">From A-Z</option>
         <option value="Z-A">From Z-A</option>
-    </optgroup>
-      <optgroup label="Price">
-          <option value="low-high">Low - High</option>
-          <option value="high-low">High - Low</option>
       </optgroup>
-  </select>
+      <optgroup label="Price">
+        <option value="low-high">Low - High</option>
+        <option value="high-low">High - Low</option>
+      </optgroup>
+    </select>
 
-<div class="product-container">
+    <div class="product-container">
 
-     <!--1-->
+      <!--1-->
       <div class="card">
         <img src="images/pink-peonies.jpg" alt="Pink Peonies">
-        <div class="top-left">Pink Peonies</div>
+        <div class="top-left"  id="name-1">Pink Peonies</div>
         <div class="product-info">
           <p>11″×14″ / 28x36cm</p>
         </div>
-        <div class="bottom-left">SAR 540</div>
-        <button class="bottom-right">Add to cart</button>
-      </div> 
+        <div class="bottom-left" id="price-1">SAR 540</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-1" class="add-to-cart-checkbox" onclick="toggleCartItem(1)"> </button>
+        <div class="quantity-control hidden" id="quantity-control-1">
+          <button onclick="decreaseQuantity(1)">−</button>
+          <span id="quantity-1">1</span>
+          <button onclick="increaseQuantity(1)">+</button>
+        </div>
+      </div>
 
-     <!--2-->
+      <!--2-->
       <div class="card">
         <img src="images/white-hydrangeas.webp" alt="White Hydrangeas">
-        <div class="top-left">White Hydrangeas</div>
+        <div class="top-left" id="name-2">White Hydrangeas</div>
         <div class="product-info">
           <p>20″×30″ / 51x76cm</p>
         </div>
-        <div class="bottom-left">SAR 364</div>
-        <button class="bottom-right">Add to cart</button>
-      </div> 
+        <div class="bottom-left" id="price-2">SAR 364</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-2" class="add-to-cart-checkbox" onclick="toggleCartItem(2)"></button>
+         <div class="quantity-control hidden" id="quantity-control-2">
+          <button onclick="decreaseQuantity(2)">−</button>
+          <span id="quantity-2">1</span>
+          <button onclick="increaseQuantity(2)">+</button>
+      </div>
 
-       <!--3-->
+      </div>
+
+      <!--3-->
       <div class="card">
         <img src="images/white-horse.webp" alt="White Horse">
         <div class="top-left">White Horse</div>
@@ -90,22 +101,22 @@
         </div>
         <div class="bottom-left">SAR 750</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
+      </div>
 
-       <!--4-->
+      <!--4-->
       <div class="card">
         <img src="images/victorian-woman-playing-piano.webp" alt="Woman Playing Piano">
         <div class="top-left">Woman Playing Piano</div>
-         <div class="product-info">
+        <div class="product-info">
           <p>20″×30″ / 51x76cm</p>
         </div>
         <div class="bottom-left">SAR 1,000</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
+      </div>
 
 
-       <!--5-->
-       <div class="card">
+      <!--5-->
+      <div class="card">
         <img src="images/coastal-spring.webp" alt="Coastal Spring">
         <div class="top-left">Coastal Spring</div>
         <div class="product-info">
@@ -113,9 +124,9 @@
         </div>
         <div class="bottom-left">SAR 843</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
+      </div>
 
-       <!--6-->
+      <!--6-->
       <div class="card">
         <img src="images/bowl-of-eggs.webp" alt="Bowl Of Eggs">
         <div class="top-left">Bowl Of Eggs</div>
@@ -124,9 +135,9 @@
         </div>
         <div class="bottom-left">SAR 410</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
+      </div>
 
-       <!--7-->
+      <!--7-->
       <div class="card">
         <img src="images/winter-candles.webp" alt="Winter Candles">
         <div class="top-left">Winter Candles</div>
@@ -135,9 +146,9 @@
         </div>
         <div class="bottom-left">SAR 1,238</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
+      </div>
 
-       <!--8-->
+      <!--8-->
       <div class="card">
         <img src="images/paris-street.webp" alt="Paris Street">
         <div class="top-left">Paris Street</div>
@@ -146,22 +157,103 @@
         </div>
         <div class="bottom-left">SAR 1,364</div>
         <button class="bottom-right">Add to cart</button>
-      </div> 
-
       </div>
-    </main>
 
-    <footer>
-      <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
-      <p>Contact us: <a href="mailto:VintageVaultsa@gmail.com" style="color:darkblue;">VintageVaultsa@gmail.com</a> | Phone: (123) 456-7890</p>
-      <p>Follow us on: 
-          <a href="https://www.instagram.com/VintageVaultStore" target="_blank">
-              <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
-          </a> | 
-          <a href="https://www.x.com/VintageVaultSa" target="_blank">
-              <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
-          </a>
-      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:VintageVaultsa@gmail.com" style="color:darkblue;">VintageVaultsa@gmail.com</a> |
+      Phone: (123) 456-7890</p>
+    <p>Follow us on:
+      <a href="https://www.instagram.com/VintageVaultStore" target="_blank">
+        <img src="images/instagram.icon.png" alt="Instagram Icon" width="30" height="30"> Instagram
+      </a> |
+      <a href="https://www.x.com/VintageVaultSa" target="_blank">
+        <img src="images/X.icon.png" alt="X Icon" width="37" height="30"> X
+      </a>
+    </p>
   </footer>
+
+  <script>
+    var cart = {}; // Object to store selected items in the cart
+  
+    // Function to handle sorting
+    function sortProducts() {
+      var sortOption = document.getElementById("sort-options").value;
+      var productContainer = document.querySelector(".product-container");
+      var items = Array.from(productContainer.children);
+  
+      items.sort(function(a, b) {
+        var nameA = a.querySelector(".top-left").innerText.toUpperCase();
+        var nameB = b.querySelector(".top-left").innerText.toUpperCase();
+        var priceA = parseFloat(a.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
+        var priceB = parseFloat(b.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
+  
+        // Manual sorting based on selected criteria
+        if (sortOption === "A-Z") {
+          return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+        } else if (sortOption === "Z-A") {
+          return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
+        } else if (sortOption === "low-high") {
+          return priceA - priceB;
+        } else if (sortOption === "high-low") {
+          return priceB - priceA;
+        }
+      });
+  
+      // Reorder items in the DOM
+      for (var i = 0; i < items.length; i++) {
+        productContainer.appendChild(items[i]);
+      }
+    }
+  
+    // Function to add or remove items from cart
+
+    function toggleCartItem(productId) {
+    const checkbox = document.getElementById("cart-checkbox-" + productId);
+    const quantityControl = document.getElementById("quantity-control-" + productId);
+    const quantityElement = document.getElementById("quantity-" + productId);
+    const productName = document.getElementById("name-" + productId).innerText;
+    const productPrice = parseFloat(document.getElementById("price-" + productId).innerText.replace("SAR ", "").replace(",", ""));
+
+    if (checkbox.checked) {
+      quantityControl.classList.remove("hidden");
+      cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText) };
+    } else {
+      quantityElement.innerText = 1;
+      quantityControl.classList.add("hidden");
+      delete cart[productId];
+    }
+  }
+
+  function increaseQuantity(productId) {
+    const quantityElement = document.getElementById("quantity-" + productId);
+    quantityElement.innerText = parseInt(quantityElement.innerText) + 1;
+    if (cart[productId]) {
+      cart[productId].quantity = parseInt(quantityElement.innerText);
+    }
+  }
+
+  function decreaseQuantity(productId) {
+    const quantityElement = document.getElementById("quantity-" + productId);
+    const currentQuantity = parseInt(quantityElement.innerText);
+    if (currentQuantity > 1) {
+      quantityElement.innerText = currentQuantity - 1;
+      if (cart[productId]) {
+        cart[productId].quantity = currentQuantity - 1;
+      }
+    }
+  }
+  
+    // Function to save cart data to localStorage and redirect to cart page
+    function saveCartAndRedirect() {
+      localStorage.setItem("cart", JSON.stringify(cart));
+      window.location.href = "cart.html";
+    }
+  </script>  
+  
 </body>
+
 </html>
