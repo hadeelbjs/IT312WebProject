@@ -12,6 +12,13 @@
     <style>
 
 
+.theme-toggle{
+  position: relative;
+  justify-content: right;
+  align-items: right;
+  margin-left: 6vw; 
+
+}
 .vision-container {
   position: relative;
   height: 30vw;
@@ -67,101 +74,40 @@
 
 
 .offer-section {
-  text-align: center;
-  margin-top: 2vw;
+    text-align: center;
+    margin-top: 2vw;
 }
-
-.offer-scroll-container {
-  display: flex;
-  overflow-x: auto;
-  gap: 2vw;
-  padding: 2vw;
-  max-width: 100%;
-  scrollbar-width: thin;
-  scrollbar-color: #6c584c #f5ebe0;
-}
-
 
 .offer-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2vw;
-  margin-top: 3vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 2vw;
+    margin-top: 3vw;
 }
 
 .offer-item {
-  flex: 0 0 22vw;
-  border-radius: 1vw;
-  overflow: hidden;
-  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
+    border-radius: 1vw;
+    overflow: hidden;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 .offer-item img {
-  width: 100%;
-  border-radius: 1vw;
+    width: 100%;
+    border-radius: 1vw;
 }
 
 .offer-details {
-  padding: 1vw;
-  background-color: #ffffff;
-  color: #9B7E65;
-  text-align: center;
+    padding: 2vw;
+    background-color: #fff;
+    border-radius: 0 0 1vw 1vw;
+    box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
 }
-
-
-.offer-item .offer-details {
-  padding: 2vw;
-  background-color: #fff;
-  border-radius: 0 0 1vw 1vw;
-  box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
-}
-
-
-
-.offer-item p {
-  position: relative;
-  font-weight: bold;
-  z-index: 1;
-  color: rgb(0, 0, 0);
-  font-size: 1.2vw;
-  margin-top: 7vw;
-}
-
 
 .offer-item:hover {
-  transform: scale(1.05); 
+    transform: scale(1.05);
 }
-
-.offer-item:hover::before {
-  transform: scale(1.05); 
-}
-
-.offer-label {
-  position: relative;
-  z-index: 1;
-  font-size: 2vw;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1vw;
-  text-shadow: -0.2vw -0.2vw 0 #000, 0.2vw -0.2vw 0 #000, -0.2vw 0.2vw 0 #000, 0.2vw 0.2vw 0 #000;
-}
-
-.offer-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover; 
-  background-position: center;
-  border-radius: 1vw;
-  opacity: 0.709;
-  z-index: 0;
-  transition: transform 0.3s ease; 
-
-}
+    
 .offer-item.offer1::before {
   background-image: url('images/offer1.jpg');
 }
@@ -185,6 +131,27 @@
 .offer-item.offer6::before {
   background-image: url('images/offer6.jpg');
 }
+
+.hidden {
+    display: none;
+}
+
+.more-button {
+    margin-top: 2vw;
+    padding: 1vw 2vw;
+    font-size: 1.2vw;
+    background-color: #6c584c;
+    color: white;
+    border: none;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.more-button:hover {
+    background-color: #5a4a3c;
+}
+
 
 .categories-section {
   margin-top: 5vw;
@@ -371,23 +338,29 @@
 
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">
-                <a href="index.html" target="_self"> 
-                    <img src="images/Logo-removebg-preview.png" alt="Website Logo" > 
-                </a>
-            </div>
-            <h1>Vintage Vault</h1>
-            <ul>
-                <li><a href="customerDashboard.html">Customer Dashboard</a></li>
-                <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
-                <li><a href="clothing.html">Clothing</a></li>
-                <li><a href="artworks.html">Artworks</a></li>
-                <li><a href="furniture.html">Furniture</a></li>
-                <li><a href="cart.html">Cart</a></li>
-            </ul>
-        </nav><br>
+  <header>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html" target="_self"> 
+                <img src="images/Logo-removebg-preview.png" alt="Website Logo">
+            </a>
+        </div>
+        <h1>Vintage Vault</h1> 
+        <div id="current-week-date" class="week-date"></div>
+        <ul>
+            <li><a href="customerDashboard.html">Customer Dashboard</a></li>
+            <li><a href="sallerDashboard.html">Seller Dashboard</a></li>
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="artworks.html">Artworks</a></li>
+            <li><a href="furniture.html">Furniture</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li class="vertical-line">|</li>
+            <li><button id="theme-toggle" class="theme-toggle">Customize</button></li>
+        </ul>
+    </nav>
+</header>
+
+    
    
 
 
@@ -400,113 +373,111 @@
                 </div>
                 <img src="images/visionBackground4.jpg" alt="Our Vision Image">
             </div>
-        </div>
-    </header>
-        
+        </div>        
         
         
     <main>
 
-        <section class="offer-section">
-            <h2>Special Offers</h2>
-            <div class="offer-scroll-container">
-                <div class="offer-item">
-                    <img src="images/offer1.jpg" alt="50% OFF">
-                    <div class="offer-details">
-                        <h3>50% OFF!!!</h3>
-                        <p>Get half off on select vintage Artworks items. Limited time offer!</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <img src="images/offer2.jpg" alt="Free Shipping">
-                    <div class="offer-details">
-                        <h3>FREE SHIPPING</h3>
-                        <p>Enjoy free shipping on all orders over $50. Shop now and save!</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <img src="images/offer3.jpg" alt="Buy 1 Get 1 Free">
-                    <div class="offer-details">
-                        <h3>BUY 1, GET 1 FREE</h3>
-                        <p>Buy one Furniture and get another one absolutely free!</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <img src="images/offer4.jpg" alt="Save $5">
-                    <div class="offer-details">
-                        <h3>SAVE $5 TODAY</h3>
-                        <p>Save $5 on your first purchase of $30 or more!</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <img src="images/offer5.jpg" alt="20% OFF">
-                    <div class="offer-details">
-                        <h3>20% OFF!!!</h3>
-                        <p>Get 20% off all vintage Furniture. Limited time offer!</p>
-                    </div>
-                </div>
-                <div class="offer-item">
-                    <img src="images/offer6.jpg" alt="Free Gift">
-                    <div class="offer-details">
-                        <h3>FREE GIFT</h3>
-                        <p>Receive a free gift with purchases over $100.</p>
-                    </div>
+      <section class="offer-section">
+        <h2>Special Offers</h2>
+        <div class="offer-container">
+            <div class="offer-item">
+                <img src="images/offer1.jpg" alt="50% OFF">
+                <div class="offer-details">
+                    <h3>50% OFF!!!</h3>
+                    <p>Get half off on select vintage Artworks items. Limited time offer!</p>
                 </div>
             </div>
-        </section>
-
-
-
-        <section id="categories-section" class="categories-section">
-            <h2>Product Categories</h2>
-            <div class="categories-container">
-                <div class="category-item category1">
-                    <div class="category-label">
-                        <h3><a href="Clothing.html">Clothing</a></h3>
-                    </div>
-                </div>
-                <div class="category-item category2">
-                    <div class="category-label">
-                        <h3><a href="artworks.html">Artworks</a></h3>
-                    </div>
-                </div>
-                <div class="category-item category3">
-                    <div class="category-label">
-                        <h3><a href="furniture.html">Furniture</a></h3>
-                    </div>
+            <div class="offer-item">
+                <img src="images/offer2.jpg" alt="Free Shipping">
+                <div class="offer-details">
+                    <h3>FREE SHIPPING</h3>
+                    <p>Enjoy free shipping on all orders over $50. Shop now and save!</p>
                 </div>
             </div>
-        </section>
-
-
-        <section class="reviews-section">
-            <h2>Customer Reviews</h2>
-            <div class="reviews-container">
-                <div class="review-item review1">
-                    <p>"I absolutely love the vintage pieces I found on Vintage Vault! <br> especially the Sweater<br> The quality is incredible, and each piece has so much character!"</p>
-                    <h3>- Emily R.</h3>
-                    <div class="star-rating">★★★★★</div> 
-                </div>
-                <div class="review-item review2">
-                    <p>"I oreder a Dress ,The customer service is fantastic,<br> and the shipping was quick. I highly recommend Vintage Vault for<br> anyone looking for unique items!"</p>
-                    <h3>- Lolo L.</h3>
-                    <div class="star-rating">★★★★★</div> 
-                </div>
-                <div class="review-item review3">
-                    <p>"I found the perfect artwork "White Hydrangeas" for my living room.<br> It's truly one-of-a-kind, and I get compliments on it all the time!"</p>
-                    <h3>- Sophia M.</h3>
-                    <div class="star-rating">★★★★★</div> 
-                </div>
-                <div class="review-item review4">
-                    <p>"Vintage Vault has an amazing collection! Like the Vanity and Mirror<br> I was able to find rare pieces that fit perfectly with my home decor."</p>
-                    <h3>- Michael B.</h3>
-                    <div class="star-rating">★★★★★</div> 
+            <div class="offer-item">
+                <img src="images/offer3.jpg" alt="Buy 1 Get 1 Free">
+                <div class="offer-details">
+                    <h3>BUY 1, GET 1 FREE</h3>
+                    <p>Buy one Furniture and get another one absolutely free!</p>
                 </div>
             </div>
-        </section>
-    </main>
+    
+            <!-- Hidden offers -->
+            <div class="offer-item hidden">
+                <img src="images/offer4.jpg" alt="Save $5">
+                <div class="offer-details">
+                    <h3>SAVE $5 TODAY</h3>
+                    <p>Save $5 on your first purchase of $30 or more!</p>
+                </div>
+            </div>
+            <div class="offer-item hidden">
+                <img src="images/offer5.jpg" alt="20% OFF">
+                <div class="offer-details">
+                    <h3>20% OFF!!!</h3>
+                    <p>Get 20% off all vintage Furniture. Limited time offer!</p>
+                </div>
+            </div>
+            <div class="offer-item hidden">
+                <img src="images/offer6.jpg" alt="Free Gift">
+                <div class="offer-details">
+                    <h3>FREE GIFT</h3>
+                    <p>Receive a free gift with purchases over $100.</p>
+                </div>
+            </div>
+        </div>
+        <button id="toggle-offers" class="more-button">More Offers</button>
+    </section>
 
 
+      <section id="categories-section" class="categories-section">
+          <h2>Product Categories</h2>
+          <div class="categories-container">
+              <div class="category-item category1">
+                  <div class="category-label">
+                      <h3><a href="Clothing.html">Clothing</a></h3>
+                  </div>
+              </div>
+              <div class="category-item category2">
+                  <div class="category-label">
+                      <h3><a href="artworks.html">Artworks</a></h3>
+                  </div>
+              </div>
+              <div class="category-item category3">
+                  <div class="category-label">
+                      <h3><a href="furniture.html">Furniture</a></h3>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+      <section class="reviews-section">
+          <h2>Customer Reviews</h2>
+          <div class="reviews-container">
+              <div class="review-item review1">
+                  <p>"I absolutely love the vintage pieces I found on Vintage Vault! <br> especially the Sweater<br> The quality is incredible, and each piece has so much character!"</p>
+                  <h3>- Emily R.</h3>
+                  <div class="star-rating">★★★★★</div> 
+              </div>
+              <div class="review-item review2">
+                  <p>"I oreder a Dress ,The customer service is fantastic,<br> and the shipping was quick. I highly recommend Vintage Vault for<br> anyone looking for unique items!"</p>
+                  <h3>- Lolo L.</h3>
+                  <div class="star-rating">★★★★★</div> 
+              </div>
+              <div class="review-item review3">
+                  <p>"I found the perfect artwork "White Hydrangeas" for my living room.<br> It's truly one-of-a-kind, and I get compliments on it all the time!"</p>
+                  <h3>- Sophia M.</h3>
+                  <div class="star-rating">★★★★★</div> 
+              </div>
+              <div class="review-item review4">
+                  <p>"Vintage Vault has an amazing collection! Like the Vanity and Mirror<br> I was able to find rare pieces that fit perfectly with my home decor."</p>
+                  <h3>- Michael B.</h3>
+                  <div class="star-rating">★★★★★</div> 
+              </div>
+          </div>
+      </section>
+  </main>
     
     <footer>
         <p>&copy; 2024 Vintage Vault. All rights reserved.</p>
@@ -520,6 +491,47 @@
             </a>
         </p>
     </footer>
+
+
+    <script>
+
+
+    function getCurrentWeekStartDate() {
+        const today = new Date();
+        const dayOfWeek = today.getDay(); 
+        const sundayOffset = dayOfWeek; 
+        const sundayDate = new Date(today);
+        sundayDate.setDate(today.getDate() - sundayOffset);
+
+        const options = { day: 'numeric', month: 'long' };
+        return sundayDate.toLocaleDateString('en-US', options);
+    }
+
+    document.getElementById('current-week-date').textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
+
+      document.getElementById('theme-toggle').addEventListener('click', function() {
+          document.body.classList.toggle('theme-dark');
+      });
+
+      const toggleButton = document.getElementById('toggle-offers');
+    const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
+
+    toggleButton.addEventListener('click', function() {
+        hiddenOffers.forEach(function(offer) {
+            offer.classList.toggle('hidden');
+        });
+
+
+        if (hiddenOffers[0].classList.contains('hidden')) {
+            toggleButton.textContent = 'More Offers'; // Show more
+        } else {
+            toggleButton.textContent = 'Less Offers'; // Show less
+        }
+    });
+
+
+  </script>
+
     
     
     
