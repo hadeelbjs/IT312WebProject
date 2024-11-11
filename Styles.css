@@ -226,6 +226,16 @@ h3{
 }
 
 
+.navbar span {
+  color: white; 
+  text-decoration: none;
+  font-size: 1.3vw;
+}
+
+.navbar span:hover {
+  color: #3b2f28;
+}
+
 .card {
       position: relative;
       width: 22%; 
@@ -291,7 +301,7 @@ h3{
         background-color: #6c584c;
         color: white;
         border: none;
-        padding: 0.9vw 1.5vw;
+        padding: 0.7vw 1vw;
         border-radius: 0.4vw;
         font-size: 1.4vw;
       }

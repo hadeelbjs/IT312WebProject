@@ -29,7 +29,7 @@
         <li><a href="clothing.html">Clothing</a></li>
         <li><a href="artworks.html">Artworks</a></li>
         <li><a href="furniture.html">Furniture</a></li>
-        <li><a href="cart.html" onclick="saveCartAndRedirect()">Cart</a></li>
+        <li><span onclick="saveCartAndRedirect()" style="cursor: pointer;">Cart</span></li>
         <li class="vertical-line">|</li>
         <li><button id="theme-toggle" class="theme-toggle">Customize</button></li>
     </ul>
@@ -98,69 +98,99 @@
       <!--3-->
       <div class="card">
         <img src="images/white-horse.webp" alt="White Horse">
-        <div class="top-left">White Horse</div>
+        <div class="top-left" id="name-3">White Horse</div>
         <div class="product-info">
           <p>18″×24″ / 46x61cm</p>
         </div>
-        <div class="bottom-left">SAR 750</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-3">SAR 750</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-3" class="add-to-cart-checkbox" onclick="toggleCartItem(3)"></button>
+        <div class="quantity-control hidden" id="quantity-control-3">
+          <button onclick="decreaseQuantity(3)">−</button>
+          <span id="quantity-3">1</span>
+          <button onclick="increaseQuantity(3)">+</button>
       </div>
+    </div>
 
       <!--4-->
       <div class="card">
-        <img src="images/victorian-woman-playing-piano.webp" alt="Woman Playing Piano">
-        <div class="top-left">Woman Playing Piano</div>
+        <img src="images/victorian-woman-playing-piano.webp" alt="Piano Woman">
+        <div class="top-left" id="name-4">Piano Woman</div>
         <div class="product-info">
           <p>20″×30″ / 51x76cm</p>
         </div>
-        <div class="bottom-left">SAR 1,000</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-4">SAR 1,000</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-4" class="add-to-cart-checkbox" onclick="toggleCartItem(4)"></button>
+        <div class="quantity-control hidden" id="quantity-control-4">
+          <button onclick="decreaseQuantity(4)">−</button>
+          <span id="quantity-4">1</span>
+          <button onclick="increaseQuantity(4)">+</button>
       </div>
+    </div>
 
 
       <!--5-->
       <div class="card">
         <img src="images/coastal-spring.webp" alt="Coastal Spring">
-        <div class="top-left">Coastal Spring</div>
+        <div class="top-left" id="name-5">Coastal Spring</div>
         <div class="product-info">
           <p>24″×36″ / 61x91cm</p>
         </div>
-        <div class="bottom-left">SAR 843</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-5">SAR 843</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-5" class="add-to-cart-checkbox" onclick="toggleCartItem(5)"></button>
+        <div class="quantity-control hidden" id="quantity-control-5">
+          <button onclick="decreaseQuantity(5)">−</button>
+          <span id="quantity-5">1</span>
+          <button onclick="increaseQuantity(5)">+</button>
       </div>
+    </div>
 
       <!--6-->
       <div class="card">
         <img src="images/bowl-of-eggs.webp" alt="Bowl Of Eggs">
-        <div class="top-left">Bowl Of Eggs</div>
+        <div class="top-left" id="name-6">Bowl Of Eggs</div>
         <div class="product-info">
           <p>16″×20″ / 41x51cm</p>
         </div>
-        <div class="bottom-left">SAR 410</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-6">SAR 410</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-6" class="add-to-cart-checkbox" onclick="toggleCartItem(6)"></button>
+        <div class="quantity-control hidden" id="quantity-control-6">
+          <button onclick="decreaseQuantity(6)">−</button>
+          <span id="quantity-6">1</span>
+          <button onclick="increaseQuantity(6)">+</button>
       </div>
+    </div>
 
       <!--7-->
       <div class="card">
         <img src="images/winter-candles.webp" alt="Winter Candles">
-        <div class="top-left">Winter Candles</div>
+        <div class="top-left" id="name-7">Winter Candles</div>
         <div class="product-info">
           <p>18″×24″ / 46x61cm</p>
         </div>
-        <div class="bottom-left">SAR 1,238</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-7">SAR 1,238</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-7" class="add-to-cart-checkbox" onclick="toggleCartItem(7)"></button>
+        <div class="quantity-control hidden" id="quantity-control-7">
+          <button onclick="decreaseQuantity(7)">−</button>
+          <span id="quantity-7">1</span>
+          <button onclick="increaseQuantity(7)">+</button>
       </div>
+    </div>
 
       <!--8-->
       <div class="card">
         <img src="images/paris-street.webp" alt="Paris Street">
-        <div class="top-left">Paris Street</div>
+        <div class="top-left" id="name-8">Paris Street</div>
         <div class="product-info">
           <p>12″×18″ / 30x46cm</p>
         </div>
-        <div class="bottom-left">SAR 1,364</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-8">SAR 1,364</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-8" class="add-to-cart-checkbox" onclick="toggleCartItem(8)"></button>
+        <div class="quantity-control hidden" id="quantity-control-8">
+          <button onclick="decreaseQuantity(8)">−</button>
+          <span id="quantity-8">1</span>
+          <button onclick="increaseQuantity(8)">+</button>
       </div>
+    </div>
 
     </div>
   </main>
@@ -213,84 +243,84 @@ function getCurrentWeekStartDate() {
             toggleButton.textContent = 'Less Offers'; // Show less
         }
     });
-
-    var cart = {}; // Object to store selected items in the cart
-  
-    // Function to handle sorting
-    function sortProducts() {
-      var sortOption = document.getElementById("sort-options").value;
-      var productContainer = document.querySelector(".product-container");
-      var items = Array.from(productContainer.children);
-  
-      items.sort(function(a, b) {
-        var nameA = a.querySelector(".top-left").innerText.toUpperCase();
-        var nameB = b.querySelector(".top-left").innerText.toUpperCase();
-        var priceA = parseFloat(a.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
-        var priceB = parseFloat(b.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
-  
-        // Manual sorting based on selected criteria
-        if (sortOption === "A-Z") {
-          return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
-        } else if (sortOption === "Z-A") {
-          return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
-        } else if (sortOption === "low-high") {
-          return priceA - priceB;
-        } else if (sortOption === "high-low") {
-          return priceB - priceA;
-        }
-      });
-  
-      // Reorder items in the DOM
-      for (var i = 0; i < items.length; i++) {
-        productContainer.appendChild(items[i]);
-      }
-    }
-  
-    // Function to add or remove items from cart
-
-    function toggleCartItem(productId) {
-    const checkbox = document.getElementById("cart-checkbox-" + productId);
-    const quantityControl = document.getElementById("quantity-control-" + productId);
-    const quantityElement = document.getElementById("quantity-" + productId);
-    const productName = document.getElementById("name-" + productId).innerText;
-    const productPrice = parseFloat(document.getElementById("price-" + productId).innerText.replace("SAR ", "").replace(",", ""));
-
-    if (checkbox.checked) {
-      quantityControl.classList.remove("hidden");
-      cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText) };
-    } else {
-      quantityElement.innerText = 1;
-      quantityControl.classList.add("hidden");
-      delete cart[productId];
-    }
-  }
-
-  function increaseQuantity(productId) {
-    const quantityElement = document.getElementById("quantity-" + productId);
-    quantityElement.innerText = parseInt(quantityElement.innerText) + 1;
-    if (cart[productId]) {
-      cart[productId].quantity = parseInt(quantityElement.innerText);
-    }
-  }
-
-  function decreaseQuantity(productId) {
-    const quantityElement = document.getElementById("quantity-" + productId);
-    const currentQuantity = parseInt(quantityElement.innerText);
-    if (currentQuantity > 1) {
-      quantityElement.innerText = currentQuantity - 1;
-      if (cart[productId]) {
-        cart[productId].quantity = currentQuantity - 1;
-      }
-    }
-  }
-  
-    // Function to save cart data to localStorage and redirect to cart page
-    function saveCartAndRedirect() {
-      localStorage.setItem("cart", JSON.stringify(cart));
-      window.location.href = "cart.html";
-    }
   </script>  
+   <script>
+  var cart = {}; // Object to store selected items in the cart
   
+  // Function to handle sorting
+  function sortProducts() {
+    var sortOption = document.getElementById("sort-options").value;
+    var productContainer = document.querySelector(".product-container");
+    var items = Array.from(productContainer.children);
+
+    items.sort(function(a, b) {
+      var nameA = a.querySelector(".top-left").innerText.toUpperCase();
+      var nameB = b.querySelector(".top-left").innerText.toUpperCase();
+      var priceA = parseFloat(a.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
+      var priceB = parseFloat(b.querySelector(".bottom-left").innerText.replace("SAR ", "").replace(",", ""));
+
+      // Manual sorting based on selected criteria
+      if (sortOption === "A-Z") {
+        return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
+      } else if (sortOption === "Z-A") {
+        return nameA > nameB ? -1 : nameA < nameB ? 1 : 0;
+      } else if (sortOption === "low-high") {
+        return priceA - priceB;
+      } else if (sortOption === "high-low") {
+        return priceB - priceA;
+      }
+    });
+
+    // Reorder items in the DOM
+    for (var i = 0; i < items.length; i++) {
+      productContainer.appendChild(items[i]);
+    }
+  }
+
+  // Function to add or remove items from cart
+
+  function toggleCartItem(productId) {
+  const checkbox = document.getElementById("cart-checkbox-" + productId);
+  const quantityControl = document.getElementById("quantity-control-" + productId);
+  const quantityElement = document.getElementById("quantity-" + productId);
+  const productName = document.getElementById("name-" + productId).innerText;
+  const productPrice = parseFloat(document.getElementById("price-" + productId).innerText.replace("SAR ", "").replace(",", ""));
+
+  if (checkbox.checked) {
+    quantityControl.classList.remove("hidden");
+    cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText) };
+  } else {
+    quantityElement.innerText = 1;
+    quantityControl.classList.add("hidden");
+    delete cart[productId];
+  }
+}
+
+function increaseQuantity(productId) {
+  const quantityElement = document.getElementById("quantity-" + productId);
+  quantityElement.innerText = parseInt(quantityElement.innerText) + 1;
+  if (cart[productId]) {
+    cart[productId].quantity = parseInt(quantityElement.innerText);
+  }
+}
+
+function decreaseQuantity(productId) {
+  const quantityElement = document.getElementById("quantity-" + productId);
+  const currentQuantity = parseInt(quantityElement.innerText);
+  if (currentQuantity > 1) {
+    quantityElement.innerText = currentQuantity - 1;
+    if (cart[productId]) {
+      cart[productId].quantity = currentQuantity - 1;
+    }
+  }
+}
+
+  // Function to save cart data to localStorage and redirect to cart page
+  function saveCartAndRedirect() {
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.href = "cart.html";
+  }
+</script>
 </body>
 
 </html>
