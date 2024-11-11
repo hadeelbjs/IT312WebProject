@@ -10,25 +10,21 @@ function getCurrentWeekStartDate() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // عرض بداية الأسبوع في العنصر
     const weekStartElement = document.getElementById('current-week-date');
     if (weekStartElement) {
         weekStartElement.textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
     }
 
-    // تطبيق الثيم الداكن المحفوظ من localStorage عند تحميل الصفحة
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('theme-dark');
     }
 
-    // التأكد من وجود زر تغيير الثيم قبل إضافة الحدث
     const themeToggleButton = document.getElementById('theme-toggle');
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
 
-    // التعامل مع زر عرض العروض المخفية
     const toggleButton = document.getElementById('toggle-offers');
     const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
     if (toggleButton && hiddenOffers.length > 0) {
@@ -46,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// وظيفة تبديل الثيم مع تحديث حالة التخزين المحلي
 function toggleTheme() {
     if (document.body.classList.contains('theme-dark')) {
         document.body.classList.remove('theme-dark');
