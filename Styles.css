@@ -336,6 +336,7 @@ h3{
   display: flex;
   align-items: center;
   font-size: 1.2vw;
+  cursor: pointer;
 }
 
 .card .quantity-control button {
@@ -358,6 +359,6 @@ h3{
 }
 
 
-.hidden {
+.card .hidden {
   display: none !important;
 }
