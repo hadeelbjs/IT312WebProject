@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniture</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="category.css">
     <link rel="icon" href="images/favicon-32x32.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +29,7 @@
             <li><a href="clothing.html">Clothing</a></li>
             <li><a href="artworks.html">Artworks</a></li>
             <li><a href="furniture.html">Furniture</a></li>
-            <li><a href="cart.html">Cart</a></li>
+            <li><span onclick="saveCartAndRedirect()" style="cursor: pointer;">Cart</span></li>
             <li class="vertical-line">|</li>
             <li><button id="theme-toggle" class="theme-toggle">Customize</button></li>
         </ul>
@@ -48,7 +49,7 @@
   </header>
 
     <main>
-    <select id="sort-options" class="sort-by">
+    <select id="sort-options" class="sort-by" onchange="sortProducts()">
       <optgroup label="Sort By">
           <option value="recommended">Recommended</option>
       </optgroup>
@@ -66,106 +67,146 @@
 
      <!--1-->
       <div class="card">
-        <img src="images/table1.webp" alt="Wooden Touch Coffee Table">
-        <div class="top-left">Wooden Touch Coffee Table</div>
+        <img src="images/table1.webp" alt="Wooden Table">
+        <div class="top-left" id="name-17">Wooden Table</div>
         <div class="product-info">
           <p>Height(cm):51<br>
             Width(cm):122<br>
             Depth(cm):76</p>
         </div>
-        <div class="bottom-left">SAR 1,438</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-17">SAR 1,438</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-17" class="add-to-cart-checkbox" onclick="toggleCartItem(17)"></button>
+        <div class="quantity-control hidden" id="quantity-control-17">
+          <button onclick="decreaseQuantity(17)">−</button>
+          <span id="quantity-17">1</span>
+          <button onclick="increaseQuantity(17)">+</button>
+        </div>
       </div> 
 
      <!--2-->
       <div class="card">
         <img src="images/_mg_0205_1.jpg" alt="Entry Table">
-        <div class="top-left">Entry Table</div>
+        <div class="top-left" id="name-18">Entry Table</div>
         <div class="product-info">
           <p>Height(cm):110<br>
             Width(cm):77<br>
             Depth(cm):40</p>
         </div>
-        <div class="bottom-left">SAR 1,264</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-18">SAR 1,264</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-18" class="add-to-cart-checkbox" onclick="toggleCartItem(18)"></button>
+        <div class="quantity-control hidden" id="quantity-control-18">
+          <button onclick="decreaseQuantity(18)">−</button>
+          <span id="quantity-18">1</span>
+          <button onclick="increaseQuantity(18)">+</button>
+        </div>
       </div> 
 
        <!--3-->
       <div class="card">
         <img src="images/output-onlinepngtools.png" alt="Dining Chair">
-        <div class="top-left">Dining Chair</div>
+        <div class="top-left" id="name-19">Dining Chair</div>
         <div class="product-info">
           <p>Height(cm):120<br>
             Width(cm):70</p>
         </div>
-        <div class="bottom-left">SAR 750</div>
-        <button class="bottom-right">Add to cart</button>
-      </div> 
+        <div class="bottom-left" id="price-19">SAR 750</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-19" class="add-to-cart-checkbox" onclick="toggleCartItem(19)"></button>
+        <div class="quantity-control hidden" id="quantity-control-19">
+          <button onclick="decreaseQuantity(19)">−</button>
+          <span id="quantity-19">1</span>
+          <button onclick="increaseQuantity(19)">+</button>
+        </div>
+       </div> 
 
        <!--4-->
       <div class="card">
         <img src="images/Untitleddesign.webp" alt=" Vanity and Mirror">
-        <div class="top-left"> Vanity and Mirror</div>
+        <div class="top-left" id="name-20"> Vanity and Mirror</div>
          <div class="product-info">
           <p>Height(cm):150<br>
             Width(cm):170<br>
             Depth(cm):40</p>
         </div>
-        <div class="bottom-left">SAR 1,800</div>
-        <button class="bottom-right">Add to cart</button>
-      </div> 
+        <div class="bottom-left" id="price-20">SAR 1,800</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-20" class="add-to-cart-checkbox" onclick="toggleCartItem(20)"></button>
+        <div class="quantity-control hidden" id="quantity-control-20">
+        <button onclick="decreaseQuantity(20)">−</button>
+        <span id="quantity-20">1</span>
+        <button onclick="increaseQuantity(20)">+</button>
+      </div>
+    </div> 
 
 
        <!--5-->
        <div class="card">
         <img src="images/CVPDA168-1_1900xcopy.webp" alt="Chandelier">
-        <div class="top-left">Chandelier</div>
+        <div class="top-left" id="name-21">Chandelier</div>
         <div class="product-info">
           <p>Height(cm):110<br>
             Width(cm):70
             </p>
         </div>
-        <div class="bottom-left">SAR 1,143</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-21">SAR 1,143</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-21" class="add-to-cart-checkbox" onclick="toggleCartItem(21)"></button>
+        <div class="quantity-control hidden" id="quantity-control-21">
+        <button onclick="decreaseQuantity(21)">−</button>
+        <span id="quantity-21">1</span>
+        <button onclick="increaseQuantity(21)">+</button>
       </div> 
+    </div> 
 
        <!--6-->
       <div class="card">
         <img src="images/Sarah-Rustic-White-Wash-Resin-Table-Lamp_-Set-of-2_1900x.webp" alt="Lamp">
-        <div class="top-left">Lamp</div>
+        <div class="top-left" id="name-22">Lamp</div>
         <div class="product-info">
             <p>Height(cm):50<br>
                 Width(cm):20
                 </p>
         </div>
-        <div class="bottom-left">SAR 410</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-22">SAR 410</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-22" class="add-to-cart-checkbox" onclick="toggleCartItem(22)"></button>
+        <div class="quantity-control hidden" id="quantity-control-22">
+          <button onclick="decreaseQuantity(22)">−</button>
+          <span id="quantity-22">1</span>
+          <button onclick="increaseQuantity(22)">+</button>
+        </div>
       </div> 
 
        <!--7-->
       <div class="card">
         <img src="images/A2000348-SW-P1-KOcopy.webp" alt="Vase">
-        <div class="top-left">Vase</div>
+        <div class="top-left" id="name-23">Vase</div>
         <div class="product-info">
             <p>Height(cm):90<br>
                 Width(cm):20
                 </p>
         </div>
-        <div class="bottom-left">SAR 538</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-23">SAR 538</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-23" class="add-to-cart-checkbox" onclick="toggleCartItem(23)"></button>
+        <div class="quantity-control hidden" id="quantity-control-23">
+          <button onclick="decreaseQuantity(23)">−</button>
+          <span id="quantity-23">1</span>
+          <button onclick="increaseQuantity(23)">+</button>
+        </div>
       </div> 
 
        <!--8-->
       <div class="card">
         <img src="images/EB1024-291-ANGLE-SW-P1-KOcopy.webp" alt="Night Stand">
-        <div class="top-left">Night Stand</div>
+        <div class="top-left" id="name-24">Night Stand</div>
         <div class="product-info">
             <p>Height(cm):120<br>
                 Width(cm):80<br>
                 Depth(cm):40</p>
         </div>
-        <div class="bottom-left">SAR 664</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-24">SAR 664</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-24" class="add-to-cart-checkbox" onclick="toggleCartItem(24)"></button>
+        <div class="quantity-control hidden" id="quantity-control-24">
+          <button onclick="decreaseQuantity(24)">−</button>
+          <span id="quantity-24">1</span>
+          <button onclick="increaseQuantity(24)">+</button>
+        </div>
       </div> 
 
       </div>
@@ -223,7 +264,7 @@
 
   </script>
 
-    
+<script src="category.js"></script>
 
 </body>
 </html>
