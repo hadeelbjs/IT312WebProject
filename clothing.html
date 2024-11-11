@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clothing</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="category.css">
     <link rel="icon" href="images/favicon-32x32.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,90 +65,130 @@
      <!--1-->
       <div class="card">
         <img src="images/w520_q80.avif" alt="Blazer">
-        <div class="top-left" id="name-1">Blazer</div>
+        <div class="top-left" id="name-9">Blazer</div>
         <div class="product-info">
           <p>Jackie cady blazer</p>
         </div>
-        <div class="bottom-left">SAR 1,540</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-9">SAR 1,540</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-9" class="add-to-cart-checkbox" onclick="toggleCartItem(9)"></button>
+        <div class="quantity-control hidden" id="quantity-control-9">
+          <button onclick="decreaseQuantity(9)">−</button>
+          <span id="quantity-9">1</span>
+          <button onclick="increaseQuantity(9)">+</button>
+        </div>
       </div> 
 
      <!--2-->
       <div class="card">
         <img src="images/w520_q80(1).avif" alt="Sweater">
-        <div class="top-left" id="name-2">Sweater</div>
+        <div class="top-left" id="name-10">Sweater</div>
         <div class="product-info">
           <p>oversized jacquard-knit wool-blend sweater</p>
         </div>
-        <div class="bottom-left">SAR 1,364</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-10">SAR 1,364</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-10" class="add-to-cart-checkbox" onclick="toggleCartItem(10)"></button>
+        <div class="quantity-control hidden" id="quantity-control-10">
+          <button onclick="decreaseQuantity(10)">−</button>
+          <span id="quantity-10">1</span>
+          <button onclick="increaseQuantity(10)">+</button>
+        </div>
       </div> 
 
        <!--3-->
       <div class="card">
         <img src="images/w220_q80(1).avif" alt="Dress">
-        <div class="top-left" id="name-3">Dress</div>
+        <div class="top-left" id="name-11">Dress</div>
         <div class="product-info">
           <p>Satin-trimmed embroidered tulle gown</p>
         </div>
-        <div class="bottom-left">SAR 1,050</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-11">SAR 1,050</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-11" class="add-to-cart-checkbox" onclick="toggleCartItem(11)"></button>
+        <div class="quantity-control hidden" id="quantity-control-11">
+          <button onclick="decreaseQuantity(11)">−</button>
+          <span id="quantity-11">1</span>
+          <button onclick="increaseQuantity(11)">+</button>
+        </div>
       </div> 
 
        <!--4-->
       <div class="card">
         <img src="images/w1020_q80(6).avif" alt="Pants">
-        <div class="top-left" id="name-4">Pants</div>
+        <div class="top-left" id="name-12">Pants</div>
          <div class="product-info">
           <p>Sequined stretch-mesh straight-leg pants</p>
         </div>
-        <div class="bottom-left">SAR 1,000</div>
-        <button class="bottom-right">Add to cart</button>
-      </div> 
+        <div class="bottom-left" id="price-12">SAR 1,000</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-12" class="add-to-cart-checkbox" onclick="toggleCartItem(12)"></button>
+        <div class="quantity-control hidden" id="quantity-control-12">
+          <button onclick="decreaseQuantity(12)">−</button>
+          <span id="quantity-12">1</span>
+          <button onclick="increaseQuantity(12)">+</button>
+        </div>
+       </div> 
 
 
        <!--5-->
        <div class="card">
         <img src="images/w1020_q80(1).avif" alt="Blouse">
-        <div class="top-left" id="name-5">Blouse</div>
+        <div class="top-left" id="name-13">Blouse</div>
         <div class="product-info">
           <p>Tabard bow-detailed metallic crepon blouse</p>
         </div>
-        <div class="bottom-left">SAR 643</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-13">SAR 643</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-13" class="add-to-cart-checkbox" onclick="toggleCartItem(13)"></button>
+        <div class="quantity-control hidden" id="quantity-control-13">
+          <button onclick="decreaseQuantity(13)">−</button>
+          <span id="quantity-13">1</span>
+          <button onclick="increaseQuantity(13)">+</button>
+        </div> 
       </div> 
 
        <!--6-->
       <div class="card">
         <img src="images/w1020_q80(2).avif" alt="Dress">
-        <div class="top-left" id="name-6">Dress</div>
+        <div class="top-left" id="name-14">Dress</div>
         <div class="product-info">
           <p>Sequin-embellished chainmail mini dress</p>
         </div>
-        <div class="bottom-left">SAR 2,210</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-14">SAR 2,210</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-14" class="add-to-cart-checkbox" onclick="toggleCartItem(14)"></button>
+        <div class="quantity-control hidden" id="quantity-control-14">
+          <button onclick="decreaseQuantity(14)">−</button>
+          <span id="quantity-14">1</span>
+          <button onclick="increaseQuantity(14)">+</button>
+        </div>
       </div> 
 
        <!--7-->
       <div class="card">
         <img src="images/w1020_q80(3).avif" alt="Skirt">
-        <div class="top-left" id="name-7">Skirt</div>
+        <div class="top-left" id="name-15">Skirt</div>
         <div class="product-info">
           <p>Embellished laser-cut crepe mini skirt</p>
         </div>
-        <div class="bottom-left">SAR 838</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-15">SAR 838</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-15" class="add-to-cart-checkbox" onclick="toggleCartItem(15)"></button>
+        <div class="quantity-control hidden" id="quantity-control-7">
+          <button onclick="decreaseQuantity(15)">−</button>
+          <span id="quantity-15">1</span>
+          <button onclick="increaseQuantity(15)">+</button>
+        </div>
       </div> 
 
        <!--8-->
       <div class="card">
         <img src="images/w1020_q80(4).avif" alt="Gown">
-        <div class="top-left" id="name-8">Gown</div>
+        <div class="top-left" id="name-16">Gown</div>
         <div class="product-info">
           <p>Embroidered tulle gown</p>
         </div>
-        <div class="bottom-left">SAR 1,364</div>
-        <button class="bottom-right">Add to cart</button>
+        <div class="bottom-left" id="price-16">SAR 1,364</div>
+        <button class="bottom-right">Add to cart <input type="checkbox" id="cart-checkbox-16" class="add-to-cart-checkbox" onclick="toggleCartItem(16)"></button>
+        <div class="quantity-control hidden" id="quantity-control-16">
+          <button onclick="decreaseQuantity(16)">−</button>
+          <span id="quantity-16">1</span>
+          <button onclick="increaseQuantity(16)">+</button>
+        </div>
       </div> 
 
       </div>
@@ -205,7 +246,7 @@
 
   </script>
 
-    
+<script src="category.js"></script>
 
 
 </body>
