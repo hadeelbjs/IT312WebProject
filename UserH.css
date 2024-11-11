@@ -37,6 +37,18 @@ table th {
     background-color: #9B7E65;
     color: white;
 }
+
+.theme-dark table th{
+    background-color: #544334;
+
+}
+
+.theme-dark table {
+    background-color: #baada2;
+
+}
+
+
 table td{
     padding-top: 5%;
     vertical-align: top;
