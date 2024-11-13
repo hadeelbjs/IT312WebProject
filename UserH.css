@@ -1,7 +1,15 @@
 
 /* Cart Page Styles*/
 
+ .theme-dark #CartIsEmpty  {
+    color: #f8eee5;
 
+}
+#CartIsEmpty {
+    font-size: 25px;
+    color: #634b2d;
+  }
+  
 table img {
     width: 18vw;
     height: auto;
@@ -34,7 +42,7 @@ table td {
 }
 
 table th {
-    background-color: #9B7E65;
+    background-color: #7f5539;
     color: white;
 }
 
@@ -44,7 +52,8 @@ table th {
 }
 
 .theme-dark table {
-    background-color: #baada2;
+    background-color: #35291f;
+    color: #ede0d4;
 
 }
 
@@ -60,6 +69,10 @@ table a {
     text-decoration: none;
 }
 
+.theme-dark table a {
+    color: #c49896;
+    text-decoration: none;
+}
 table a:hover {
     text-decoration: underline;
 }
@@ -85,6 +98,17 @@ table a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    
 }
+.theme-dark .order-summary div {
+    background-color: #544334;
+    color: #f8eee5;
+    padding: 2%;
+    width: 60vw;
+    height: 10vw;
+    border-radius: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+}
+
 
 
 .order-summary button {
@@ -112,9 +136,21 @@ table a:hover {
     align-content: center;
     
 }
+.theme-dark .order-summary .buttons {
+    background-color: #9b7e6500;
+    box-shadow: none;
+    border-radius: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    
+}
 .order-summary .buttons strong {
     font-size: 1.8vw; 
 }
+
 #Clear {
     background-color: white;
     color: #9B7E65;
@@ -126,11 +162,29 @@ table a:hover {
    
 }
 
+.theme-dark #Clear {
+    background-color: #623121;
+    color: white;
+    transition:  background-color 0.3s ease;
+}
+
+.theme-dark #Checkout{
+    margin-bottom: 0.5vw;
+    color: white;
+   background-color: #8b5e34;
+}
+
  #Clear:hover {
     background-color: #d98b473e;
 }
+.theme-dark #Clear:hover {
+    background-color: #38040e;
+}
 #Checkout:hover {
     background-color: #CCD5AE;
+}
+.theme-dark #Checkout:hover {
+    background-color: #242f00;
 }
 
 .price {

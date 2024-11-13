@@ -76,7 +76,7 @@ body {
 }
 
 .theme-dark .week-date {
-  color: #9B7E65;
+  color: #ead6c3;
 
 }
 
@@ -175,7 +175,7 @@ margin: 0 2vw;
 
 .vertical-line {
     padding: 0 0.2vw;
-    color: white; /* Adjust color as needed */
+    color: white; 
     font-weight: bold;
 }
 
@@ -195,6 +195,16 @@ margin: 0 2vw;
 
 .Breadcrumb a {
   color: #9B7E65;
+  text-decoration: none;
+}
+.theme-dark .Breadcrumb p {
+  font-size: 1.6vw;
+  color: #ead6c3;
+  font-weight:normal;
+}
+
+.theme-dark .Breadcrumb a {
+  color: #ead6c3;
   text-decoration: none;
 }
 

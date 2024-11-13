@@ -159,8 +159,6 @@
             let cartEmp = document.getElementById("CartIsEmpty");
             if (cartEmp) {
                 cartEmp.innerHTML = "Your cart is empty";
-                cartEmp.style.fontSize = "25px";
-                cartEmp.style.color = "#634b2d";
             }
         }
   
@@ -248,6 +246,7 @@
         alert(feedback);
             
         window.location.href = "Eval.html"; 
+        ClearCart();
        
     }
     function loadCart() {
