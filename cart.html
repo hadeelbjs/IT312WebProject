@@ -64,34 +64,8 @@
                         <th class="price">Total</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr class="cart-row">
-                        <td class="productDetails">
-                            <img src="images/w520_q80(1).avif" alt="Blazer">
-                            <p>Name:<br><strong>cady blazer</strong> </p>
-                        </td>
-                        
-                        <td>
-                            <input class="quantity" type="number" name="Quan" min="1" value="1" data-price="1540"><br>
-                            <a onclick="removeItem(this)">Remove</a>
-                        </td>
-                        <td> 1,540 SAR</td>
-                        <td class="total-price"> 1,540 SAR</td>
-                    </tr>
-                    <tr class="cart-row">
-                        <td class="productDetails">
-                            <img src="images/_mg_0205_1.jpg" alt="Entry Table">
-                            <p>Name: <br><strong>Entry Table</strong></p>
-                        </td>
-                       
-                        <td>
-                           <input type="number" class="quantity" name="Quan" min="1" value="1" data-price="1264"><br>
-                            
-                            <a onclick="removeItem(this)">Remove</a>
-                        </td>
-                        <td> 1,264 SAR</td>
-                        <td class="total-price"> 1,264 SAR</td>
-                    </tr>
+                <tbody id = "cartBody">
+                    
                 </tbody>
             </table>
 
@@ -129,112 +103,210 @@
         </p>
     </footer>
     <script>
-     function ClearCart() {
-        let items = document.getElementsByTagName("table");
-      
-        for (let i = items.length - 1; i >= 0; i--) {
-            items[i].remove();
-        }
-        document.getElementById("Checkout").remove();
-        document.getElementById("Clear").remove();
+        // Initialize cart from localStorage
+        var cart = JSON.parse(localStorage.getItem("cart")) || {};
+        var grandTotal;
+        var noItems;
 
 
-        let orderSum = document.getElementById("summary");
-        let h3 = orderSum.getElementsByTagName("h3");
-        h3[0].remove();
-        //h3[0].innerHTML = "Your Cart is Empty"
-        let p = orderSum.getElementsByTagName("p");
-        p[0].remove();
-        document.getElementById("Total").remove();
-        orderSum.remove();
-        //orderSum.style.backgroundColor = rgba(0,0,0,0);
-        cartEmp = document.getElementById("CartIsEmpty");
-        cartEmp.innerHTML = "Your cart is empty";
-        cartEmp.style.fontSize = "25px" ;
-        cartEmp.style.color = "#634b2d";
-
-    }
-    // Function to update the totals
-        function updateCartTotals() {
-            let grandTotal = 0;
-
-            // Get all rows in the cart table body
-            const rows = document.getElementsByClassName('cart-row'); 
-
-            for (let i = 0; i < rows.length; i++) {
-                // Get the quantity input and unit price
-                const quantityInput = rows[i].getElementsByClassName('quantity')[0];
-                const unitPrice = parseFloat(quantityInput.getAttribute('data-price'));
-                const quantity = parseInt(quantityInput.value, 10);
-
-                // Calculate the total price for this row
-                const totalPrice = unitPrice * quantity;
-                rows[i].getElementsByClassName('total-price')[0].textContent = `${totalPrice.toLocaleString()} SAR`;
-
-                // Add this row's total to the grand total
-                grandTotal += totalPrice;
+        function ClearCart() {
+            if (noItems !== 0) {
+                localStorage.removeItem("cart");
+                cart = {};
+                loadCart();
             }
 
-            // Update the grand total on the page
-            document.getElementById('Total').textContent = `Total Cost: ${grandTotal.toLocaleString()} SAR`;
+            // Remove the table if it exists
+            let items = document.getElementsByTagName("table");
+            if (items.length > 0) {
+                items[0].remove();
+            }
+
+            // Remove the "Checkout" button if it exists
+            let checkoutButton = document.getElementById("Checkout");
+            if (checkoutButton) {
+                checkoutButton.remove();
+            }
+
+            // Remove the "Clear" button if it exists
+            let clearButton = document.getElementById("Clear");
+            if (clearButton) {
+                clearButton.remove();
+            }
+
+            // Handle the order summary section
+            let orderSum = document.getElementById("summary");
+            if (orderSum) {
+                let h3 = orderSum.getElementsByTagName("h3");
+                if (h3.length > 0) {
+                    h3[0].remove();
+                }
+
+                let p = orderSum.getElementsByTagName("p");
+                for (let i = 0; i < p.length; i++) {
+                    p[i].remove();
+                }
+
+                let totalElement = document.getElementById("Total");
+                if (totalElement) {
+                    totalElement.remove();
+                }
+
+                orderSum.remove();
+            }
+
+            // Handle the "Cart is empty" message
+            let cartEmp = document.getElementById("CartIsEmpty");
+            if (cartEmp) {
+                cartEmp.innerHTML = "Your cart is empty";
+                cartEmp.style.fontSize = "25px";
+                cartEmp.style.color = "#634b2d";
+            }
         }
+  
+
+        // Function to update the totals
+        function updateCartTotals() {
+        grandTotal = 0;
+        // Get all rows in the cart table body
+        const rows = document.getElementsByClassName('cart-row'); 
+
+        for (let i = 0; i < rows.length; i++) {
+            // Get the quantity input and unit price
+            const quantityInput = rows[i].getElementsByClassName('quantity')[0];
+            const unitPrice = parseFloat(quantityInput.getAttribute('item-price'));
+            const quantity = parseInt(quantityInput.value, 10);
+            const productId = quantityInput.getAttribute('item-id');
+
+            // Calculate the total price for this row
+            const totalPrice = unitPrice * quantity;
+            rows[i].getElementsByClassName('total-price')[0].textContent = `${totalPrice.toLocaleString()} SAR`;
+
+            // Add this row's total to the grand total
+            grandTotal += totalPrice;
+
+            // Update the quantity in the cart object and local storage
+            if (cart[productId]) {
+                cart[productId].quantity = quantity; // Update the cart object
+            }
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Update the grand total on the page
+        document.getElementById('Total').textContent = `Total Cost: ${grandTotal.toLocaleString()} SAR`;
+    }
 
 
-        // Get all quantity inputs
+    // Get all quantity inputs
+    const quantityInputs = document.getElementsByClassName('quantity');
+    for (let i = 0; i < quantityInputs.length; i++) {
+        quantityInputs[i].addEventListener('input', updateCartTotals);
+    }
+        
+
+    // Initial calculation on page load
+    updateCartTotals();
+
+    function updateNoItems() {
+        let noItems = 0;
+
+        // Get all rows in the cart table body
+        const rows = document.getElementsByClassName('cart-row'); 
+        noItems = rows.length ;
+
+        // Update the grand total on the page
+        document.getElementById('orderSumNoITems').textContent = `Items: ${noItems.toLocaleString()}`;
+    }
+    updateNoItems();
+
+    function addQuantityEventListeners() {
         const quantityInputs = document.getElementsByClassName('quantity');
         for (let i = 0; i < quantityInputs.length; i++) {
             quantityInputs[i].addEventListener('input', updateCartTotals);
         }
+    }
 
-        // Initial calculation on page load
-        updateCartTotals();
-
-        function updateNoItems() {
-            let noItems = 0;
-
-            // Get all rows in the cart table body
-            const rows = document.getElementsByClassName('cart-row'); 
-            noItems = rows.length ;
-
-            // Update the grand total on the page
-            document.getElementById('orderSumNoITems').textContent = `Items: ${noItems.toLocaleString()}`;
-        }
-        updateNoItems();
-
-        function removeItem(row){
-            tableRow = row.closest('tr');
+    function removeItem(id){
+            /*tableRow = row.closest('tr');
             if (tableRow) {
                 tableRow.remove();
                 updateCartTotals();
                 updateNoItems() 
-            }
-        }
+            }*/
+        delete cart[id];
+        localStorage.setItem("cart", JSON.stringify(cart)); // Update localStorage
 
-        function checkout(){
-            feedback = "Thank You For Your Purchase";
-            total = document.getElementById("Total").textContent;
-            feedback += "\n" + total;
-            alert(feedback);
-            
-            window.location.href = "Eval.html"; 
-       
-        }
-
-
-
-        window.addEventListener('load', function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('theme-dark');
-    } else {
-        document.body.classList.remove('theme-dark');
+        loadCart(); // Reload the cart with the updated items
+        updateCartTotals(); // Recalculate the totals after the item is removed
+        updateNoItems(); // Update the item count
     }
-});
+
+    function checkout(){
+        feedback = "Thank You For Your Purchase";
+        total = document.getElementById("Total").textContent;
+        feedback += "\n" + total;
+        alert(feedback);
+            
+        window.location.href = "Eval.html"; 
+       
+    }
+    function loadCart() {
+
+        const cartBody = document.getElementById("cartBody");
+        cartBody.innerHTML = "";
+
+        noItems = 0;
+        grandTotal = 0;
+
+        for (const productId in cart) {
+            const { name, price, quantity, imagePath } = cart[productId];
+
+            const row = document.createElement("tr");
+            row.classList.add("cart-row");
+
+            row.innerHTML = `<td class="productDetails">
+                                <img src="${imagePath}" alt="${name}">
+                                <p>Name:<br><strong>${name}</strong></p>
+                            </td>
+                            <td>
+                                <input class="quantity" type="number" min="1" value="${quantity}" item-price="${price}" item-id="${productId}">
+                                <br><a onclick="removeItem(${productId})";">Remove</a>
+                            </td>
+                            <td>${price.toLocaleString()} SAR</td>
+                            <td class="total-price">${(price * quantity).toLocaleString()} SAR</td>`;
+
+            cartBody.appendChild(row);
+            grandTotal += price * quantity;
+            noItems += 1;
+        }
+
+        // Update totals only if there are items in the cart
+        document.getElementById("orderSumNoITems").textContent = noItems > 0 ? `Items: ${noItems}` :" ";
+        document.getElementById("Total").textContent = grandTotal > 0 ? `Total Cost: ${grandTotal.toLocaleString()} SAR` : " ";
+
+        if(noItems == 0) ClearCart();
+
+        // Add event listeners for the quantity inputs
+        addQuantityEventListeners();
+    }
+
+    window.onload = loadCart;
+
+
+
+    window.addEventListener('load', function() {
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            document.body.classList.add('theme-dark');
+        } else {
+            document.body.classList.remove('theme-dark');
+        }
+    });
 
 
     </script>
   
-       <script src="theme.js"></script>
+    <script src="theme.js"></script>
 
 </body>
 

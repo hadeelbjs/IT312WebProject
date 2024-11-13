@@ -29,10 +29,11 @@ function toggleCartItem(productId) {
   const quantityElement = document.getElementById("quantity-" + productId);
   const productName = document.getElementById("name-" + productId).innerText;
   const productPrice = parseFloat(document.getElementById("price-" + productId).innerText.replace("SAR ", "").replace(",", ""));
+  const imgPath = document.getElementById("img-" +productId).src;
 
   if (checkbox.checked) {
     quantityControl.classList.remove("hidden");
-    cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText) };
+    cart[productId] = { name: productName, price: productPrice, quantity: parseInt(quantityElement.innerText), imagePath: imgPath  }
   } else {
     quantityElement.innerText = 1;
     quantityControl.classList.add("hidden");
