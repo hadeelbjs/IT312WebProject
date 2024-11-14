@@ -134,6 +134,7 @@
 
 
     </style>
+
 </head>
 <body>
     <header>
@@ -165,7 +166,7 @@
     <main>
         <hr>
         <div class="AddProduct-container">
-           <form action="submit_product.php" method="POST" enctype="multipart/form-data" class="AddProduct-form-container">
+           <form class="AddProduct-form-container">
                 <div class="image-upload">
                     <h2>Image</h2>
                     <div class="image-placeholder">
@@ -232,6 +233,58 @@
             </a>
         </p>
     </footer>
+
+    <script>
+        document.querySelector('.AddProduct-form-container').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            // Retrieve input values
+            var name = document.getElementById('name').value.trim();
+            var price = document.getElementById('price').value.trim();
+            var quantity = document.getElementById('quantity').value.trim();
+            var description = document.getElementById('description').value.trim();
+            var category = document.querySelector('select[name="category"]').value;
+            var imageInput = document.getElementById('image-upload');
+    
+            // Validate input fields
+            if (!name || !price || !quantity || !description || !category || imageInput.files.length === 0) {
+                alert('Please fill in all fields.');
+                return;
+            }
+            if (/^\d/.test(name)) {
+                alert('Product name cannot start with a number.');
+                return;
+            }
+            if (isNaN(price) || isNaN(quantity)) {
+                alert('Price and Quantity must be numbers.');
+                return;
+            }
+    
+            
+            var reader = new FileReader();
+            reader.onload = function(event) {
+                var productImage = event.target.result;
+    
+                var product = {
+                    id: Date.now(),
+                    name: name,
+                    price: parseFloat(price),
+                    quantity: parseInt(quantity),
+                    description: description,
+                    category: category,
+                    image: productImage
+                };
+    
+                var products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
+                products.push(product);
+                localStorage.setItem('sellerProducts', JSON.stringify(products));
+    
+                alert('Product "' + name + '" added successfully!');
+                document.querySelector('.AddProduct-form-container').reset();
+            };
+            reader.readAsDataURL(imageInput.files[0]);
+        });
+    </script>
 
 
 
