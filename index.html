@@ -152,7 +152,6 @@
     background-color: #5a4a3c;
 }
 
-
 .categories-section {
   margin-top: 5vw;
   text-align: center;
@@ -162,75 +161,69 @@
   display: flex;
   flex-direction: row;
   justify-content: center; 
-  gap: 1.25em; 
+  gap: 2em; /* زيادة المسافة بين العناصر */
   flex-wrap: wrap; 
 }
 
 .category-item {
   position: relative;
-  background-color: white;
-  color: #6c584c; 
-  padding: 5vw;
+  flex: 0 1 25vw; 
   text-align: center;
+  border-radius: 2vw;
+  overflow: hidden;
   transition: transform 0.3s ease;
-  flex: 0 1 17vw;
-  max-width: 100%;
-  border-radius: 3vw; 
+  background-color: white; 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+  display: block; /* Make sure the entire area is clickable */
 
 }
-
 
 
 .category-item:hover {
-  transform: scale(1.03); 
+  transform: scale(1.05); 
 }
 
-.category-item:hover::before {
-  transform: scale(1.03); 
+.category-image {
+  width: 100%;
+  height: 35vw; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 2vw 2vw 0 0; 
 }
-
 
 .category-label {
-  position: relative;
-  z-index: 1;
+  padding: 1em;
+  background-color: white; 
+  text-align: center;
 }
 
 .category-label h3 {
-  font-size: 2vw;
+  font-size: 1.5vw; 
   font-weight: bold;
-  color: white; 
+  margin: 0;
+  color: #6c584c;
 }
 
-.category-item::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  border-radius: 1vw;
-  z-index: 0;
-  opacity: 0.9;
-  transition: transform 0.3s ease; 
-
+.category-item a {
+  text-decoration: none; /* Ensure no underline on the link */
+  color: inherit; /* Inherit text color */
 }
 
-.category-item.category1::before {
-  background-image: url('images/clothes.jpg'); 
+.category-item.category1 .category-image {
+  background-image: url('images/clothes.jpg');
 }
 
-.category-item.category2::before {
-  background-image: url('images/artworks.jpg'); 
+.category-item.category2 .category-image {
+  background-image: url('images/artworks.jpg');
 }
 
-.category-item.category3::before {
-  background-image: url('images/Furniture.jpg'); 
+.category-item.category3 .category-image {
+  background-image: url('images/Furniture.jpg');
 }
+
 
 .reviews-section {
-  padding: 4vw 2vw;
+  padding-top: 6vw ;
   background-color: #f5ebe0; 
   text-align: center;
   overflow: hidden;
@@ -265,15 +258,15 @@
     width: 11vw; 
     padding: 5vw; 
     border-radius: 0.7vw;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
     font-size: 1vw; 
+    margin-bottom: 2vw;
 }
 
 .review  p{
     font-size: 2vw; 
     color: #5a4a3c;
 }
-
 
 .review:hover {
     transform: scale(1.05);
@@ -427,30 +420,36 @@
     </section>
 
 
-      <section id="categories-section" class="categories-section">
-          <h2>Product Categories</h2>
-          <div class="categories-container">
-              <div class="category-item category1" >
-                  <div class="category-label">
-                      <h3><a href="clothing.html"  style="color: #fff;  text-decoration: none;" >Clothing</a></h3>
-                  </div>
-              </div>
-              <div class="category-item category2">
-                  <div class="category-label">
-                      <h3><a href="artworks.html" style="color: #fff;  text-decoration: none;" >Artworks</a></h3>
-                  </div>
-              </div>
-              <div class="category-item category3">
-                  <div class="category-label">
-                      <h3><a href="furniture.html" style="color: #fff;  text-decoration: none;" >Furniture</a></h3>
-                  </div>
-              </div>
+    <section id="categories-section" class="categories-section">
+      <h2>Popular Categories</h2>
+      <div class="categories-container">
+        <a href="clothing.html" class="category-item category1" style="text-decoration: none;">
+          <div class="category-image"></div>
+          <div class="category-label">
+            <h3>Clothing</h3>
           </div>
-      </section>
+        </a>
+        <a href="artworks.html" class="category-item category2"style="text-decoration: none;">
+          <div class="category-image"></div>
+          <div class="category-label">
+            <h3>Artworks</h3>
+          </div>
+        </a>
+        <a href="furniture.html" class="category-item category3"style="text-decoration: none;">
+          <div class="category-image"></div>
+          <div class="category-label">
+            <h3>Furniture</h3>
+          </div>
+        </a>
+      </div>
+    </section>
+    
+    
+  
 
 
       <section class="reviews-section">
-        <h2>Customer Reviews</h2>
+        <h2>What our clients say!</h2>
         <div class="reviews-container" id="reviews-container">
             <div class="review" id="review1" data-customer="Joun R." data-product="Sweater" data-rate="★★★★★" data-feedback="I absolutely love the vintage pieces I found on Vintage Vault! especially the Sweater The quality is incredible, and each piece has so much character!">
                 <p>Joun R.</p>
