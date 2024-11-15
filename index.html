@@ -175,6 +175,8 @@
   transition: transform 0.3s ease;
   flex: 0 1 17vw;
   max-width: 100%;
+  border-radius: 3vw; 
+
 }
 
 
@@ -234,103 +236,97 @@
   overflow: hidden;
 }
 
+
 .reviews-container {
-  display: flex;
-  flex-direction: row;
-  animation: scroll 15s linear infinite;
-  white-space: nowrap;
+    display: flex;
+    overflow-x: hidden; 
+    gap: 5vw;
+    border: 0vw ;
+    white-space: nowrap;
+    width: 100%;
+    animation: scrollReviews 15s linear infinite; 
+    height: auto; 
+    overflow: visible; 
 }
 
 
 
-.review-item {
-  background-size: cover; 
-  background-position: center;
-  color: white;
-  flex: 0 0 auto;
-  border-radius: 0.8vw;
-  min-width: 37vw;
-  min-height: 15vw;
-  margin-right: 1vw;
-  position: relative;
-  overflow: hidden;
-  z-index: 2; 
+@keyframes scrollReviews {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
 }
 
-.review-item::before {
-  content: "";
+.review {
+    flex-shrink: 0; 
+    width: 20vw; 
+    padding: 5vw; 
+    border-radius: 0.7vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1vw; 
+}
+
+.review  p{
+    font-size: 2vw; 
+}
+
+
+.review:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#hover-info {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5); 
-  z-index: 1;
-  border-radius: 0.8vw;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
 }
 
-.review-item h3 {
-  position: absolute;
-  top: 1vw;
-  left: 1.5vw; 
-  font-size: 1.5vw;
-  color: #fff;
-  padding: 0.5vw;
-  z-index: 3; 
+
+#review1 {
+  background-image: url("images/avatar1.png"); 
+  background-size: 8em;
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-color: #fff;
+
+
 }
 
-.star-rating {
-  position: absolute;
-  top: 1vw; 
-  right: 1.5vw; 
-  font-size: 1.8vw; 
-  color: rgb(255, 229, 79);
-  z-index: 4; 
+#review2 {
+  background-image: url("images/avatar2.png"); 
+  background-size: 8em;
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-color: #fff;
+
 }
 
-.review-item p {
-  position: absolute;
-  bottom: 0vw;
-  font-size: 1.1vw;
-  width: 100%; 
-  padding: 1.5vw;
-  background-color: rgba(78, 58, 38, 0.8);
-  color: white;
-  border-radius: 0.8vw;
-  z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
+#review3 {
+  background-image: url("images/avatar4.png"); 
+  background-size: 8em;
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-color: #fff;
+
 }
 
-.review-item.review1 {
-  background-image: url("images/w520_q80(1).avif"); 
-  background-size: 15em;
+#review4 {
+  background-image: url("images/avatar3.png"); 
+  background-size: 8em;
+  background-repeat: no-repeat;
+  background-position: center top; 
+  background-color: #fff;
 }
 
-.review-item.review2 {
-  background-image: url("images/w220_q80(1).avif"); 
-  background-size: 10em;
-}
 
-.review-item.review3 {
-  background-image: url("images/white-hydrangeas.webp"); 
-  background-size: 15em;
-}
-
-.review-item.review4 {
-  background-image: url("images/Untitleddesign_56_0736bb2b-dddb-4ef3-ab76-3f289f276ab7_1900x.webp"); 
-  background-size: 15em;
-}
-
- 
-@keyframes scroll {
-      0% {
-          transform: translateX(100%);
-      }
-      100% {
-          transform: translateX(-100%);
-      }
-}
 
     </style>
 </head>
@@ -453,8 +449,33 @@
 
 
       <section class="reviews-section">
-          <h2>Customer Reviews</h2>
-          <div class="reviews-container">
+        <h2>Customer Reviews</h2>
+        <div class="reviews-container" id="reviews-container">
+            <div class="review" id="review1" data-customer="Joun R." data-product="Sweater" data-rate="★★★★★" data-feedback="I absolutely love the vintage pieces I found on Vintage Vault! especially the Sweater The quality is incredible, and each piece has so much character!">
+                <p>Joun R.</p>
+            </div>
+            <div class="review" id="review2" data-customer="Lolo L." data-product="Artwork" data-rate="★★★★" data-feedback="I found the perfect artwork White Hydrangeas for my living room. It's truly one-of-a-kind, and I get compliments on it all the time!">
+                <p>Lolo L.</p>
+            </div>
+            <div class="review" id="review3" data-customer="Sophia M." data-product="Dress" data-rate="★★★★★" data-feedback="The customer service is fantastic!">
+                <p>Sophia M.</p>
+            </div>
+            <div class="review" id="review4" data-customer="Michael B." data-product="Product C" data-rate="★★★" data-feedback="Amazing collection!">
+                <p>Michael B.</p>
+            </div>
+        </div>
+    </section>
+
+        <div id="hover-info" class="hidden">
+            <p><strong>Customer:</strong> <span id="customer-name"></span></p>
+            <p><strong>Product:</strong> <span id="product-name"></span></p>
+            <p><strong>Rate:</strong> <span id="product-rate"></span></p>
+            <p><strong>Feedback:</strong> <span id="product-feedback"></span></p>
+        </div>
+    </section>
+
+
+       <!--   <div class="reviews-container">
               <div class="review-item review1">
                   <p>"I absolutely love the vintage pieces I found on Vintage Vault! <br> especially the Sweater<br> The quality is incredible, and each piece has so much character!"</p>
                   <h3>- Emily R.</h3>
@@ -476,7 +497,8 @@
                   <div class="star-rating">★★★★★</div> 
               </div>
           </div>
-      </section>
+      </section> 
+      -->
   </main>
     
     <footer>
@@ -501,6 +523,41 @@
         document.body.classList.remove('theme-dark');
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const reviews = document.querySelectorAll(".review");
+  const hoverInfo = document.getElementById("hover-info");
+
+  reviews.forEach(review => {
+    review.addEventListener("mouseover", event => {
+      const customer = review.dataset.customer;
+      const product = review.dataset.product;
+      const rate = review.dataset.rate;
+      const feedback = review.dataset.feedback;
+
+      document.getElementById("customer-name").textContent = customer;
+      document.getElementById("product-name").textContent = product;
+      document.getElementById("product-rate").textContent = rate;
+      document.getElementById("product-feedback").textContent = feedback;
+
+      hoverInfo.style.display = "block";
+      hoverInfo.style.top = `${event.pageY + 10}px`;
+      hoverInfo.style.left = `${event.pageX + 10}px`;
+    });
+
+    review.addEventListener("mousemove", event => {
+      hoverInfo.style.top = `${event.pageY + 10}px`;
+      hoverInfo.style.left = `${event.pageX + 10}px`;
+    });
+
+    review.addEventListener("mouseout", () => {
+      hoverInfo.style.display = "none";
+    });
+  });
+});
+
+
 
     </script>
     <script src="theme.js"></script>
