@@ -204,24 +204,10 @@
             }
         </style>
         
-        <div class="offer-box">
-            <img src="images/offer5.jpg" alt="Offer Image">
-            <div class="offer-info">
-                <h2>Offer name: 20% OFF!!!</h2>
-                <p>Discount: 20%</p>
-            </div>
-            <label for="offer1" class="visually-hidden">delete</label>
-            <input type="checkbox" id="offer1">
-        </div>
-        <div class="offer-box">
-            <img src="images/offer1.jpg" alt="Offer Image">
-            <div class="offer-info">
-                <h2>Offer name: 50% OFF!!!</h2>
-                <p>Discount: 50%</p>
-            </div>
-            <label for="offer2" class="visually-hidden">delete</label>
-            <input type="checkbox" id="offer2">
-        </div>
+
+        <section id="offer-display">
+
+        </section>
         
         <div class="delete-container">
             <button id="delete">Delete Selected Offers</button> 
@@ -236,6 +222,7 @@
     </section>
 
     <section class="form-box">
+        <form id="offer-form"> 
         <div class="img-upload">    
             <label for="offerImage">Upload Offer Image</label>
             <input type="file" name="offerImage" id="offerImage">   
@@ -254,6 +241,7 @@
 
             <button id="add">Add</button>
         </div>
+    </form>
     </section>
 
     <footer>
@@ -283,6 +271,6 @@ window.addEventListener('load', function() {
       </script>
     
     <script src="theme.js"></script>
-
+    <script src="offers.js"></script>
 </body>
 </html>
