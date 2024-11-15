@@ -76,6 +76,8 @@ h2 {
     padding: 2vw;
 }
 
+
+
 .products::-webkit-scrollbar {
     height: 1vw;
 }
@@ -85,18 +87,22 @@ h2 {
     border-radius: 1vw;
 }
 
+
+
 .product-box {
     position: relative;
     padding: 1.5vw;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
-    min-width: 15vw;
-    max-width: 15vw;
+    width: 20%;
     height: auto;
+    min-height: 28vw;
     background-color: white;
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .product-box:hover {
     transform: scale(1.05);
@@ -118,11 +124,14 @@ h2 {
     object-fit: cover;
     border-radius: 1vw;
 }
-.product-box p.name {
-    position: relative;
+
+
+.product-box .name {
     font-size: 1.5vw;
     color: black;
     text-align: left;
+    margin-top: 0.1vw; 
+    margin-bottom: 0.5vw;
 }
 
 .product-box p.price span {
@@ -133,17 +142,31 @@ h2 {
     position: absolute;
     bottom: 0;
     left: 1vw;
-    font-size: 1.25vw;
+    font-size: 1.3vw;
     color: black;
 }
     .product-box p.descript {
-    margin-top: 2vw;
+     margin-top: 2vw;
     margin-bottom: 2.5vw;
     font-size: 1.25vw;
     color: #555;
     text-align: center;
     line-height: 1.4;
 }
+
+
+
+.quantity {
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    font-size: 1.3vw;
+    color: black;
+}
+
+
+
+
 </style>
 </head>
 <body>
@@ -177,70 +200,7 @@ h2 {
         </div>
         <h2>My Products</h2>
         <div class="products">
-            <div class="product-box">
-                <p class="name">White hydrangeas</p>
-                <div class="product-image">
-                    <img src="images/white-hydrangeas.webp" alt="White hydrangeas">
-                </div>
-                <p class="descript">Elegant white hydrangeas artwork in a minimalist vase, perfect for home decor.</p>
-                <p class="price"><span>SAR</span>364</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Winter Candles</p>
-                <div class="product-image">
-                    <img src="images/winter-candles.webp" alt="Winter Candles">
-                </div>
-                <p class="descript">Warm winter candle artwork set with a vintage aesthetic for cozy evenings.</p>
-                <p class="price"><span>SAR</span>1,238</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Vase</p>
-                <div class="product-image">
-                    <img src="images/KO.webp" alt="Vase">
-                </div>
-                <p class="descript">Stylish ceramic vase to elevate your floral displays.</p>
-                <p class="price"><span>SAR</span>538</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Lamp</p>
-                <div class="product-image">
-                    <img src="images/Sarah-Rustic-White-Wash-Resin-Table-Lamp_-Set-of-2_1900x.webp" alt="Lamp">
-                </div>
-                <p class="descript">Rustic table lamp with a whitewash finish for a charming glow.</p>
-                <p class="price"><span>SAR</span>410</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Entry Table</p>
-                <div class="product-image">
-                    <img src="images/_mg_0205_1.jpg" alt="Entry Table">
-                </div>
-                <p class="descript">Beautifully crafted entry table with intricate detailing.</p>
-                <p class="price"><span>SAR</span>1,264</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Jacket</p>
-                <div class="product-image">
-                    <img src="images/w220_q80(2).avif" alt="Jacket">
-                </div>
-                <p class="descript">Trendy black leather jacket for a chic, modern look.</p>
-                <p class="price"><span>SAR</span>1,238</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Skirt</p>
-                <div class="product-image">
-                    <img src="images/w1020_q80(3).avif" alt="Skirt">
-                </div>
-                <p class="descript">Embellished laser-cut crepe mini skirt.</p>
-                <p class="price"><span>SAR</span>838</p>
-            </div>
-            <div class="product-box">
-                <p class="name">Dress</p>
-                <div class="product-image">
-                    <img src="images/w220_q80 (1) (1).avif" alt="Dress">
-                </div>
-                <p class="descript">Colorful and bold dress with unique patterns for festive occasions.</p>
-                <p class="price"><span>SAR</span>1,238</p>
-            </div>
+            <!-- Products will be inserted here -->
         </div>
         <div class="actions">
             <a href="AddProduct.html" class="btn">Add Product</a>
@@ -261,6 +221,43 @@ h2 {
     </footer>
 
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var productsContainer = document.querySelector('.products');
+    
+            // Function to load products from localStorage
+            function loadProducts() {
+                var products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
+                productsContainer.innerHTML = ''; // Clear the container
+    
+                if (products.length === 0) {
+                    productsContainer.innerHTML = '<p>No products to display. Please add some products.</p>';
+                    return;
+                }
+    
+                
+                for (var i = 0; i < products.length; i++) {
+                    var product = products[i];
+                    var productBox = document.createElement('div');
+                    productBox.className = 'product-box';
+    
+                    productBox.innerHTML =
+                        '<p class="name">' + product.name + '</p>' +
+                        '<div class="product-image"><img src="' + product.image + '" alt="' + product.name + '"></div>' +
+                        '<p class="descript">' + product.description + '</p>' +
+                        '<div class="price-quantity">' +
+                            '<p class="price"><span>SAR</span>' + product.price + '</p>' +
+                            '<p class="quantity">Quantity: ' + product.quantity + '</p>' +
+                        '</div>';
+                    productsContainer.appendChild(productBox);
+                }
+            }
+    
+            loadProducts(); 
+        });
+    </script>
+    
+
+<script>
 
 window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('theme');
