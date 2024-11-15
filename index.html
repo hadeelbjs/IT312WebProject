@@ -9,6 +9,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Satisfy&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+
     <style>
 
 
@@ -37,7 +43,6 @@
 }
 
 .vision-content img {
-  
   width: 100%;
   height: 100%;
   object-fit: cover; 
@@ -45,7 +50,7 @@
   top: 0;
   left: 0;
   z-index: 0; 
-  opacity: 0.7;
+  opacity: 0.9;
 }
 
 
@@ -55,7 +60,7 @@
   left: 50%;
   transform: translate(-50%, -50%); 
   color: white;
-  text-align: center;
+  text-align:start;
   z-index: 1; 
   padding: 2vw;
 }
@@ -67,9 +72,9 @@
 }
 
 .vision-text p {
-  font-size: 1.5vw;
+  font-size: 1.8vw;
   line-height: 1.6;
-  text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 0.5);
+  text-shadow: 0.1vw 0.1vw 0.3vw rgba(0, 0, 0, 1);
 }
 
 
@@ -102,6 +107,14 @@
     background-color: #fff;
     border-radius: 0 0 1vw 1vw;
     box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2);
+}
+
+.offer-details h3 {
+  font-family: 'Sour Gummy';
+}
+
+.offer-details p {
+  font-family: 'Sour Gummy';
 }
 
 .offer-item:hover {
@@ -161,7 +174,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center; 
-  gap: 2em; /* زيادة المسافة بين العناصر */
+  gap: 2em; 
   flex-wrap: wrap; 
 }
 
@@ -174,7 +187,7 @@
   transition: transform 0.3s ease;
   background-color: white; 
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-  display: block; /* Make sure the entire area is clickable */
+  display: block; 
 
 }
 
@@ -195,6 +208,7 @@
   padding: 1em;
   background-color: white; 
   text-align: center;
+  
 }
 
 .category-label h3 {
@@ -202,11 +216,12 @@
   font-weight: bold;
   margin: 0;
   color: #6c584c;
+  font-family: 'Edu AU VIC WA NT Pre';
 }
 
 .category-item a {
-  text-decoration: none; /* Ensure no underline on the link */
-  color: inherit; /* Inherit text color */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .category-item.category1 .category-image {
@@ -359,9 +374,9 @@
             <div class="vision-content">
                 <div class="vision-text">
                     <h2>OUR VISION</h2>
-                    <p>At <strong>Vintage Vault</strong>, our vision is to become the premier destination for timeless treasures and unique, vintage pieces. We believe in preserving the beauty and craftsmanship of the past, while offering a curated collection that speaks to the modern world. Our goal is to inspire a love for heritage, sustainability, and individuality through every product we offer.</p>
+                    <p style="font-family: 'Satisfy'">At <strong>Vintage Vault</strong>, our vision is to become the premier destination for timeless treasures and unique, vintage pieces. We believe in preserving the beauty and craftsmanship of the past, while offering a curated collection that speaks to the modern world. Our goal is to inspire a love for heritage, sustainability, and individuality through every product we offer.</p>
                 </div>
-                <img src="images/visionBackground4.jpg" alt="Our Vision Image">
+                <img src="images/vision.png" alt="Our Vision Image">
             </div>
         </div>        
         
@@ -373,7 +388,7 @@
         <div class="offer-container">
             <div class="offer-item">
                 <img src="images/offer1.jpg" alt="50% OFF">
-                <div class="offer-details">
+                <div class="offer-details" >
                     <h3>50% OFF!!!</h3>
                     <p>Get half off on select vintage Artworks items. Limited time offer!</p>
                 </div>
@@ -421,7 +436,7 @@
 
 
     <section id="categories-section" class="categories-section">
-      <h2>Popular Categories</h2>
+      <h2 >Popular Categories</h2>
       <div class="categories-container">
         <a href="clothing.html" class="category-item category1" style="text-decoration: none;">
           <div class="category-image"></div>
