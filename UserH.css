@@ -204,6 +204,10 @@ table a:hover {
 
 /* Customer Page Styles*/
 
+.theme-dark #CustomerBox h3 {
+    color: white;
+}
+
 #CustomerBox {
     display: flex;
     justify-content: space-around;

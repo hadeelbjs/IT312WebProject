@@ -42,7 +42,6 @@ body {
 
 }
 
-
 .theme-dark h2{
   color:white;
 }
@@ -61,7 +60,7 @@ body {
 }
 
 .theme-dark .more-button{
-  background-color:#9B7E65 ;
+  background-color:#56453a ;
 
 }
 
@@ -78,6 +77,17 @@ body {
 .theme-dark .week-date {
   color: #ead6c3;
 
+}
+
+.theme-dark #review1,
+.theme-dark #review2,
+.theme-dark #review3,
+.theme-dark #review4 {
+  background-color:#56453a;
+}
+
+.theme-dark .review p {
+color: white;
 }
 
 footer {
