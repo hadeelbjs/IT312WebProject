@@ -435,6 +435,8 @@
     </section>
 
 
+
+
     <section id="categories-section" class="categories-section">
       <h2 >Popular Categories</h2>
       <div class="categories-container">
@@ -529,52 +531,7 @@
         </p>
     </footer>
     
-    <script> 
-      window.addEventListener('load', function() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('theme-dark');
-    } else {
-        document.body.classList.remove('theme-dark');
-    }
-});
 
-
-document.addEventListener("DOMContentLoaded", () => {
-  const reviews = document.querySelectorAll(".review");
-  const hoverInfo = document.getElementById("hover-info");
-
-  reviews.forEach(review => {
-    review.addEventListener("mouseover", event => {
-      const customer = review.dataset.customer;
-      const product = review.dataset.product;
-      const rate = review.dataset.rate;
-      const feedback = review.dataset.feedback;
-
-      document.getElementById("customer-name").textContent = customer;
-      document.getElementById("product-name").textContent = product;
-      document.getElementById("product-rate").textContent = rate;
-      document.getElementById("product-feedback").textContent = feedback;
-
-      hoverInfo.style.display = "block";
-      hoverInfo.style.top = `${event.pageY + 10}px`;
-      hoverInfo.style.left = `${event.pageX + 10}px`;
-    });
-
-    review.addEventListener("mousemove", event => {
-      hoverInfo.style.top = `${event.pageY + 10}px`;
-      hoverInfo.style.left = `${event.pageX + 10}px`;
-    });
-
-    review.addEventListener("mouseout", () => {
-      hoverInfo.style.display = "none";
-    });
-  });
-});
-
-
-
-    </script>
     <script src="theme.js"></script>
 
     
