@@ -170,14 +170,11 @@ textarea:focus {
               </select>
           </div>
           <div class="form-group">
-              <label for="products">Select Product:</label>
-              <select id="products" name="products" >
-                  <option value="">Select product</option>
-                  <option value="product1">product 1</option>
-                  <option value="product2">product 2</option>
-                  <option value="product3">product 3</option>
-              </select>
-          </div>
+            <label for="products">Select Product:</label>
+            <select id="products" name="products">
+                <option value="">Select product</option>
+            </select>
+        </div>
           <div class="form-group">
               <label>How do you rate this product?</label>
               <div class="rating">
@@ -232,7 +229,30 @@ textarea:focus {
     } else {
         document.body.classList.remove('theme-dark');
     }
+    const productsByOrder = {
+            "Order#12345": ["dress", "Pink Peonies", "Dining Chair"],
+            "Order#12346": ["Gown", "Coastal Spring", "Chandelier"],
+            "Order#12347": ["dress", "Piano Woman", "Blouse"],
+            "Order#12397": ["Sweater", "Skirt", "Wooden Table"]
+        };
 
+        document.getElementById('previousOrders').addEventListener('change', function() {
+            const selectedOrder = this.value;
+            const productSelect = document.getElementById('products');
+
+            // مسح الخيارات السابقة
+            productSelect.innerHTML = '<option value="">Select product</option>';
+
+            // إضافة المنتجات الجديدة
+            if (productsByOrder[selectedOrder]) {
+                productsByOrder[selectedOrder].forEach(function(product) {
+                    const option = document.createElement('option');
+                    option.value = product;
+                    option.textContent = product;
+                    productSelect.appendChild(option);
+                });
+            }
+        });
     document.getElementById('evaluationForm').addEventListener('submit', function(e) {
         // Prevent default form submission
         e.preventDefault();  // Stops the form from submitting to the server
@@ -270,7 +290,7 @@ textarea:focus {
         const selectedProduct = productSelect.value;
         const selectedRating = document.querySelector('input[name="rating"]:checked').value;
 
-        alert(`Thank you for your feedback! Your rating for #${selectedProduct} is ${selectedRating}`);
+        alert(`Thank you for your feedback! Your rating for product ${selectedProduct} is ${selectedRating}`);
 
         // Redirect to the home page after the alert
         window.location.href = "index.html"; 
