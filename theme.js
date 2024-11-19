@@ -1,28 +1,17 @@
-function getCurrentWeekStartDate() {
-    const today = new Date();
-    const dayOfWeek = today.getDay(); 
-    const sundayOffset = dayOfWeek; 
-    const sundayDate = new Date(today);
-    sundayDate.setDate(today.getDate() - sundayOffset); 
-
-    const options = { day: 'numeric', month: 'long' }; 
-    return sundayDate.toLocaleDateString('en-US', options); 
-}
-
 document.addEventListener('DOMContentLoaded', () => {
-    const weekStartElement = document.getElementById('current-week-date');
-    if (weekStartElement) {
-        weekStartElement.textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
-    }
+    const toggleButton = document.getElementById('toggle-offers');
+    const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
 
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('theme-dark');
-    }
+    if (toggleButton && hiddenOffers.length > 0) {
+        toggleButton.addEventListener('click', () => {
+            hiddenOffers.forEach(offer => offer.classList.toggle('hidden'));
 
-    const themeToggleButton = document.getElementById('theme-toggle');
-    if (themeToggleButton) {
-        themeToggleButton.addEventListener('click', toggleTheme);
+            if (hiddenOffers[0].classList.contains('hidden')) {
+                toggleButton.textContent = 'More Offers';
+            } else {
+                toggleButton.textContent = 'Less Offers';
+            }
+        });
     }
 
     const reviews = document.querySelectorAll(".review");
@@ -33,16 +22,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const productSpan = document.createElement("span");
         productSpan.textContent = product;
         productSpan.style.display = "block";
-        productSpan.style.fontSize = "1.5vw"; 
-        productSpan.style.fontWeight = "bold"; 
+        productSpan.style.fontSize = "1.5vw";
+        productSpan.style.fontWeight = "bold";
 
         const rateSpan = document.createElement("span");
         rateSpan.textContent = rate;
         rateSpan.style.display = "block";
-        rateSpan.style.fontSize = "1.5vw"; 
-        rateSpan.style.color = "#777"; 
-        rateSpan.style.color = "gold";
-
+        rateSpan.style.fontSize = "1.5vw";
+        rateSpan.style.color = "gold"; 
 
         review.appendChild(productSpan);
         review.appendChild(rateSpan);
@@ -80,4 +67,3 @@ function toggleTheme() {
     const isDark = document.body.classList.toggle('theme-dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
 }
-
