@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Toggle offers visibility
     const toggleButton = document.getElementById('toggle-offers');
     const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
 
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Reviews section
     const reviews = document.querySelectorAll(".review");
 
     reviews.forEach((review) => {
@@ -35,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         review.appendChild(rateSpan);
     });
 
+    // Hover info for reviews
     const hoverInfo = document.getElementById("hover-info");
     if (reviews.length > 0 && hoverInfo) {
         reviews.forEach((review) => {
@@ -61,8 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Apply saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('theme-dark');
+    }
+
+    // Add event listener to the customize button to toggle theme
+    const customizeButton = document.getElementById('theme-toggle'); // Use the correct ID
+    if (customizeButton) {
+        customizeButton.addEventListener('click', toggleTheme);
+    }
 });
 
+// Function to toggle the theme
 function toggleTheme() {
     const isDark = document.body.classList.toggle('theme-dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
