@@ -29,7 +29,7 @@
   position: relative;
   height: 30vw;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
   overflow: hidden;
   margin-top: 2.1vw;
@@ -50,7 +50,7 @@
   top: 0;
   left: 0;
   z-index: 0; 
-  opacity: 0.9;
+  opacity: 0.7;
 }
 
 
@@ -60,7 +60,7 @@
   left: 50%;
   transform: translate(-50%, -50%); 
   color: white;
-  text-align:start;
+  text-align:center;
   z-index: 1; 
   padding: 2vw;
 }
@@ -238,54 +238,55 @@
 
 
 .reviews-section {
-  padding-top: 6vw ;
+  padding-top: 6vw;
   background-color: #f5ebe0; 
   text-align: center;
   overflow: hidden;
 }
 
-
 .reviews-container {
-    display: flex;
-    overflow-x: hidden; 
-    gap: 5vw;
-    border: 0vw ;
-    white-space: nowrap;
-    width: 100%;
-    animation: scrollReviews 15s linear infinite; 
-    height: auto; 
-    overflow: visible; 
+  display: flex;
+  overflow-x: hidden; 
+  gap: 5vw;
+  border: 0vw;
+  white-space: nowrap;
+  width: 100%;
+  animation: scrollReviews 15s linear infinite; 
+  height: auto; 
+  overflow: visible; 
 }
 
-
-
 @keyframes scrollReviews {
-    0% {
-        transform: translateX(100%); 
-    }
-    100% {
-        transform: translateX(-100%); 
-    }
+  0% {
+      transform: translateX(100%); 
+  }
+  100% {
+      transform: translateX(-100%); 
+  }
 }
 
 .review {
-    flex-shrink: 0; 
-    width: 11vw; 
-    padding: 5vw; 
-    border-radius: 0.7vw;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    font-size: 1vw; 
-    margin-bottom: 2vw;
+  flex-shrink: 0; 
+  width: 11vw; 
+  padding: 5vw; 
+  border-radius: 0.7vw;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  font-size: 1vw; 
+  margin-bottom: 2vw;
+  text-align: center; /* Centers text in the review */
 }
 
-.review  p{
-    font-size: 2vw; 
-    color: #5a4a3c;
+.review p {
+  font-size: 1.6vw; 
+  color: #5a4a3c;
+  margin-top: 1vw; /* Adds space above the customer name */
+  padding-top: 3vw; /* Moves the background image down */
+
 }
 
 .review:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 #hover-info {
@@ -298,49 +299,31 @@
   display: none;
 }
 
-
-#review1 {
-  background-image: url("images/avatar_no_bg_1.png"); 
+#review1, #review2, #review3, #review4 {
   background-size: 8em;
   background-repeat: no-repeat;
   background-position: center top; 
   background-color: #fff;
+  padding-top: 3vw; /* Moves the background image down */
+}
 
-
+#review1 {
+  background-image: url("images/avatar_no_bg_1.png");
 }
 
 #review2 {
-  background-image: url("images/avatar_no_bg_2.png"); 
-  background-size: 8em;
-  background-repeat: no-repeat;
-  background-position: center top; 
-  background-color: #fff;
-
+  background-image: url("images/avatar_no_bg_2.png");
 }
 
 #review3 {
-  background-image: url("images/avatar_no_bg_4.png"); 
-  background-size: 8em;
-  background-repeat: no-repeat;
-  background-position: center top; 
-  background-color: #fff;
-
+  background-image: url("images/avatar_no_bg_4.png");
 }
 
 #review4 {
-  background-image: url("images/avatar_no_bg_3.png"); 
-  background-size: 8em;
-  background-repeat: no-repeat;
-  background-position: center top; 
-  background-color: #fff;
+  background-image: url("images/avatar_no_bg_3.png");
 }
-
-
-
     </style>
 </head>
-
-
 
 <body>
   <header>
@@ -365,18 +348,13 @@
     </nav>
 </header>
 
-    
-   
-
-
-
         <div class="vision-container">
             <div class="vision-content">
                 <div class="vision-text">
                     <h2>OUR VISION</h2>
                     <p style="font-family: 'Satisfy'">At <strong>Vintage Vault</strong>, our vision is to become the premier destination for timeless treasures and unique, vintage pieces. We believe in preserving the beauty and craftsmanship of the past, while offering a curated collection that speaks to the modern world. Our goal is to inspire a love for heritage, sustainability, and individuality through every product we offer.</p>
                 </div>
-                <img src="images/vision.png" alt="Our Vision Image">
+                <img src="images/visionBackground4.jpg" alt="Our Vision Image">
             </div>
         </div>        
         
@@ -434,9 +412,6 @@
         <button id="toggle-offers" class="more-button">More Offers</button>
     </section>
 
-
-
-
     <section id="categories-section" class="categories-section">
       <h2 >Popular Categories</h2>
       <div class="categories-container">
@@ -460,24 +435,24 @@
         </a>
       </div>
     </section>
-    
-    
-  
-
 
       <section class="reviews-section">
         <h2>What our clients say!</h2>
         <div class="reviews-container" id="reviews-container">
-            <div class="review" id="review1" data-customer="Joun R." data-product="Sweater" data-rate="★★★★★" data-feedback="I absolutely love the vintage pieces I found on Vintage Vault! especially the Sweater The quality is incredible, and each piece has so much character!">
+            <div class="review" id="review1" data-customer="Joun R." data-product="Sweater" data-rate="★★★★★" data-feedback="I love the vintage pieces from Vintage Vault, especially the sweater! The quality is amazing and each piece has so much character!">
+              
                 <p>Joun R.</p>
             </div>
-            <div class="review" id="review2" data-customer="Lolo L." data-product="Artwork" data-rate="★★★★" data-feedback="I found the perfect artwork White Hydrangeas for my living room. It's truly one-of-a-kind, and I get compliments on it all the time!">
+            <div class="review" id="review2" data-customer="Lolo L." data-product="White Hydrangeas" data-rate="★★★★" data-feedback="I found the perfect White Hydrangeas artwork for my living room. It's unique, and I get compliments all the time!">
+              
                 <p>Lolo L.</p>
             </div>
-            <div class="review" id="review3" data-customer="Sophia M." data-product="Dress" data-rate="★★★★★" data-feedback="The customer service is fantastic!">
+            <div class="review" id="review3" data-customer="Sophia M." data-product="Dress" data-rate="★★★★★" data-feedback="I ordered a dress, and the service was fantastic. The shipping was quick. Highly recommend Vintage Vault for unique items!">
+          
                 <p>Sophia M.</p>
             </div>
-            <div class="review" id="review4" data-customer="Michael B." data-product="Product C" data-rate="★★★" data-feedback="Amazing collection!">
+            <div class="review" id="review4" data-customer="Michael B." data-product="Vanity and Mirror" data-rate="★★★" data-feedback="Vintage Vault has an amazing collection! I found rare pieces like the Vanity and Mirror that fit perfectly with my decor.">
+              
                 <p>Michael B.</p>
             </div>
         </div>
@@ -491,31 +466,6 @@
         </div>
     </section>
 
-
-       <!--   <div class="reviews-container">
-              <div class="review-item review1">
-                  <p>"I absolutely love the vintage pieces I found on Vintage Vault! <br> especially the Sweater<br> The quality is incredible, and each piece has so much character!"</p>
-                  <h3>- Emily R.</h3>
-                  <div class="star-rating">★★★★★</div> 
-              </div>
-              <div class="review-item review2">
-                  <p>"I oreder a Dress ,The customer service is fantastic,<br> and the shipping was quick. I highly recommend Vintage Vault for<br> anyone looking for unique items!"</p>
-                  <h3>- Lolo L.</h3>
-                  <div class="star-rating">★★★★★</div> 
-              </div>
-              <div class="review-item review3">
-                  <p>"I found the perfect artwork "White Hydrangeas" for my living room.<br> It's truly one-of-a-kind, and I get compliments on it all the time!"</p>
-                  <h3>- Sophia M.</h3>
-                  <div class="star-rating">★★★★★</div> 
-              </div>
-              <div class="review-item review4">
-                  <p>"Vintage Vault has an amazing collection! Like the Vanity and Mirror<br> I was able to find rare pieces that fit perfectly with my home decor."</p>
-                  <h3>- Michael B.</h3>
-                  <div class="star-rating">★★★★★</div> 
-              </div>
-          </div>
-      </section> 
-      -->
   </main>
     
     <footer>

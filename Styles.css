@@ -7,7 +7,7 @@ h2 {
     color: #9B7E65;
 }
 
- button {
+ button{
   font-family: Georgia, Garamond, Helvetica, Arial;
   padding: 2% 1%;
   font-size: 1.5vw;
@@ -83,11 +83,15 @@ body {
 .theme-dark #review2,
 .theme-dark #review3,
 .theme-dark #review4 {
-  background-color:#56453a;
+  background-color:#483b33;
 }
 
 .theme-dark .review p {
 color: white;
+}
+
+.theme-dark .review{
+    color: #e7dbd0;
 }
 
 footer {
