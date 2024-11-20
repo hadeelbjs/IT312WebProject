@@ -1,17 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Toggle offers visibility
+    // Set the current week start date
+    const weekStartElement = document.getElementById('current-week-date');
+    if (weekStartElement) {
+        weekStartElement.textContent = `Week starts on: ${getCurrentWeekStartDate()}`;
+    }
+
+    // Apply saved theme on page load
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        document.body.classList.add('theme-dark');
+    }
+
+    // Theme toggle functionality
+    const themeToggleButton = document.getElementById('theme-toggle');
+    if (themeToggleButton) {
+        themeToggleButton.addEventListener('click', toggleTheme);
+    }
+
+    // Toggle hidden offers
     const toggleButton = document.getElementById('toggle-offers');
     const hiddenOffers = document.querySelectorAll('.offer-item.hidden');
-
     if (toggleButton && hiddenOffers.length > 0) {
-        toggleButton.addEventListener('click', () => {
+        toggleButton.addEventListener('click', function () {
             hiddenOffers.forEach(offer => offer.classList.toggle('hidden'));
-
-            if (hiddenOffers[0].classList.contains('hidden')) {
-                toggleButton.textContent = 'More Offers';
-            } else {
-                toggleButton.textContent = 'Less Offers';
-            }
+            toggleButton.textContent = hiddenOffers[0].classList.contains('hidden') ? 'More Offers' : 'Less Offers';
         });
     }
 
@@ -64,22 +76,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // Apply saved theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-        document.body.classList.add('theme-dark');
-    }
-
-    // Add event listener to the customize button to toggle theme
-    const customizeButton = document.getElementById('theme-toggle'); // Use the correct ID
-    if (customizeButton) {
-        customizeButton.addEventListener('click', toggleTheme);
-    }
 });
 
 // Function to toggle the theme
 function toggleTheme() {
     const isDark = document.body.classList.toggle('theme-dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+function getCurrentWeekStartDate() {
+    const today = new Date();
+    const dayOfWeek = today.getDay();
+    const sundayOffset = dayOfWeek;
+    const sundayDate = new Date(today);
+    sundayDate.setDate(today.getDate() - sundayOffset);
+
+    const options = { day: 'numeric', month: 'long' };
+    return sundayDate.toLocaleDateString('en-US', options);
 }
