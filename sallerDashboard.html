@@ -141,26 +141,23 @@ h2 {
     font-size: 1.9vw;
     color:  #000000;
     font-weight: bold;
-    margin-top:0vw;
     text-align: left;
 }
 
 .price-quantity {
     display: flex;
     justify-content: space-between;
-    margin: 1vw 0;
+    margin: 0vw 0;
 }
 
 .product-box p.price,span{
     font-size: 1.2vw;
-    font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
 }
 
 .product-box p.quantity {
     font-size: 1.2vw;
-    font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     text-align: right;
@@ -171,11 +168,10 @@ h2 {
     color: #555;
     line-height: 1.4;
     text-align: left;
-    margin-top: 1vw;
-    margin-bottom: 0;
     white-space: normal; 
     word-wrap: break-word; 
     overflow: visible; 
+    font-family:sans-serif;
 }
 
 
@@ -257,13 +253,13 @@ h2 {
                     productBox.className = 'product-box';
     
                 productBox.innerHTML =
-                '<p class="name">' + product.name + '</p>' +
                 '<div class="product-image"><img src="' + product.image + '" alt="' + product.name + '"></div>' +
+                '<p class="name">' + product.name + '</p>' +
+                '<p class="descript">' + product.description + '</p>' +
                 '<div class="price-quantity">' +
                 '<p class="price"><span> SAR </span>' + product.price + '</p>' +
                 '<p class="quantity">Quantity: ' + product.quantity + '</p>' +
-                '</div>' +
-                '<p class="descript">' + product.description + '</p>';
+                '</div>';
                     productsContainer.appendChild(productBox);
                 }
             }
