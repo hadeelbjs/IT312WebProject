@@ -104,7 +104,9 @@ h2 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
     margin: 0.5vw; 
-    width: 18vw; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
 }
 
 @media (max-width: 768px) {
@@ -146,24 +148,24 @@ h2 {
 
 .product-box p.name {
     font-size: 1.8vw;
-    text-align: left;
     color: #3e2723; 
-    text-align: left;
     font-family: 'Caudex', serif;
     font-weight: bold;
+    margin-bottom: 0.5vw; 
 }
-
 .product-box p {
     margin: 0;
     padding: 0.2vw 0; 
 }
 
-.price-quantity {
+.product-box .price-quantity {
     display: flex;
     justify-content: space-between;
     font-family: 'Lora', serif;
     font-size: 1vw;
+    font-weight: bold;
     color: #9B7E65; 
+    margin-top: auto; 
 }
 
 .product-box p.price,span{
