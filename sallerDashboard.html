@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 
+
 <style>
 
 body {
@@ -78,6 +79,7 @@ h2 {
     gap: 2vw;
     max-width: 100%;
     padding: 2vw;
+    
 }
 
 .products::-webkit-scrollbar {
@@ -91,7 +93,7 @@ h2 {
 
 .product-box {
     position: relative;
-    padding: 1.5vw;
+    padding: 1vw;
     border: 0.1vw solid #ccc;
     border-radius: 1vw;
     box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.1);
@@ -101,6 +103,8 @@ h2 {
     background-color: rgb(255, 255, 255);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
+    margin: 0.5vw; 
+    width: 18vw; 
 }
 
 @media (max-width: 768px) {
@@ -116,13 +120,13 @@ h2 {
 
 .product-image {
     width: 100%;
-    height: 15vw;
+    height: 14vw;
     margin-bottom: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    object-fit: cover; /* Ensures the image fills the container */
+    object-fit: cover; 
     border-radius: 1vw;
 
     
@@ -130,53 +134,59 @@ h2 {
 
 .product-image img {
     width: 100%;
-    height: auto;
+    height: 14vw;
     object-fit: contain;
     border-radius: 1vw;
     color: white;
+    object-fit: cover; 
+    border-radius: 1vw;
 
 }
 
+
 .product-box p.name {
-    font-size: 1.9vw;
-    color:  #000000;
-    font-weight: bold;
+    font-size: 1.8vw;
     text-align: left;
+    color: #3e2723; 
+    text-align: left;
+    font-family: 'Caudex', serif;
+    font-weight: bold;
+}
+
+.product-box p {
+    margin: 0;
+    padding: 0.2vw 0; 
 }
 
 .price-quantity {
     display: flex;
     justify-content: space-between;
-    margin: 0vw 0;
+    font-family: 'Lora', serif;
+    font-size: 1vw;
+    color: #9B7E65; 
 }
 
 .product-box p.price,span{
-    font-size: 1.2vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
+    text-align: left;
+
 }
 
 .product-box p.quantity {
-    font-size: 1.2vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    margin: 0;
     text-align: right;
+
 }
 
 .product-box p.descript {
-    font-size: 1.1vw;
-    color: #555;
     line-height: 1.4;
     text-align: left;
     white-space: normal; 
     word-wrap: break-word; 
     overflow: visible; 
     font-family:sans-serif;
+    font-size: 1.1vw; 
+    color: #6e6e6e; 
 }
-
-
-
-
+    
 
 </style>
 </head>
@@ -257,7 +267,7 @@ h2 {
                 '<p class="name">' + product.name + '</p>' +
                 '<p class="descript">' + product.description + '</p>' +
                 '<div class="price-quantity">' +
-                '<p class="price"><span> SAR </span>' + product.price + '</p>' +
+                '<p class="price">' + product.price + '<span> $</span></p>' +
                 '<p class="quantity">Quantity: ' + product.quantity + '</p>' +
                 '</div>';
                     productsContainer.appendChild(productBox);
