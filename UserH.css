@@ -200,6 +200,10 @@ table a:hover {
     margin-top: 5%;
 }
 
+footer {
+    margin-top: 20%;
+}
+
 /* End Of Cart Page Styles*/
 
 /* Customer Page Styles*/
@@ -248,6 +252,7 @@ table a:hover {
         flex-direction: column;
         margin-bottom: 7vw;
     }
+
     
     
 }

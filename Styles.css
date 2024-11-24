@@ -52,7 +52,7 @@ body {
 }
 
 .theme-dark .reviews-section{
-  background-color: #281f16;
+  background-color: var(--base-color);
 
 }
 
@@ -97,7 +97,7 @@ body {
 .theme-dark #review2,
 .theme-dark #review3,
 .theme-dark #review4 {
-  background-color:#483b33;
+  background-color:var(--base-color);
 }
 
 .theme-dark .review p {
@@ -182,7 +182,7 @@ footer img {
     margin-right: 0.8%;
 }
 footer p{
-  font-size: 1.3vw;
+  font-size: 0.9em;
 }
 
 main {
@@ -265,10 +265,10 @@ list-style: none;
   transition: 0.7 ease;
 }
 
-/*.vertical-divider {
+.vertical-divider {
   margin: 0 0;
   font-size: 0em;
-}*/
+}
 
 .vertical-line {
     padding: 0 0.2vw;
@@ -280,12 +280,12 @@ list-style: none;
 .Breadcrumb {
   margin-bottom: 2%;
   text-align: left;
-  margin-top: 3em;
+  margin-top: 0;
   margin-left: 5%;
 }
 
 .Breadcrumb p {
-  font-size: 1.6em;
+  font-size: 1em;
   color: #9B7E65;
   font-weight:normal;
 }
@@ -484,6 +484,14 @@ h3{
   .nav-icons.active{
     opacity: 0;
     z-index: -2;
+  }
+  .Breadcrumb  {
+    font-size:0.7em ;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  main {
+    margin-top: 0;
   }
   
   
