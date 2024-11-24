@@ -98,10 +98,13 @@ function getCurrentWeekStartDate() {
 //hamburger icon
 const hamburger = document.querySelector(".humburger");
 const navMenu = document.querySelector(".nav-menu");
+const navIcons = document.querySelector(".nav-icons");
 
 hamburger.addEventListener("click",() =>{
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
+    navIcons.classList.toggle("active");
+
 
 });
 
@@ -109,5 +112,6 @@ hamburger.addEventListener("click",() =>{
 document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click",()=>{
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
+    navIcons.classList.remove("active");
 
 } ));

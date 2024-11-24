@@ -194,7 +194,7 @@ main {
 
 .week-date {
   flex-grow: 1;
-  font-size: 1.5vw;
+  font-size: 1.5em;
   margin-left: 4%;
   margin-top: 0;
   text-align: start;
@@ -392,6 +392,7 @@ h3{
   }
   .nav-icons{
     gap: 7vw;
+    justify-content: flex-end;
   }
   .nav-link{
     font-weight: bold;
@@ -456,6 +457,7 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     gap: 4vw;
     position: fixed;
     left: 0;
@@ -479,6 +481,11 @@ h3{
     z-index: 1000;
     padding: 10px 0;
   }
+  .nav-icons.active{
+    opacity: 0;
+    z-index: -2;
+  }
+  
   
 }
 
