@@ -398,8 +398,7 @@ h3{
   }
   .humburger{
     display: block;
-    margin-right: 0;
-    margin-left: -2vw;
+    margin-right: 0%;
     position: relative;
     cursor: pointer;
   }
