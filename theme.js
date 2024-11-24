@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Theme toggle functionality
-    const themeToggleButton = document.getElementById('theme-toggle');
+    const themeToggleButton = document.getElementById('theme-switch');
     if (themeToggleButton) {
         themeToggleButton.addEventListener('click', toggleTheme);
     }
@@ -94,3 +94,20 @@ function getCurrentWeekStartDate() {
     const options = { day: 'numeric', month: 'long' };
     return sundayDate.toLocaleDateString('en-US', options);
 }
+
+//hamburger icon
+const hamburger = document.querySelector(".humburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click",() =>{
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+
+});
+
+
+document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click",()=>{
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+
+} ));

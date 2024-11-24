@@ -241,5 +241,15 @@ table a:hover {
     margin-top: 1vw;
     color: #6c584c;
 }
+@media (max-width: 799px) {
+    #CustomerBox {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-bottom: 7vw;
+    }
+    
+    
+}
 /* End Of Customer Page Styles*/
 
