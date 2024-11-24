@@ -460,7 +460,7 @@ h3{
     gap: 4vw;
     position: fixed;
     left: 0;
-    top: 13vw;
+    top: 10vw;
     width: 100%;
     text-align: center;
     background-color: #6c584c;
@@ -473,7 +473,7 @@ h3{
     flex-direction: column;
     position: fixed;
     left: 0;
-    top: 13vw;
+    top: 10vw;
     width: 100%;
     text-align: center;
     background-color: var(--base-color);
