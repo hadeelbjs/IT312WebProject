@@ -452,9 +452,67 @@ h3{
     font-size: 0.7em;
     top: 7.9em;
   }
-  footer {
-    font-size: 0.9em;
+  
+  .offer-details p {
+    font-size: 1.2vw; 
   }
+
+  .offer-details h3 {
+    font-size: 1.5vw; 
+  }
+  
+  .week-date {
+    font-size: 1.5vw; 
+  }
+
+  #hover-info{
+    font-size:1.2vw;
+}
+
+.offer-section h2{
+  font-size:2.4vw;
+}
+
+.categories-section h2{
+  font-size:2.4vw;
+}
+
+.reviews-section h2{
+  font-size:2.4vw;
+
+}
+
+.categories-section {
+  margin-top: 3vw; /* تقليل المسافة العلوية */
+}
+
+.categories-container {
+
+  gap: 1.5em; /* تقليل الفجوة بين العناصر */
+}
+
+.category-item {
+  flex: 0 1 20vw; /* تصغير عرض العنصر */
+  border-radius: 1.5vw; /* تقليل انحناء الحواف */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* تقليل الظل */
+}
+
+
+
+.category-image {
+  height: 25vw; /* تقليل ارتفاع الصورة */
+}
+
+.category-label {
+  padding: 0.em; /* تقليل الحشو */
+
+}
+
+.category-label h3 {
+  font-size: 1.2vw; /* تصغير حجم الخط */
+
+}
+
 
 }
 @media(max-width: 530px){

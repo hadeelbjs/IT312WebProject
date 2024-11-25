@@ -267,15 +267,15 @@ h2 {
 
     </footer>
 
+    
     <script>
       
         document.addEventListener("DOMContentLoaded", function() {
             var productsContainer = document.querySelector('.products');
     
-            // Function to load products from localStorage
             function loadProducts() {
                 var products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
-                productsContainer.innerHTML = ''; // Clear the container
+                productsContainer.innerHTML = ''; 
     
                 if (products.length === 0) {
                     productsContainer.innerHTML = '<p>add some products.</p>';
@@ -301,9 +301,12 @@ h2 {
             }
     
             loadProducts(); 
+            window.addEventListener('storage', loadProducts);
         });
 
     </script>
+
+
 
     
     <script src="theme.js"></script>
