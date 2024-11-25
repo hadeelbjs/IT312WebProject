@@ -382,6 +382,10 @@ h3{
 }
 @media(max-width: 799px){
   
+  body{
+    padding-top: 5em;
+  }
+  
   .navbar h1{
     font-size: 1em;
     align-self: center;
@@ -530,33 +534,32 @@ h3{
 }
 
 .categories-section {
-  margin-top: 3vw; /* تقليل المسافة العلوية */
+  margin-top: 3vw; 
 }
 
 .categories-container {
 
-  gap: 1.5em; /* تقليل الفجوة بين العناصر */
+  gap: 1.5em; 
 }
 
 .category-item {
-  flex: 0 1 20vw; /* تصغير عرض العنصر */
-  border-radius: 1.5vw; /* تقليل انحناء الحواف */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* تقليل الظل */
+  flex: 0 1 20vw; 
+  border-radius: 1.5vw; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
 }
-
 
 
 .category-image {
-  height: 25vw; /* تقليل ارتفاع الصورة */
+  height: 25vw; 
 }
 
 .category-label {
-  padding: 0.em; /* تقليل الحشو */
+  padding: 0.em; 
 
 }
 
 .category-label h3 {
-  font-size: 1.2vw; /* تصغير حجم الخط */
+  font-size: 1.2vw; 
 
 }
 
