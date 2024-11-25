@@ -202,7 +202,7 @@ table a:hover {
 }
 
 footer {
-    margin-top: 20%;
+    margin-top: 5%;
 }
 
 /* End Of Cart Page Styles*/
@@ -268,7 +268,7 @@ footer {
         position: relative;
         top:5vw;
     }
-    .Breadcrumb {
+    .Breadcrumb {   
         display: block;
         position: absolute;
         top: 7em;

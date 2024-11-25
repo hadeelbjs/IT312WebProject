@@ -523,7 +523,13 @@ h3{
 }
 @media(max-width: 400px){
   .humburger{
-    right: -8vw;
+    padding: 0;
+    right: 0vw;
+    margin: 0;
+  }
+  .nav-icons{
+    position: fixed; 
+    right: 20vw;
     margin: 0;
   }
  
