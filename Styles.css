@@ -235,7 +235,7 @@ list-style: none;
   margin-top: 0;
   margin-left: 5%;
   position: absolute;
-        top: 5em;
+  top: 5em;
        
 }
 
@@ -515,6 +515,77 @@ h3{
   font-size: 1.2vw; 
 
 }
+.category-container{
+  top: 8vw;
+  bottom: 8vw;
+}
+.offer-details p {
+  font-size: 1.2vw; 
+}
+
+.offer-details h3 {
+  font-size: 1.5vw; 
+}
+
+.week-date {
+  font-size: 1.5vw; 
+}
+
+#hover-info{
+  font-size:1.2vw;
+}
+
+.offer-section h2{
+font-size:2.4vw;
+}
+
+.categories-section h2{
+font-size:2.4vw;
+}
+
+.reviews-section h2{
+font-size:2.4vw;
+
+}
+
+.categories-section {
+margin-top: 5vw; 
+}
+
+.categories-container {
+
+gap: 0em; 
+
+}
+
+.category-item {
+flex: 0 1 30vw; 
+border-radius: 2.5vw; 
+
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); 
+}
+
+
+
+.category-image {
+height: 40vw; 
+
+}
+
+.category-label {
+padding: 1.5em; 
+
+}
+
+.category-label h3 {
+font-size: 2vw; 
+
+}
+
+main{
+  position: relative;
+  top: 8vw;
+}
 
 
 }
@@ -522,6 +593,24 @@ h3{
   .humburger{
     right: -6vw;
   }
+  .Breadcrumb {
+    margin-bottom: 2%;
+    text-align: left;
+    margin-top: 0;
+    margin-left: 5%;
+    position: absolute;
+    top: 5em;
+         
+  }
+  .category-container{
+    top: 8vw;
+    bottom: 8vw;
+  }
+  main{
+    position: relative;
+    top: 8vw;
+  }
+  
  
 }
 @media(max-width: 400px){
@@ -532,9 +621,21 @@ h3{
   }
   .nav-icons{
     position: fixed; 
-    right: 20vw;
+    right: 27vw;
     margin: 0;
   }
+  .category-container{
+    top: 8vw;
+    bottom: 8vw;
+  }
+  main{
+    position: relative;
+    top: 8vw;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+
  
 }
 
