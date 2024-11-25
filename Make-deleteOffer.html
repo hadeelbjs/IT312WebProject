@@ -11,13 +11,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     
     <style>
-        .offer-box, .form-box {
-            background-color: #ffffff;
-            padding: 2vw;
-            margin: 2vw 3vw;
-            border-radius: 1.5vw;
-            box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.1);
+
+        body {
+        margin: 0;
+        font-family: 'Caudex', serif;
+        line-height: 1.6;
+        overflow-x: hidden;
         }
+
+        .offer-box, .form-box {
+        background-color: #ffffff;
+        padding: 2vw;
+        margin: 2vw 3vw;
+        border-radius: 1.5vw;
+        box-shadow: 0 0.4vw 1.2vw rgba(0, 0, 0, 0.1);
+         }
+
+        hr {
+        border: none; 
+        border-top: 2px solid #9B7E65; 
+        margin: 2rem 0; 
+        opacity: 0.6; 
+        }
+        @media (max-width: 768px) {
+        hr {
+            border-top: px solid #9B7E65; 
+            margin: 2rem 0;
+        }
+        }
+
+        h2 {
+        font-size: clamp(1.5rem, 2.5vw, 3rem); 
+        margin-top: 0;
+        margin-bottom: 1em;
+        text-align: center;
+        color: #9B7E65;
+         }
 
         .offer-box {
             display: flex;
@@ -237,20 +266,6 @@
     <hr>
 
     <section>
-        <style>
-            .visually-hidden {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                margin: -1px;
-                padding: 0;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                border: 0;
-            }
-        </style>
-        
-
         <section id="offer-display">
 
         </section>
