@@ -276,16 +276,19 @@ list-style: none;
     font-weight: bold;
 }
 
-
 .Breadcrumb {
   margin-bottom: 2%;
   text-align: left;
   margin-top: 0;
   margin-left: 5%;
+  position: absolute;
+        top: 5em;
+       
 }
 
+
 .Breadcrumb p {
-  font-size: 1em;
+  font-size: 1.6em;
   color: #9B7E65;
   font-weight:normal;
 }
@@ -327,7 +330,6 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
 #theme-switch svg{
   fill: var(--base-color);
@@ -364,8 +366,10 @@ h3{
 .nav-icons {
   display: flex;
   align-items: center;
-  gap: 1vw;
+  gap: 1.5vw;
   margin-left: 10vw;
+  position: fixed;
+  right: 2vw;
 }
 
 .nav-icons svg {
@@ -393,6 +397,8 @@ h3{
   .nav-icons{
     gap: 7vw;
     justify-content: flex-end;
+    padding-right: 3%;
+    right: 13vw;
   }
   .nav-link{
     font-weight: bold;
@@ -400,8 +406,10 @@ h3{
   .humburger{
     display: block;
     margin-right: 0%;
-    position: relative;
     cursor: pointer;
+    position: fixed;
+    right: 1vw;
+
   }
   .bar{
     display: block;
@@ -417,9 +425,6 @@ h3{
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .navbar{
-    background-color: #6c584c;
-  }
   
   .nav-menu{
     left: -100%;
@@ -452,6 +457,9 @@ h3{
   .nav-menu {
     display: none;
   }
+  h2{
+    font-size: 3em;
+  }
   
   .nav-menu.active {
     display: flex;
@@ -464,7 +472,7 @@ h3{
     top: 10vw;
     width: 100%;
     text-align: center;
-    background-color: #6c584c;
+    background-color: #635044;
     z-index: 1000;
     padding: 10px 0;
   }
@@ -486,14 +494,17 @@ h3{
     z-index: -2;
   }
   .Breadcrumb  {
-    font-size:0.7em ;
     margin-top: 0;
     padding-top: 0;
+    font-size: 0.7em;
+    top: 7.9em;
   }
-  main {
-    margin-top: 0;
+
+}
+@media(max-width: 600px){
+  .humburger{
+    right: -6vw;
   }
-  
-  
+ 
 }
 

@@ -42,7 +42,7 @@ table td {
 }
 
 table th {
-    background-color: #7f5539;
+    background-color: #9B7E65;
     color: white;
 }
 
@@ -94,8 +94,9 @@ table a:hover {
     padding: 2%;
     width: 60vw;
     height: 10vw;
-    border-radius: 1em;
+    border-radius: 1.4em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1vw;
    
 }
 .theme-dark .order-summary div {
@@ -163,7 +164,7 @@ table a:hover {
 }
 
 .theme-dark #Clear {
-    background-color: #623121;
+    background-color: #8b5e3497;
     color: white;
     transition:  background-color 0.3s ease;
 }
@@ -251,6 +252,19 @@ footer {
         justify-content: space-around;
         flex-direction: column;
         margin-bottom: 7vw;
+    }
+
+    main{
+        display:flex ;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0;
+    }
+    .Breadcrumb {
+        display: block;
+        position: absolute;
+        top: 7em;
     }
 
     
