@@ -256,58 +256,85 @@
         </p>
     </footer>
 
-    <script>
+    
+  <script>
          
-        document.querySelector('.AddProduct-form-container').addEventListener('submit', function(event) {
-            event.preventDefault();
-    
-            // Retrieve input values
-            var name = document.getElementById('name').value.trim();
-            var price = document.getElementById('price').value.trim();
-            var quantity = document.getElementById('quantity').value.trim();
-            var description = document.getElementById('description').value.trim();
-            var category = document.querySelector('select[name="category"]').value;
-            var imageInput = document.getElementById('image-upload');
-    
-            // Validate input fields
-            if (!name || !price || !quantity || !description || !category || imageInput.files.length === 0) {
-                alert('Please fill in all fields.');
-                return;
-            }
-            if (/^\d/.test(name)) {
-                alert('Product name cannot start with a number.');
-                return;
-            }
-            if (isNaN(price) || isNaN(quantity)) {
-                alert('Price and Quantity must be numbers.');
-                return;
-            }
-    
-            
-            var reader = new FileReader();
-            reader.onload = function(event) {
-                var productImage = event.target.result;
-    
-                var product = {
-                    id: Date.now(),
-                    name: name,
-                    price: parseFloat(price),
-                    quantity: parseInt(quantity),
-                    description: description,
-                    category: category,
-                    image: productImage
-                };
-    
-                var products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
-                products.push(product);
-                localStorage.setItem('sellerProducts', JSON.stringify(products));
-    
-                alert('Product "' + name + '" added successfully!');
-                document.querySelector('.AddProduct-form-container').reset();
+    document.querySelector('.AddProduct-form-container').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        // Retrieve input values
+        var name = document.getElementById('name').value.trim();
+        var price = document.getElementById('price').value.trim();
+        var quantity = document.getElementById('quantity').value.trim();
+        var description = document.getElementById('description').value.trim();
+        var category = document.querySelector('select[name="category"]').value;
+        var imageInput = document.getElementById('image-upload');
+
+        // Create a variable to store error messages
+        var errorMessage = "";
+
+        // Check for empty fields and add specific messages
+        if (!name) {
+            errorMessage += "Product name is required.\n"; 
+        }
+        if (!price) {
+            errorMessage += "Price is required.\n"; 
+        }
+        if (!quantity) {
+            errorMessage += "Quantity is required.\n"; 
+        }
+        if (!description) {
+            errorMessage += "Description is required.\n"; 
+        }
+        if (!category) {
+            errorMessage += "Category is required.\n"; 
+        }
+        if (imageInput.files.length === 0) {
+            errorMessage += "Product image is required.\n"; 
+        }
+
+        //Additionsl validation
+        if (name && /^\d/.test(name)) {
+            errorMessage += "Product name cannot start with a number.\n"; 
+        }
+        if (price && isNaN(price)) {
+            errorMessage += "Price must be a valid number.\n"; 
+        }
+        if (quantity && isNaN(quantity)) {
+            errorMessage += "Quantity must be a valid number.\n"; 
+        }
+
+        // Show the error messages if any
+        if (errorMessage !== "") {
+            alert("Please correct the following errors:\n" + errorMessage); 
+            return; 
+        }
+        
+        var reader = new FileReader();
+        reader.onload = function(event) {
+            var productImage = event.target.result;
+
+            var product = {
+                id: Date.now(),
+                name: name,
+                price: parseFloat(price),
+                quantity: parseInt(quantity),
+                description: description,
+                category: category,
+                image: productImage
             };
-            reader.readAsDataURL(imageInput.files[0]);
-        });
-    </script>
+
+            var products = JSON.parse(localStorage.getItem('sellerProducts')) || [];
+            products.push(product);
+            localStorage.setItem('sellerProducts', JSON.stringify(products));
+
+            alert('Product "' + name + '" added successfully!');
+            document.querySelector('.AddProduct-form-container').reset();
+        };
+        reader.readAsDataURL(imageInput.files[0]);
+    });
+</script>
+
     
     
     <script src="theme.js"></script>
