@@ -250,23 +250,32 @@ footer {
     #CustomerBox {
         display: flex;
         justify-content: space-around;
-        flex-direction: column;
-        margin-bottom: 7vw;
+        flex-direction: column;        
+    }
+    #CustomerBox h3 {
+        font-size: 4vw;
     }
 
     main{
         display:flex ;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
         align-items: center;
-        margin: 1em 0;
+        margin: 1vw 0;
+        height: 120%;
+        font-size: 0.5em;
+        
+        position: relative;
+        top:5vw;
     }
     .Breadcrumb {
         display: block;
         position: absolute;
         top: 7em;
     }
+    
 
+    
     
     
 }

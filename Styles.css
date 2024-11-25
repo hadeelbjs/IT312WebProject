@@ -37,7 +37,9 @@ h2 {
   font-family:  "Caudex", Georgia, Garamond, Helvetica, Arial;
   
 } 
-
+html, body{
+  height: 100%;
+}
 body {
     font-family: Georgia, Garamond, Helvetica, Arial;
     line-height: 1.6;
@@ -114,10 +116,8 @@ footer {
     text-align: center;
     color: white;
     margin-top: 6%; /* 50px */
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    
+    bottom: 0;
+    width: 100%;
 }
 footer a {
   text-decoration: none;
@@ -126,53 +126,6 @@ footer a {
 }
 footer a:hover {
   color: #b39f8e;
-}
-/* Ensure dropdown menu is visible and aligned */
-.dropdown-menu {
-  position: absolute; /* Keeps it aligned relative to the parent */
-  top: 100%; /* Positions it below the dropdown button */
-  left: 900px;
-  display: none; /* Hidden by default */
-  background-color: #f5ebe0; /* Match your navbar background */
-  list-style: none;
-  padding: 10px 0; /* Adds padding inside the dropdown */
-  margin: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
-  border-radius: 5px; /* Rounded corners */
-  z-index: 1000; /* Ensure it's above other content */
-  width: max-content; /* Adjust width based on content */
-}
-
-/* Style for dropdown menu links */
-.dropdown-menu li a {
-  display: block; /* Ensures the clickable area spans the full width */
-  padding: 8px 15px; /* Adds space around links */
-  white-space: nowrap; /* Prevents wrapping of text */
-  color: #333; /* Adjust text color for visibility */
-  text-decoration: none; /* No underline for links */
-}
-
-/* Hover effect for dropdown links */
-.dropdown-menu li a:hover {
-  background-color: #e7d9ce; /* Light background color on hover */
-  color: #6c584c; /* Match your theme */
-}
-
-/* Show dropdown menu on hover */
-.dropdown:hover .dropdown-menu {
-  display: block;
-  left: 0;
-}
-.dropdown {
-  position: relative; /* Required for the absolute positioning of the menu */
-  display: inline-block; /* Keeps the dropdown inline with other items */
-}
-
-
-/* Add styling for the down arrow */
-.dropdown a svg {
-  margin-left: 5px;
-  font-size: 0.8em;
 }
 
 footer img {
@@ -324,8 +277,8 @@ h3{
   height: 30px;
   width: 30px;
   align-self: baseline;
-  padding: 0;
   border-radius: 50%;
+  z-index: 100;
   background-color: var(--base-variant);
   display: flex;
   justify-content: center;
@@ -402,7 +355,7 @@ h3{
     gap: 7vw;
     justify-content: flex-end;
     padding-right: 3%;
-    right: 13vw;
+    right: 25vw;
   }
   .nav-link{
     font-weight: bold;
@@ -565,10 +518,18 @@ h3{
 
 
 }
-@media(max-width: 600px){
+@media(max-width: 530px){
   .humburger{
     right: -6vw;
   }
  
 }
+@media(max-width: 400px){
+  .humburger{
+    right: -8vw;
+    margin: 0;
+  }
+ 
+}
+
 
