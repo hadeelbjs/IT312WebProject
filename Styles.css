@@ -614,14 +614,16 @@ main{
  
 }
 @media(max-width: 400px){
+
   .humburger{
     padding: 0;
     right: 0vw;
     margin: 0;
   }
+  
   .nav-icons{
     position: fixed; 
-    right: 27vw;
+    right: 35vw;
     margin: 0;
   }
   .category-container{
@@ -631,6 +633,7 @@ main{
   main{
     position: relative;
     top: 8vw;
+    margin-bottom: 20%;
   }
   footer {
     font-size: 0.7em;
