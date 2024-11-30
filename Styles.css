@@ -235,7 +235,7 @@ list-style: none;
   margin-top: 0;
   margin-left: 5%;
   position: absolute;
-  top: 5em;
+  top: 5vw;
        
 }
 
@@ -583,13 +583,15 @@ font-size: 2vw;
 }
 
 main{
-  position: relative;
   top: 8vw;
 }
 
 
+
+
 }
 @media(max-width: 530px){
+  
   .humburger{
     right: -6vw;
   }
@@ -607,7 +609,6 @@ main{
     bottom: 8vw;
   }
   main{
-    position: relative;
     top: 8vw;
   }
   
@@ -631,7 +632,6 @@ main{
     bottom: 8vw;
   }
   main{
-    position: relative;
     top: 8vw;
     margin-bottom: 30%;
   }
