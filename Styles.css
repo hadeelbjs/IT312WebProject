@@ -333,6 +333,8 @@ h3{
 .nav-icons svg:hover {
   transform: scale(1.1);
 }
+
+
 @media(max-width: 799px){
   
   body{
@@ -487,109 +489,79 @@ h3{
 }
 
 .categories-section {
-  margin-top: 3vw; 
+  margin-top: 5vw; 
 }
 
 .categories-container {
 
-  gap: 1.5em; 
-}
-
-.category-item {
-  flex: 0 1 20vw; 
-  border-radius: 1.5vw; 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); 
-}
-
-
-.category-image {
-  height: 25vw; 
-}
-
-.category-label {
-  padding: 0.em; 
-
-}
-
-.category-label h3 {
-  font-size: 1.2vw; 
-
-}
-.category-container{
-  top: 8vw;
-  bottom: 8vw;
-}
-.offer-details p {
-  font-size: 1.2vw; 
-}
-
-.offer-details h3 {
-  font-size: 1.5vw; 
-}
-
-.week-date {
-  font-size: 1.5vw; 
-}
-
-#hover-info{
-  font-size:1.2vw;
-}
-
-.offer-section h2{
-font-size:2.4vw;
-}
-
-.categories-section h2{
-font-size:2.4vw;
-}
-
-.reviews-section h2{
-font-size:2.4vw;
-
-}
-
-.categories-section {
-margin-top: 5vw; 
-}
-
-.categories-container {
-
-gap: 0em; 
+  gap: 0em; 
 
 }
 
 .category-item {
-flex: 0 1 30vw; 
-border-radius: 2.5vw; 
+  flex: 0 1 30vw; 
+  border-radius: 2.5vw; 
 
-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); 
 }
 
 
 
 .category-image {
-height: 40vw; 
+  height: 40vw; 
 
 }
 
 .category-label {
-padding: 1.5em; 
+  padding: 1.5em; 
 
 }
 
 .category-label h3 {
-font-size: 2vw; 
+  font-size: 2vw; 
 
 }
 
-main{
-  top: 8vw;
+footer {
+  background-color: #6c584c;
+  padding: 0.5%; 
+  text-align: center;
+  color: white;
+  margin-top: 3%; 
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+  font-size: 0.8em; 
+}
+
+footer a:hover {
+  color: #b39f8e;
+}
+
+footer img {
+  vertical-align: middle;
+  width: 2vw; 
+  height: auto;
+  margin-right: 0.5%; 
+}
+
+footer p {
+  font-size: 0.8em; 
+  margin: 0.5em;
 }
 
 
 
 
+
 }
+
+
 @media(max-width: 530px){
   
   .humburger{
@@ -608,10 +580,8 @@ main{
     top: 8vw;
     bottom: 8vw;
   }
-  main{
-    top: 8vw;
-  }
-  
+ 
+
  
 }
 @media(max-width: 400px){
@@ -631,14 +601,12 @@ main{
     top: 8vw;
     bottom: 8vw;
   }
-  main{
-    top: 8vw;
-    margin-bottom: 30%;
-  }
+
   footer {
     font-size: 0.7em;
     margin-top: 5%;
   }
+
 
  
 }
