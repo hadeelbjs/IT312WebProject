@@ -230,12 +230,12 @@ list-style: none;
 }
 
 .Breadcrumb {
-  margin-bottom: 2%;
+  margin-bottom: 2vw;
   text-align: left;
   margin-top: 0;
   margin-left: 5%;
   position: absolute;
-  top: 5vw;
+  top: 5.5vw;
        
 }
 

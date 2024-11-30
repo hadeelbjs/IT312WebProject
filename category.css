@@ -8,6 +8,8 @@
   
   .category-container {
         position: relative;
+        top: 3vw;
+        margin-bottom: 2vw;
         color: #ffffff;
   }
   
