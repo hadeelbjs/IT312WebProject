@@ -504,8 +504,23 @@ h3{
 
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); 
 }
-
-
+.category-container {
+  position: relative;
+  margin-bottom: 4vw;
+  color: #ffffff;
+}
+.navbar{
+  height: 1vw;
+}
+.Breadcrumb {
+  margin-bottom: 2%;
+  text-align: left;
+  margin-top: 0;
+  margin-left: 5%;
+  position: absolute;
+  top: 5em;
+       
+}
 
 .category-image {
   height: 40vw; 
@@ -568,18 +583,14 @@ footer p {
     right: -6vw;
   }
   .Breadcrumb {
-    margin-bottom: 2%;
     text-align: left;
     margin-top: 0;
     margin-left: 5%;
     position: absolute;
-    top: 5em;
+    top: 12vw;
          
   }
-  .category-container{
-    top: 8vw;
-    bottom: 8vw;
-  }
+  
  
 
  
@@ -591,17 +602,15 @@ footer p {
     right: 0vw;
     margin: 0;
   }
+ 
+  
   
   .nav-icons{
     position: fixed; 
     right: 35vw;
     margin: 0;
   }
-  .category-container{
-    top: 8vw;
-    bottom: 8vw;
-  }
-
+  
   footer {
     font-size: 0.7em;
     margin-top: 5%;

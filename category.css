@@ -8,9 +8,17 @@
   
   .category-container {
         position: relative;
-        top: 3vw;
+        top: 1vw;
         margin-bottom: 2vw;
         color: #ffffff;
+  }
+  @media(max-width:799px){
+    .category-container {
+      position: relative;
+      top: 5vw;
+      margin-bottom: 2vw;
+      color: #ffffff;
+}
   }
   
   .category-bottom-left {
